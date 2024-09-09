@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://qqjadxciqvnx"]
+
+[ext_resource type="Script" path="res://Scripts/bedScript.gd" id="1_aeanl"]
+[ext_resource type="Texture2D" uid="uid://du0x1tddamxl4" path="res://icon.svg" id="1_s8ngp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_45e23"]
+size = Vector2(40, 40)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b3wsp"]
+radius = 35.0
+
+[node name="Bed" type="StaticBody2D"]
+script = ExtResource("1_aeanl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_45e23")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_s8ngp")
+
+[node name="InteractArea" type="Area2D" parent="."]
+
+[node name="InteractAreaShape" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("CircleShape2D_b3wsp")
+
+[connection signal="area_entered" from="InteractArea" to="." method="_on_interact_area_area_entered"]
+[connection signal="area_exited" from="InteractArea" to="." method="_on_interact_area_area_exited"]
