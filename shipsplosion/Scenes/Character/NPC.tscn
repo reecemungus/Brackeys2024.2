@@ -49,6 +49,7 @@ motion_mode = 1
 platform_on_leave = 2
 
 [node name="NPCCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 15)
 shape = ExtResource("1_y2han")
 
 [node name="SpriteContainer" type="Node2D" parent="."]

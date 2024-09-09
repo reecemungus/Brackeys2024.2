@@ -1,13 +1,14 @@
 [gd_scene load_steps=5 format=3 uid="uid://qqjadxciqvnx"]
 
 [ext_resource type="Script" path="res://Scripts/bedScript.gd" id="1_aeanl"]
-[ext_resource type="Texture2D" uid="uid://du0x1tddamxl4" path="res://icon.svg" id="1_s8ngp"]
+[ext_resource type="Texture2D" uid="uid://bahr8fhgom2pp" path="res://Assets/spritesheettest.png" id="2_8f8yn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_45e23"]
-size = Vector2(40, 40)
+size = Vector2(42, 94)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_b3wsp"]
-radius = 35.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oyd5c"]
+radius = 45.0
+height = 140.0
 
 [node name="Bed" type="StaticBody2D"]
 script = ExtResource("1_aeanl")
@@ -16,13 +17,15 @@ script = ExtResource("1_aeanl")
 shape = SubResource("RectangleShape2D_45e23")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_s8ngp")
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_8f8yn")
+region_enabled = true
+region_rect = Rect2(80, 0, 16, 37)
 
 [node name="InteractArea" type="Area2D" parent="."]
 
 [node name="InteractAreaShape" type="CollisionShape2D" parent="InteractArea"]
-shape = SubResource("CircleShape2D_b3wsp")
+shape = SubResource("CapsuleShape2D_oyd5c")
 
 [connection signal="area_entered" from="InteractArea" to="." method="_on_interact_area_area_entered"]
 [connection signal="area_exited" from="InteractArea" to="." method="_on_interact_area_area_exited"]

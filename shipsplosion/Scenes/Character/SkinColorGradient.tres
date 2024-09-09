@@ -3,6 +3,6 @@
 [resource]
 interpolation_mode = 2
 interpolation_color_space = 2
-offsets = PackedFloat32Array(0.1, 0.9)
-colors = PackedColorArray(0.893761, 0.664591, 0.573602, 1, 0.32549, 0.137255, 0.0117647, 1)
-metadata/_snap_enabled = true
+offsets = PackedFloat32Array(0, 0.0384615, 0.092219, 0.2, 0.4, 0.6, 0.8, 1)
+colors = PackedColorArray(1, 0.504089, 0.492188, 1, 0.917969, 0.620318, 0.613174, 1, 1, 0.905882, 0.819608, 1, 0.893761, 0.664591, 0.573602, 1, 0.831373, 0.666667, 0.470588, 1, 0.831373, 0.666667, 0.470588, 1, 0.631373, 0.431373, 0.294118, 1, 0.231373, 0.133333, 0.0980392, 1)
+metadata/_snap_count = 5
