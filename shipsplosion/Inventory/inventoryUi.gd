@@ -31,4 +31,5 @@ func open() -> void:
 
 func UpdateSlots() -> void:
 	for i in range(min(inventory.Items.size(), slots.size())):
+		print(slots[i])
 		slots[i].UpdateInv(inventory.Items[i])
