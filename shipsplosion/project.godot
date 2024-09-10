@@ -25,6 +25,19 @@ GameInformation="*res://Scripts/AutoLoad/game_information.gd"
 window/size/viewport_width=960
 window/size/viewport_height=540
 
+[file_customization]
+
+folder_colors={
+"res://Assets/": "orange",
+"res://Inventory/": "yellow",
+"res://Scenes/": "blue",
+"res://Scripts/": "gray"
+}
+
+[global_group]
+
+G_Player="Active player, 1 per scene"
+
 [input]
 
 Move_Left={
@@ -54,6 +67,11 @@ Move_Down={
 Interact={
 "deadzone": 0.5,
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+Inventory={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":73,"key_label":0,"unicode":105,"location":0,"echo":false,"script":null)
 ]
 }
 

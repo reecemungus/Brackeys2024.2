@@ -4,16 +4,19 @@
 [ext_resource type="Texture2D" uid="uid://bahr8fhgom2pp" path="res://Assets/spritesheettest.png" id="2_8f8yn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_45e23"]
-size = Vector2(42, 94)
+size = Vector2(42, 81)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oyd5c"]
 radius = 45.0
 height = 140.0
 
 [node name="Bed" type="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_aeanl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.5)
 shape = SubResource("RectangleShape2D_45e23")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

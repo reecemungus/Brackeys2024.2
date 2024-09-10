@@ -8,7 +8,7 @@
 [ext_resource type="Gradient" uid="uid://b8xcf7d78mn1b" path="res://Scenes/Character/SkinColorGradient.tres" id="4_fldu3"]
 [ext_resource type="Texture2D" uid="uid://by2ijonb7onha" path="res://Assets/Characters/Base/legs.png" id="5_muno8"]
 [ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="6_75fak"]
-[ext_resource type="Script" path="res://Scripts/AnimController.gd" id="7_u5dp8"]
+[ext_resource type="Script" path="res://Scripts/feetAnim.gd" id="7_u5dp8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sglo4"]
 atlas = ExtResource("6_75fak")
@@ -45,15 +45,17 @@ animations = [{
 }]
 
 [node name="NPC" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 motion_mode = 1
 platform_on_leave = 2
 
 [node name="NPCCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 15)
+rotation = 1.57079
 shape = ExtResource("1_y2han")
 
 [node name="SpriteContainer" type="Node2D" parent="."]
-z_index = 1
+position = Vector2(0, -15)
 scale = Vector2(30, 30)
 script = ExtResource("2_pa6y6")
 ClothingColors = ExtResource("3_eohia")

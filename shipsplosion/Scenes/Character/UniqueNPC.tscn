@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://uvfgbs84njrv" path="res://Assets/Characters/Base/torso.png" id="4_xlb5k"]
 [ext_resource type="Texture2D" uid="uid://by2ijonb7onha" path="res://Assets/Characters/Base/legs.png" id="5_pnvkp"]
 [ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="6_5i0ty"]
-[ext_resource type="Script" path="res://Scripts/AnimController.gd" id="7_fq87o"]
+[ext_resource type="Script" path="res://Scripts/feetAnim.gd" id="7_fq87o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sglo4"]
 atlas = ExtResource("6_5i0ty")
@@ -48,15 +48,17 @@ animations = [{
 radius = 45.0
 
 [node name="NPCCharacter" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
 motion_mode = 1
 platform_on_leave = 2
 
 [node name="NPCCollision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 15)
+rotation = 1.5708
 shape = ExtResource("1_a1bdk")
 
 [node name="SpriteContainer" type="Node2D" parent="."]
-z_index = 1
 scale = Vector2(30, 30)
 script = ExtResource("2_hh1xu")
 ClothingColors = ExtResource("3_db82g")

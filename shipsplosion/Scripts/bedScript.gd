@@ -1,13 +1,12 @@
 class_name Bed extends StaticBody2D
 
-@onready var player : CharacterBody2D = get_node("/root/ShipLevel/PlayerCharacter") # get ref to player
+@onready var player : CharacterBody2D = get_tree().get_first_node_in_group("G_Player") # player ref
 @onready var fade : AnimationPlayer = get_node("/root/ShipLevel/Fade/AnimationPlayer")
 var isActive : bool = false
 
-func _ready() -> void:
-	
+func _ready() -> void:	
 	if player: # attempt to connect to signal on player
-		player.Interact.connect(AdvanceDay)
+		player.Interact.connect(AdvanceDay) # connect advance day to player interact
 	else:
 		push_error("Player not found")
 

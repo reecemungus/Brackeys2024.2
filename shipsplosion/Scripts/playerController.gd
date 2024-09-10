@@ -1,8 +1,13 @@
 extends CharacterBody2D
 
 signal Interact
+signal InventoryToggle
 
-@export var SPEED : float = 5000.0
+@export_group("Movement")
+@export var speed : float = 5000.0
+
+@export_group("Inventory")
+@export var inventory : Inventory
 
 func _ready() -> void:
 	pass
@@ -10,9 +15,12 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	var inputVector = Input.get_vector("Move_Left", "Move_Right", "Move_Up", "Move_Down")
 	
-	velocity = inputVector * SPEED * delta
+	velocity = inputVector * speed * delta
 	move_and_slide()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Interact"):
 		Interact.emit()
+		
+	if event.is_action_pressed("Inventory"):
+		InventoryToggle.emit()
