@@ -16,10 +16,8 @@ func _ready() -> void:
 func FindGM() -> void:
 	GameManager = get_node("/root/ShipLevel/GameManager")
 	
-	if GameManager:
-		print("GM Found") 
-	else:
-		print("GM Not Found")
+	if !GameManager:
+		push_error("GM Not Found")
 
 func AdvanceTime() -> void:
 	# Increment Clock

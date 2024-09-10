@@ -2,10 +2,7 @@ extends Panel
 
 @onready var itemVisual : Sprite2D = %ItemDisplay
 
-func UpdateInv(item : InventoryItem) -> void:
-	print("item = %s" % [item])
-	print("itemVisual = %s" % [itemVisual])
-	
+func UpdateInv(item : InventoryItem) -> void:	
 	if !item:
 		itemVisual.visible = false
 	else:
