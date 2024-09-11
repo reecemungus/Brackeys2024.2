@@ -39,7 +39,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-columns = 4
+columns = 10
 
 [node name="InvSlotUi" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/HotBar" instance=ExtResource("2_rfxfn")]
 layout_mode = 2
@@ -57,6 +57,36 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="InvSlotUi4" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/HotBar" instance=ExtResource("2_rfxfn")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="InvSlotUi5" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/HotBar" instance=ExtResource("2_rfxfn")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="InvSlotUi6" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/HotBar" instance=ExtResource("2_rfxfn")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="InvSlotUi7" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/HotBar" instance=ExtResource("2_rfxfn")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="InvSlotUi8" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/HotBar" instance=ExtResource("2_rfxfn")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="InvSlotUi9" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/HotBar" instance=ExtResource("2_rfxfn")]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="InvSlotUi10" parent="Control/MarginContainer/HBoxContainer/VBoxContainer/HotBar" instance=ExtResource("2_rfxfn")]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4

@@ -13,7 +13,7 @@
 [ext_resource type="Script" path="res://Scripts/charAnimator.gd" id="9_vil8j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ew0od"]
-radius = 45.0
+radius = 25.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sglo4"]
 atlas = ExtResource("5_aebok")

@@ -1,20 +1,25 @@
 extends Resource
 class_name Inventory
 
-signal UpdateInventory
+signal UpdateInventory # update UI
 
 @export var slots : Array[InventorySlot]
+var shouldDestroy : bool = false
 
 func Insert(item : InventoryItem) -> void:
-	var itemSlots = slots.filter(func(slot): return slot.item == item)
+	var hasItemAlready = false
+	var inc = 0
 	
-	if itemSlots.is_empty():
-		itemSlots[0].amount += 1
-	else:
-		var emptySlots = slots.filter(func(slot): return slot.item == null)
-		
-		if !emptySlots.is_empty():
-			emptySlots[0].item = item
-			emptySlots[0].amount = 1
+	for i in range(slots.size()):
+		if slots[i].slotItem != null: # is not null
+			if slots[i].slotItem == item:
+				slots[i].slotAmount += 1
+				hasItemAlready = true
 			
+			inc = inc + 1
+	
+	if !hasItemAlready && inc < slots.size():
+		slots[inc].slotItem = item
+		slots[inc].slotAmount += 1
+	
 	UpdateInventory.emit()

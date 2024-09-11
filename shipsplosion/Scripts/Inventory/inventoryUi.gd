@@ -32,5 +32,6 @@ func open() -> void:
 	visible = true
 
 func UpdateSlots() -> void:
-	for i in range(min(inventory.slots.size(), slots.size())):
-		slots[i].UpdateInv(inventory.slots[i])
+	for i in range(0, slots.size()):
+		if slots[i] != null:
+			slots[i].UpdateInv(inventory.slots[i])
