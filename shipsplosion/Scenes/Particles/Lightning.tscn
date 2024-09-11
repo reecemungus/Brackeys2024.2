@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://dsber65g2ym5"]
+
+[ext_resource type="Texture2D" uid="uid://urk8h7uncfwm" path="res://Scenes/Particles/Lightning.png" id="1_xurp1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_git4i"]
+atlas = ExtResource("1_xurp1")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q0abp"]
+atlas = ExtResource("1_xurp1")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p437u"]
+atlas = ExtResource("1_xurp1")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kmax"]
+atlas = ExtResource("1_xurp1")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_px2cm"]
+atlas = ExtResource("1_xurp1")
+region = Rect2(64, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2v1ul"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_git4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q0abp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p437u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kmax")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_px2cm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2v1ul")
+autoplay = "default"
+frame_progress = 0.0426416
