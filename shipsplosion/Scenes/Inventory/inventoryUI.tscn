@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dnxclndhuo5rf"]
 
-[ext_resource type="Script" path="res://Inventory/inventoryUi.gd" id="1_2k5v7"]
-[ext_resource type="PackedScene" uid="uid://ma52dtyj0rsf" path="res://Inventory/InvSlotUi.tscn" id="2_rfxfn"]
+[ext_resource type="Script" path="res://Scripts/Inventory/inventoryUi.gd" id="1_2k5v7"]
+[ext_resource type="PackedScene" uid="uid://ma52dtyj0rsf" path="res://Scenes/Inventory/InvSlotUi.tscn" id="2_rfxfn"]
 
 [node name="InventoryUi" type="CanvasLayer"]
 script = ExtResource("1_2k5v7")
