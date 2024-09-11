@@ -36,6 +36,7 @@ folder_colors={
 [global_group]
 
 G_Player="Active player, 1 per scene"
+G_Character=""
 
 [input]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://6bmg6cemniwx"]
+[gd_scene load_steps=15 format=3 uid="uid://6bmg6cemniwx"]
 
 [ext_resource type="Shape2D" uid="uid://bdo387rdebn18" path="res://Scenes/Character/CharCollision.tres" id="1_y2han"]
 [ext_resource type="Script" path="res://Scripts/NPC/NPCSpriteScript.gd" id="2_pa6y6"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://by2ijonb7onha" path="res://Assets/Characters/Base/legs.png" id="5_muno8"]
 [ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="6_75fak"]
 [ext_resource type="Script" path="res://Scripts/feetAnim.gd" id="7_u5dp8"]
+[ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="10_0rs6c"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sglo4"]
 atlas = ExtResource("6_75fak")
@@ -78,3 +79,6 @@ scale = Vector2(0.099836, 0.099836)
 sprite_frames = SubResource("SpriteFrames_rt1o4")
 animation = &"Idle"
 script = ExtResource("7_u5dp8")
+
+[node name="HitBox" parent="." instance=ExtResource("10_0rs6c")]
+position = Vector2(0, -15)
