@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ci181sbmubk0q"
-path="res://.godot/imported/Star.png-186ee9da06503ac15743c0db201aaa1d.ctex"
+uid="uid://bk7xgau37hhaw"
+path="res://.godot/imported/Meteorite.png-4b78e7cefe6f6b86568b2439a8548200.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/Levels/MainMenu/Star.png"
-dest_files=["res://.godot/imported/Star.png-186ee9da06503ac15743c0db201aaa1d.ctex"]
+source_file="res://Scenes/Particles/Meteorite.png"
+dest_files=["res://.godot/imported/Meteorite.png-4b78e7cefe6f6b86568b2439a8548200.ctex"]
 
 [params]
 

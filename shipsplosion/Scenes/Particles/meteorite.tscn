@@ -1,0 +1,97 @@
+[gd_scene load_steps=16 format=3 uid="uid://bex0akvjuch11"]
+
+[ext_resource type="Texture2D" uid="uid://bk7xgau37hhaw" path="res://Scenes/Particles/Meteorite.png" id="1_w7xjr"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tjsbt"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_h4onv"]
+offsets = PackedFloat32Array(0, 0.114754, 0.770492, 0.92623)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wt2jn"]
+gradient = SubResource("Gradient_h4onv")
+
+[sub_resource type="Curve" id="Curve_ad6up"]
+max_value = 2.0
+_data = [Vector2(0.306667, 1.89011), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="Curve" id="Curve_qe4q2"]
+min_value = -4.0
+_data = [Vector2(0.233333, -2.02198), 0.0, 0.0, 0, 0, Vector2(0.64, -3.28571), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_igmpo"]
+curve_x = SubResource("Curve_ad6up")
+curve_y = SubResource("Curve_qe4q2")
+
+[sub_resource type="Curve" id="Curve_d3e8a"]
+max_value = 2.5
+_data = [Vector2(0.0266667, 1.26374), 0.0, 0.0, 0, 0, Vector2(1, 1.84066), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_cslyw"]
+curve = SubResource("Curve_d3e8a")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qwoq4"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(2, 2, 2)
+emission_shape = 3
+emission_box_extents = Vector3(250, 250, 50)
+directional_velocity_min = -50.0
+directional_velocity_max = -50.0
+directional_velocity_curve = SubResource("CurveXYZTexture_igmpo")
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 3.0
+scale_curve = SubResource("CurveTexture_cslyw")
+color_ramp = SubResource("GradientTexture1D_wt2jn")
+anim_speed_min = 1.0
+anim_speed_max = 1.0
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ib5tb"]
+
+[sub_resource type="Curve" id="Curve_hox1l"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.993333, 0.978022), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_rcxri"]
+min_value = -1.0
+_data = [Vector2(0, -0.978022), 0.0, 0.0, 0, 0, Vector2(0.973333, -1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_sqbx6"]
+curve_x = SubResource("Curve_hox1l")
+curve_y = SubResource("Curve_rcxri")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vx3yd"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(2, 2, 2)
+directional_velocity_min = 50.0
+directional_velocity_max = 50.0
+directional_velocity_curve = SubResource("CurveXYZTexture_sqbx6")
+gravity = Vector3(0, 0, 0)
+radial_accel_min = -2.23517e-06
+radial_accel_max = 39.44
+
+[node name="Meteorite" type="Node2D"]
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_tjsbt")
+amount = 35
+process_material = SubResource("ParticleProcessMaterial_qwoq4")
+texture = ExtResource("1_w7xjr")
+lifetime = 6.0
+fixed_fps = 24
+
+[node name="Sparks" type="GPUParticles2D" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_ib5tb")
+amount = 21
+process_material = SubResource("ParticleProcessMaterial_vx3yd")
+lifetime = 3.2

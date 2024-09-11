@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ehgrixoqenig"]
 
-[ext_resource type="Texture2D" uid="uid://ci181sbmubk0q" path="res://Scenes/Levels/MainMenu/Star.png" id="1_k3er3"]
+[ext_resource type="Texture2D" uid="uid://ci181sbmubk0q" path="res://Scenes/Particles/Star.png" id="1_k3er3"]
 
 [sub_resource type="Curve" id="Curve_jc1ol"]
 min_value = -360.0

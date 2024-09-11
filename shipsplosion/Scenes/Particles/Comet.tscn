@@ -1,0 +1,95 @@
+[gd_scene load_steps=20 format=3 uid="uid://b6qik5q5vdmse"]
+
+[ext_resource type="Texture2D" uid="uid://by74hov10m2ga" path="res://Scenes/Particles/Comet.png" id="1_ogsbn"]
+[ext_resource type="Texture2D" uid="uid://ci181sbmubk0q" path="res://Scenes/Particles/Star.png" id="2_6olu5"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_utxs0"]
+
+[sub_resource type="Gradient" id="Gradient_81ls6"]
+offsets = PackedFloat32Array(0, 0.827869)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_78erp"]
+gradient = SubResource("Gradient_81ls6")
+
+[sub_resource type="Curve" id="Curve_1to7c"]
+min_value = -1.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_tdv1m"]
+curve_x = SubResource("Curve_1to7c")
+
+[sub_resource type="Curve" id="Curve_nebls"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.494505), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_81fp8"]
+curve = SubResource("Curve_nebls")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_tulln"]
+particle_flag_disable_z = true
+directional_velocity_min = -400.0
+directional_velocity_max = -400.0
+directional_velocity_curve = SubResource("CurveXYZTexture_tdv1m")
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_81fp8")
+color_ramp = SubResource("GradientTexture1D_78erp")
+
+[sub_resource type="Curve" id="Curve_vsvdu"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_tmi0l"]
+curve = SubResource("Curve_vsvdu")
+
+[sub_resource type="Gradient" id="Gradient_rdval"]
+offsets = PackedFloat32Array(0, 0.803279, 0.918033, 1)
+colors = PackedColorArray(0, 0, 0, 0, 0.760784, 0.760784, 0.760784, 0, 0.918033, 0.918033, 0.918033, 0.918033, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_aijtf"]
+gradient = SubResource("Gradient_rdval")
+
+[sub_resource type="Curve" id="Curve_bs65s"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.626543, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.515281), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_1buy6"]
+curve_x = SubResource("Curve_bs65s")
+
+[sub_resource type="Curve" id="Curve_iktr5"]
+_data = [Vector2(0, 0.515281), 0.0, 0.0, 0, 0, Vector2(0.87037, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.0146699), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_48qml"]
+curve = SubResource("Curve_iktr5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ssjy0"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(-20, 0, 0)
+angular_velocity_min = 270.0
+angular_velocity_max = 270.0
+angular_velocity_curve = SubResource("CurveTexture_tmi0l")
+directional_velocity_min = -400.0
+directional_velocity_max = -400.0
+directional_velocity_curve = SubResource("CurveXYZTexture_1buy6")
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_48qml")
+color_ramp = SubResource("GradientTexture1D_aijtf")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Comet" type="GPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_utxs0")
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_tulln")
+texture = ExtResource("1_ogsbn")
+lifetime = 5.0
+
+[node name="Twinkle" type="GPUParticles2D" parent="."]
+amount = 1
+process_material = SubResource("ParticleProcessMaterial_ssjy0")
+texture = ExtResource("2_6olu5")
+lifetime = 5.0

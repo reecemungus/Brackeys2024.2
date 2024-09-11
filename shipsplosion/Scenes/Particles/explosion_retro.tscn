@@ -33,7 +33,7 @@ anim_speed_max = 1.0
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 material = SubResource("CanvasItemMaterial_ogxe0")
-position = Vector2(0, 4)
+position = Vector2(0, 5)
 emitting = false
 process_material = SubResource("ParticleProcessMaterial_r376i")
 texture = ExtResource("1_h8a3c")
