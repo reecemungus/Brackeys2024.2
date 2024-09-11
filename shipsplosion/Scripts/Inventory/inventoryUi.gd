@@ -1,14 +1,16 @@
 extends CanvasLayer
 
-@onready var inventory : Inventory = preload("res://Inventory/playerInventory.tres")
+@onready var inventory : Inventory = preload("res://Scenes/Inventory/Inventories/playerInventory.tres")
 @onready var slots: Array = %HotBar.get_children()
 
 @onready var player : CharacterBody2D = get_tree().get_first_node_in_group("G_Player") # player ref
 var isOpen : bool = false
 
 func _ready() -> void:
+	inventory.UpdateInventory.connect(UpdateSlots)
+	
 	UpdateSlots()
-	close()
+	open()
 	
 	if player: # attempt to connect to signal on player
 		player.InventoryToggle.connect(OnToggle) # connect advance day to player interact
@@ -30,5 +32,5 @@ func open() -> void:
 	visible = true
 
 func UpdateSlots() -> void:
-	for i in range(min(inventory.Items.size(), slots.size())):
-		slots[i].UpdateInv(inventory.Items[i])
+	for i in range(min(inventory.slots.size(), slots.size())):
+		slots[i].UpdateInv(inventory.slots[i])

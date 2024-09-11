@@ -29,7 +29,6 @@ window/size/viewport_height=540
 
 folder_colors={
 "res://Assets/": "orange",
-"res://Inventory/": "yellow",
 "res://Scenes/": "blue",
 "res://Scripts/": "gray"
 }
