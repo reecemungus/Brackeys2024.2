@@ -1,0 +1,74 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxw7x2m37dfki"]
+
+[ext_resource type="PackedScene" uid="uid://nppsjra3shv0" path="res://Scenes/Particles/Lightning.tscn" id="1_k51ox"]
+
+[node name="LightningScene" type="Node2D"]
+
+[node name="Node2D11" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(-12.0001, -32.8)
+rotation = 1.39627
+scale = Vector2(1, 1)
+
+[node name="Node2D12" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(-12.0001, -21.2)
+rotation = -2.20959
+
+[node name="Node2D13" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(-83.1998, -33.6)
+rotation = 1.91638
+scale = Vector2(0.8, 0.8)
+
+[node name="Lightning2" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(-84.4, 7.99998)
+rotation = 1.27933
+scale = Vector2(0.8, 0.8)
+
+[node name="Node2D6" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(-12.0001, 7.19997)
+rotation = 2.0944
+
+[node name="Node2D7" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(-14.0001, 18.4)
+rotation = -1.74533
+
+[node name="Node2D4" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(84.3998, 7.59999)
+rotation = 1.86227
+
+[node name="Node2D3" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(13.2001, 19.2)
+rotation = -1.27933
+
+[node name="Node2D8" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(10.7999, -21.2)
+rotation = -0.776675
+
+[node name="Node2D9" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(84.7999, -20.8001)
+rotation = -2.16421
+
+[node name="Node2D10" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(13.6, -34.4)
+rotation = 1.9984
+scale = Vector2(1, 1)
+
+[node name="Node2D14" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(-84.4001, -21.6)
+rotation = -0.813327
+
+[node name="Node2D5" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(-82.7999, 18.4)
+rotation = -1.27933
+
+[node name="Node2D15" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(83.1994, -32.4)
+rotation = 1.27933
+scale = Vector2(1, 1)
+
+[node name="Node2D2" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(84.3998, 18.8)
+rotation = -1.86227
+
+[node name="Node2D" parent="." instance=ExtResource("1_k51ox")]
+position = Vector2(11.6, 7.59999)
+rotation = 1.27409

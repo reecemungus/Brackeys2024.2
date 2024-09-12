@@ -1,6 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://cupdaxtx1s5eb"]
+[gd_scene load_steps=17 format=3 uid="uid://cupdaxtx1s5eb"]
 
 [ext_resource type="Shape2D" uid="uid://bdo387rdebn18" path="res://Scenes/Character/CharCollision.tres" id="1_a1bdk"]
+[ext_resource type="Script" path="res://Scripts/NPC/unique_npc.gd" id="1_lh8oq"]
 [ext_resource type="Script" path="res://Scripts/NPC/NPCSpriteScript.gd" id="2_hh1xu"]
 [ext_resource type="Gradient" uid="uid://c3dh6e6ux5v08" path="res://Scenes/Character/ClothingColorGradient.tres" id="3_db82g"]
 [ext_resource type="Texture2D" uid="uid://cby4i2kmt2jn8" path="res://Assets/Characters/Base/head.png" id="3_rmbyj"]
@@ -9,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://by2ijonb7onha" path="res://Assets/Characters/Base/legs.png" id="5_pnvkp"]
 [ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="6_5i0ty"]
 [ext_resource type="Script" path="res://Scripts/feetAnim.gd" id="7_fq87o"]
+[ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="10_q6rr4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sglo4"]
 atlas = ExtResource("6_5i0ty")
@@ -52,13 +54,14 @@ z_index = 1
 y_sort_enabled = true
 motion_mode = 1
 platform_on_leave = 2
+script = ExtResource("1_lh8oq")
 
 [node name="NPCCollision" type="CollisionShape2D" parent="."]
-position = Vector2(0, 15)
 rotation = 1.5708
 shape = ExtResource("1_a1bdk")
 
 [node name="SpriteContainer" type="Node2D" parent="."]
+position = Vector2(0, -15)
 scale = Vector2(30, 30)
 script = ExtResource("2_hh1xu")
 ClothingColors = ExtResource("3_db82g")
@@ -84,6 +87,13 @@ frame_progress = 0.44072
 script = ExtResource("7_fq87o")
 
 [node name="DialogueSphere" type="Area2D" parent="."]
+position = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueSphere"]
 shape = SubResource("CircleShape2D_p2xn7")
+
+[node name="HitBox" parent="." instance=ExtResource("10_q6rr4")]
+position = Vector2(0, -15)
+
+[connection signal="area_entered" from="DialogueSphere" to="." method="_on_dialogue_sphere_area_entered"]
+[connection signal="area_exited" from="DialogueSphere" to="." method="_on_dialogue_sphere_area_exited"]
