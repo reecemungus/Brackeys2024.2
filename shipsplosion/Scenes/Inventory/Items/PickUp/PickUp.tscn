@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bewp7u50gr63p"]
 
-[ext_resource type="Shape2D" uid="uid://n2l4lu6otjb1" path="res://Scenes/Inventory/PickUp/pickupShape.tres" id="1_30r61"]
+[ext_resource type="Shape2D" uid="uid://n2l4lu6otjb1" path="res://Scenes/Inventory/Items/PickUp/pickupShape.tres" id="1_30r61"]
 [ext_resource type="Script" path="res://Scripts/Inventory/pickUp.gd" id="1_ww4ru"]
 
 [node name="PickUp" type="Area2D"]
