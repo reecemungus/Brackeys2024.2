@@ -1,0 +1,104 @@
+[gd_scene load_steps=16 format=3 uid="uid://ca85uhni3kr7f"]
+
+[ext_resource type="Script" path="res://Scripts/NPC/npc_rush.gd" id="1_nyp8p"]
+[ext_resource type="Shape2D" uid="uid://bdo387rdebn18" path="res://Scenes/Character/CharCollision.tres" id="2_d0vi6"]
+[ext_resource type="Script" path="res://Scripts/NPC/NPCSpriteScript.gd" id="3_1xfky"]
+[ext_resource type="Gradient" uid="uid://c3dh6e6ux5v08" path="res://Scenes/Character/ClothingColorGradient.tres" id="4_8hwg5"]
+[ext_resource type="Gradient" uid="uid://b8xcf7d78mn1b" path="res://Scenes/Character/SkinColorGradient.tres" id="5_63o3k"]
+[ext_resource type="Texture2D" uid="uid://cby4i2kmt2jn8" path="res://Assets/Characters/Base/head.png" id="6_gric5"]
+[ext_resource type="Texture2D" uid="uid://uvfgbs84njrv" path="res://Assets/Characters/Base/torso.png" id="7_o33ri"]
+[ext_resource type="Texture2D" uid="uid://by2ijonb7onha" path="res://Assets/Characters/Base/legs.png" id="8_c8a5b"]
+[ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="9_semoh"]
+[ext_resource type="Script" path="res://Scripts/feetAnim.gd" id="10_lfqtk"]
+[ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="11_6x3ax"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sglo4"]
+atlas = ExtResource("9_semoh")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k458q"]
+atlas = ExtResource("9_semoh")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gd1s"]
+atlas = ExtResource("9_semoh")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rt1o4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sglo4")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k458q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gd1s")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 5.0
+}]
+
+[node name="RushNPC" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 0
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_nyp8p")
+
+[node name="NPCCollision" type="CollisionShape2D" parent="."]
+rotation = 1.57079
+shape = ExtResource("2_d0vi6")
+
+[node name="SpriteContainer" type="Node2D" parent="."]
+position = Vector2(0, -15)
+scale = Vector2(30, 30)
+script = ExtResource("3_1xfky")
+ClothingColors = ExtResource("4_8hwg5")
+skinColors = ExtResource("5_63o3k")
+
+[node name="NPCHead" type="Sprite2D" parent="SpriteContainer"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_gric5")
+
+[node name="NPCTorso" type="Sprite2D" parent="SpriteContainer"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_o33ri")
+
+[node name="NPCLegs" type="Sprite2D" parent="SpriteContainer"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_c8a5b")
+
+[node name="NPCFeet" type="AnimatedSprite2D" parent="SpriteContainer"]
+scale = Vector2(0.099836, 0.099836)
+sprite_frames = SubResource("SpriteFrames_rt1o4")
+animation = &"Idle"
+script = ExtResource("10_lfqtk")
+
+[node name="HitBox" parent="." groups=["G_Attackable"] instance=ExtResource("11_6x3ax")]
+position = Vector2(0, -15)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+unique_name_in_owner = true
+debug_enabled = true
+
+[node name="NavUpdater" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+wait_time = 0.5
+autostart = true
+
+[node name="HitDelayer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.1
+
+[connection signal="timeout" from="NavUpdater" to="." method="_on_nav_updater_timeout"]
+[connection signal="timeout" from="HitDelayer" to="." method="_on_hit_delayer_timeout"]
