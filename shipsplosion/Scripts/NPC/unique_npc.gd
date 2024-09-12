@@ -12,15 +12,16 @@ func _ready() -> void:
 	player.Interact.connect(OnSpokenTo)
 
 func _on_dialogue_sphere_area_entered(area: Area2D) -> void:
-	if area.is_in_group("G_Character"):
+	if area.is_in_group("G_Player"):
 		isActive = true
 
 func _on_dialogue_sphere_area_exited(area: Area2D) -> void:
-	if area.is_in_group("G_Character"):
+	if area.is_in_group("G_Player"):
 		isActive = false
 
 func runDialog(dialogString : String) -> void:
 	Dialogic.start(dialogString)
 
 func OnSpokenTo() -> void:
-	runDialog(dialog)
+	if isActive:
+		runDialog(dialog)
