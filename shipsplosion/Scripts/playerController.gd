@@ -4,7 +4,7 @@ signal Interact
 signal InventoryToggle
 
 @export_group("Movement")
-@export var speed : float = 5000.0
+@export var speed : float = 7500.0
 
 @export_group("Inventory")
 @export var inventory : Inventory

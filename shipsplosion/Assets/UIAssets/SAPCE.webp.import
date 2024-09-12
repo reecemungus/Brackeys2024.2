@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rn27fe28wpdw"
-path="res://.godot/imported/spritesheet1COMPLETE (3).png-9f8f1df6aa08e08647d61436347a7eef.ctex"
+uid="uid://wqmheqbtdhqr"
+path="res://.godot/imported/SAPCE.webp-a881c841dd9e79ecdcbc60699bfe54ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemap/spritesheet1COMPLETE (3).png"
-dest_files=["res://.godot/imported/spritesheet1COMPLETE (3).png-9f8f1df6aa08e08647d61436347a7eef.ctex"]
+source_file="res://Assets/UIAssets/SAPCE.webp"
+dest_files=["res://.godot/imported/SAPCE.webp-a881c841dd9e79ecdcbc60699bfe54ae.ctex"]
 
 [params]
 

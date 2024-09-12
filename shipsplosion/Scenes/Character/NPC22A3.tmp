@@ -49,11 +49,9 @@ animations = [{
 [node name="NPC" type="CharacterBody2D"]
 z_index = 1
 y_sort_enabled = true
-collision_layer = 0
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_73v6b")
-speed = 5000.0
 
 [node name="NPCCollision" type="CollisionShape2D" parent="."]
 rotation = 1.57079
@@ -91,23 +89,9 @@ position = Vector2(0, -15)
 unique_name_in_owner = true
 debug_enabled = true
 
-[node name="NavUpdater" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-process_callback = 0
-wait_time = 0.5
+wait_time = 0.1
 autostart = true
 
-[node name="WonderTimer" type="Timer" parent="."]
-unique_name_in_owner = true
-process_callback = 0
-wait_time = 5.0
-autostart = true
-
-[node name="WaitTimer" type="Timer" parent="."]
-unique_name_in_owner = true
-process_callback = 0
-one_shot = true
-
-[connection signal="timeout" from="NavUpdater" to="." method="_on_nav_updater_timeout"]
-[connection signal="timeout" from="WonderTimer" to="." method="_on_wonder_timer_timeout"]
-[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

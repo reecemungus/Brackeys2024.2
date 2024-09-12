@@ -208,7 +208,6 @@ y_sort_enabled = true
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_3c8mn")
-speed = 7500.0
 inventory = ExtResource("2_4qojt")
 
 [node name="PlayerHud" parent="." instance=ExtResource("2_1v0iv")]

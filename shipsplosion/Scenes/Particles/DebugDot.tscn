@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ck2tl1jn2gj4i"]
+
+[node name="DebugDot" type="CPUParticles2D"]
+z_index = 999
+emitting = false
+amount = 1
+lifetime = 60.0
+one_shot = true
+gravity = Vector2(0, 0)

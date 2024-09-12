@@ -10,10 +10,10 @@ func _ready() -> void:
 	
 	%AnimationPlayer.play("DoorClose")
 
-func _on_area_entered(area: Area2D) -> void:
+func _on_area_entered(_area: Area2D) -> void:
 	CheckAreas()
 
-func _on_area_exited(area: Area2D) -> void:
+func _on_area_exited(_area: Area2D) -> void:
 	CheckAreas()
 
 func CheckAreas() -> void:
@@ -29,6 +29,3 @@ func CheckAreas() -> void:
 		%AnimationPlayer.current_animation = anims[1]
 	else:
 		%AnimationPlayer.current_animation = anims[0]
-
-func _on_animation_player_current_animation_changed(name: String) -> void:
-	pass
