@@ -4,6 +4,4 @@
 
 [node name="OptionsMenuLevel" type="Node2D"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Settings" parent="CanvasLayer" instance=ExtResource("1_m2pib")]
+[node name="Settings" parent="." instance=ExtResource("1_m2pib")]
