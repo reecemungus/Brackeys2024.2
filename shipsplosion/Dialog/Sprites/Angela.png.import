@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnx3tcerk6wc5"
-path="res://.godot/imported/Harry.png-1750b2fcde76402b47486603ae455611.ctex"
+uid="uid://dt2hika5r1whi"
+path="res://.godot/imported/Angela.png-1606013d431e7499916eb8c7bd592d4c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Sprites/Harry.png"
-dest_files=["res://.godot/imported/Harry.png-1750b2fcde76402b47486603ae455611.ctex"]
+source_file="res://Dialog/Sprites/Angela.png"
+dest_files=["res://.godot/imported/Angela.png-1606013d431e7499916eb8c7bd592d4c.ctex"]
 
 [params]
 

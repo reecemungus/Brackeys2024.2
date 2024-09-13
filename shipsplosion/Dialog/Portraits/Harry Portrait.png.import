@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://shdcp3527w4a"
-path="res://.godot/imported/Jeremy.png-c53800571c08eabe6edae74e55cc5184.ctex"
+uid="uid://dga41ky5h8jd1"
+path="res://.godot/imported/Harry Portrait.png-5e2404b5caaff8c454429a6c2cd130aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Sprites/Jeremy.png"
-dest_files=["res://.godot/imported/Jeremy.png-c53800571c08eabe6edae74e55cc5184.ctex"]
+source_file="res://Dialog/Portraits/Harry Portrait.png"
+dest_files=["res://.godot/imported/Harry Portrait.png-5e2404b5caaff8c454429a6c2cd130aa.ctex"]
 
 [params]
 

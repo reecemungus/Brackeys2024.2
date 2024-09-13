@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dga41ky5h8jd1"
-path="res://.godot/imported/Harry Portrait.png-0be2c592d33bd417d68931791e090db0.ctex"
+uid="uid://cv8wdcdi1qtlt"
+path="res://.godot/imported/Avi.png-e8ee170cbe6e0b745e9ab8a2bdc3d0b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Portraits/Harry Portrait.png"
-dest_files=["res://.godot/imported/Harry Portrait.png-0be2c592d33bd417d68931791e090db0.ctex"]
+source_file="res://Dialog/Sprites/Avi.png"
+dest_files=["res://.godot/imported/Avi.png-e8ee170cbe6e0b745e9ab8a2bdc3d0b4.ctex"]
 
 [params]
 

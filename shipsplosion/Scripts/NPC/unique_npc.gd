@@ -5,17 +5,28 @@ class_name UniqueNPC
 
 var isActive : bool = false
 
+@export_group("DialogInfo")
 @export var characterName : String
-@export var dialog : String
+
+var daysSpokenTo : int = 1
+var dailyDialog : int = 1
+var isPanicked : bool = false
+
+var currentDay : int = 1
+var spokenToToday : bool = false
+
+@export_group("CharacterInfo")
+@export var sprite : Texture2D
 
 func _ready() -> void:
 	player.Interact.connect(OnSpokenTo)
+	GameInformation.OnAdvanceDay.connect(AdvanceDay)
 
-func _on_dialogue_sphere_area_entered(area: Area2D) -> void:
+func _on_dialog_zone_area_entered(area: Area2D) -> void:
 	if area.is_in_group("G_Player"):
 		isActive = true
 
-func _on_dialogue_sphere_area_exited(area: Area2D) -> void:
+func _on_dialog_zone_area_exited(area: Area2D) -> void:
 	if area.is_in_group("G_Player"):
 		isActive = false
 
@@ -23,5 +34,23 @@ func runDialog(dialogString : String) -> void:
 	Dialogic.start(dialogString)
 
 func OnSpokenTo() -> void:
-	if isActive:
-		runDialog(dialog)
+	if isActive && player.canTalk:
+		spokenToToday = true
+		
+		PlayerInformation.addRep(characterName)
+		
+		runDialog(GetTimeLine())
+		
+		if dailyDialog != 3:
+			dailyDialog = dailyDialog + 1
+
+func GetTimeLine() -> String:
+	var timelineString : String = "%s%s_%s" % [characterName, daysSpokenTo, dailyDialog]
+	return timelineString
+
+func AdvanceDay() -> void:
+	if spokenToToday:
+		dailyDialog = 1
+		daysSpokenTo = daysSpokenTo + 1
+		
+	spokenToToday = false

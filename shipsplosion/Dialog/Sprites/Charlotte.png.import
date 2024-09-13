@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ce11hp1rs1i62"
-path="res://.godot/imported/Patrick Portrait.png-973ab5f7911e2b7c2119c5c41c7d43a9.ctex"
+uid="uid://cmgijav8brhys"
+path="res://.godot/imported/Charlotte.png-cd5117bb1cfbb9996a91d039d6fb9805.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Portraits/Patrick Portrait.png"
-dest_files=["res://.godot/imported/Patrick Portrait.png-973ab5f7911e2b7c2119c5c41c7d43a9.ctex"]
+source_file="res://Dialog/Sprites/Charlotte.png"
+dest_files=["res://.godot/imported/Charlotte.png-cd5117bb1cfbb9996a91d039d6fb9805.ctex"]
 
 [params]
 

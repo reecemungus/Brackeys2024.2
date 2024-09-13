@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5fidacm2amx0"
-path="res://.godot/imported/Patrick.png-ad2f1a0980ce3a919e63a0c6c42935f6.ctex"
+uid="uid://co60pqtk7jcmk"
+path="res://.godot/imported/Jeremy Portrait.png-0394cc0d940b6e08033e8f0e48db7fb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Sprites/Patrick.png"
-dest_files=["res://.godot/imported/Patrick.png-ad2f1a0980ce3a919e63a0c6c42935f6.ctex"]
+source_file="res://Dialog/Portraits/Jeremy Portrait.png"
+dest_files=["res://.godot/imported/Jeremy Portrait.png-0394cc0d940b6e08033e8f0e48db7fb7.ctex"]
 
 [params]
 

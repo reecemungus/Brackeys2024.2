@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k5sbjluwrw2x"
-path="res://.godot/imported/Charlotte Portrait.png-bd8637a7d0da3a2129ba7b837fbde4e5.ctex"
+uid="uid://bnx3tcerk6wc5"
+path="res://.godot/imported/Harry.png-e98d3c604855c25441a48e60f38a8860.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Portraits/Charlotte Portrait.png"
-dest_files=["res://.godot/imported/Charlotte Portrait.png-bd8637a7d0da3a2129ba7b837fbde4e5.ctex"]
+source_file="res://Dialog/Sprites/Harry.png"
+dest_files=["res://.godot/imported/Harry.png-e98d3c604855c25441a48e60f38a8860.ctex"]
 
 [params]
 

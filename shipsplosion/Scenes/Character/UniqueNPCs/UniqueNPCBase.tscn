@@ -1,0 +1,113 @@
+[gd_scene load_steps=12 format=3 uid="uid://c8ssdynf847wn"]
+
+[ext_resource type="Script" path="res://Scripts/NPC/unique_npc.gd" id="1_qrf46"]
+[ext_resource type="Shape2D" uid="uid://bdo387rdebn18" path="res://Scenes/Character/CharCollision.tres" id="2_0ljj6"]
+[ext_resource type="Texture2D" uid="uid://dt2hika5r1whi" path="res://Dialog/Sprites/Angela.png" id="2_r8rq1"]
+[ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="9_kivvq"]
+[ext_resource type="Script" path="res://Scripts/feetAnim.gd" id="10_8n5ne"]
+[ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="11_wwfwv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q1xyl"]
+radius = 30.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sglo4"]
+atlas = ExtResource("9_kivvq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k458q"]
+atlas = ExtResource("9_kivvq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gd1s"]
+atlas = ExtResource("9_kivvq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rt1o4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sglo4")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k458q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gd1s")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 5.0
+}]
+
+[node name="NPC" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 0
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_qrf46")
+characterName = "Angela"
+sprite = ExtResource("2_r8rq1")
+
+[node name="NPCCollision" type="CollisionShape2D" parent="."]
+rotation = 1.57079
+shape = ExtResource("2_0ljj6")
+
+[node name="HitBox" parent="." instance=ExtResource("11_wwfwv")]
+position = Vector2(0, -15)
+
+[node name="DialogZone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogZone"]
+position = Vector2(0, -15)
+shape = SubResource("CircleShape2D_q1xyl")
+debug_color = Color(0.7, 0.7, 0, 0.0784314)
+
+[node name="SpriteContainer" type="Node2D" parent="."]
+position = Vector2(0, -15)
+scale = Vector2(30, 30)
+
+[node name="NPCFeet" type="AnimatedSprite2D" parent="SpriteContainer"]
+scale = Vector2(0.099836, 0.099836)
+sprite_frames = SubResource("SpriteFrames_rt1o4")
+animation = &"Idle"
+script = ExtResource("10_8n5ne")
+
+[node name="Sprite" type="Sprite2D" parent="SpriteContainer"]
+position = Vector2(0, -0.2)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_r8rq1")
+region_enabled = true
+region_rect = Rect2(0, 0, 20, 16)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+unique_name_in_owner = true
+debug_enabled = true
+
+[node name="NavUpdater" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+wait_time = 0.5
+autostart = true
+
+[node name="WonderTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+wait_time = 5.0
+autostart = true
+
+[node name="WaitTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+one_shot = true
+
+[connection signal="area_entered" from="DialogZone" to="." method="_on_dialog_zone_area_entered"]
+[connection signal="area_exited" from="DialogZone" to="." method="_on_dialog_zone_area_exited"]
+[connection signal="timeout" from="NavUpdater" to="." method="_on_nav_updater_timeout"]
+[connection signal="timeout" from="WonderTimer" to="." method="_on_wonder_timer_timeout"]
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

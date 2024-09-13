@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dt2hika5r1whi"
-path="res://.godot/imported/Angela.png-58aeb035615c9383f66e75994eb06a12.ctex"
+uid="uid://ddge38l3i004v"
+path="res://.godot/imported/Avi Portrait.png-b1cd534b0ba68e2bf2f2929bd91a15ba.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Sprites/Angela.png"
-dest_files=["res://.godot/imported/Angela.png-58aeb035615c9383f66e75994eb06a12.ctex"]
+source_file="res://Dialog/Portraits/Avi Portrait.png"
+dest_files=["res://.godot/imported/Avi Portrait.png-b1cd534b0ba68e2bf2f2929bd91a15ba.ctex"]
 
 [params]
 

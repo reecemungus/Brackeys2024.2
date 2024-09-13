@@ -10,7 +10,12 @@ signal InventoryToggle
 @export_group("Inventory")
 @export var inventory : Inventory
 
+@export_group("Dialog")
+var canTalk : bool = true
+
 func _ready() -> void:
+	Dialogic.timeline_started.connect(PreventDialog)
+	Dialogic.timeline_ended.connect(AllowDialog)
 	pass
 
 func _physics_process(delta: float) -> void:
@@ -31,3 +36,9 @@ func _input(event: InputEvent) -> void:
 
 func Collect(item : InventoryItem) -> void:
 	inventory.Insert(item)
+
+func PreventDialog() -> void:
+	canTalk = false
+
+func AllowDialog() -> void:
+	canTalk = true

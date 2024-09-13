@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmgijav8brhys"
-path="res://.godot/imported/Charlotte.png-5ae39f7a0c2a144555d05b975015c5f7.ctex"
+uid="uid://bbgg8qhhdxcdp"
+path="res://.godot/imported/Angela Portrait.png-5f7ab31d3de0e1675029fe3e66103f22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Sprites/Charlotte.png"
-dest_files=["res://.godot/imported/Charlotte.png-5ae39f7a0c2a144555d05b975015c5f7.ctex"]
+source_file="res://Dialog/Portraits/Angela Portrait.png"
+dest_files=["res://.godot/imported/Angela Portrait.png-5f7ab31d3de0e1675029fe3e66103f22.ctex"]
 
 [params]
 

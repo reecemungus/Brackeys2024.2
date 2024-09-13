@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbgg8qhhdxcdp"
-path="res://.godot/imported/Angela Portrait.png-05535c67db8d6d9e75060b7de1f0af6c.ctex"
+uid="uid://ce11hp1rs1i62"
+path="res://.godot/imported/Patrick Portrait.png-4f0275afbd1691c80901764970224760.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Portraits/Angela Portrait.png"
-dest_files=["res://.godot/imported/Angela Portrait.png-05535c67db8d6d9e75060b7de1f0af6c.ctex"]
+source_file="res://Dialog/Portraits/Patrick Portrait.png"
+dest_files=["res://.godot/imported/Patrick Portrait.png-4f0275afbd1691c80901764970224760.ctex"]
 
 [params]
 

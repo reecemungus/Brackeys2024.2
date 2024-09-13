@@ -1,6 +1,6 @@
 extends Node
 
-#signal AdvanceDay
+signal OnAdvanceDay
 
 var DAY : int = 0
 var TIME : String = "08:00"
@@ -46,4 +46,4 @@ func AdvanceDay() -> void:
 	
 	DAY = DAY + 1
 	
-	print("Day - %s" % [DAY])
+	OnAdvanceDay.emit()

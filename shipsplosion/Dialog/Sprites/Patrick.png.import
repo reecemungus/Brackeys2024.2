@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cv8wdcdi1qtlt"
-path="res://.godot/imported/Avi.png-b6254bcbb208f9d120acc2e1b5f87c79.ctex"
+uid="uid://c5fidacm2amx0"
+path="res://.godot/imported/Patrick.png-272fae557742c1e48fd40e67dbb9e8ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Sprites/Avi.png"
-dest_files=["res://.godot/imported/Avi.png-b6254bcbb208f9d120acc2e1b5f87c79.ctex"]
+source_file="res://Dialog/Sprites/Patrick.png"
+dest_files=["res://.godot/imported/Patrick.png-272fae557742c1e48fd40e67dbb9e8ca.ctex"]
 
 [params]
 

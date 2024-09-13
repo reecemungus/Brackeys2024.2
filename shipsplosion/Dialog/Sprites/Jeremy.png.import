@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddge38l3i004v"
-path="res://.godot/imported/Avi Portrait.png-7ac3fdaffedff495d422bca1aa129cdc.ctex"
+uid="uid://shdcp3527w4a"
+path="res://.godot/imported/Jeremy.png-93fded3c0b0c30c2d9ad5be068118335.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Characters/NPCs/Portraits/Avi Portrait.png"
-dest_files=["res://.godot/imported/Avi Portrait.png-7ac3fdaffedff495d422bca1aa129cdc.ctex"]
+source_file="res://Dialog/Sprites/Jeremy.png"
+dest_files=["res://.godot/imported/Jeremy.png-93fded3c0b0c30c2d9ad5be068118335.ctex"]
 
 [params]
 
