@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://baj082ltpbi8e"]
+[gd_scene load_steps=18 format=4 uid="uid://baj082ltpbi8e"]
 
 [ext_resource type="Script" path="res://Scripts/ship_levelScript.gd" id="1_vl32y"]
 [ext_resource type="PackedScene" uid="uid://begrf0occhpgk" path="res://Scenes/Character/player_character.tscn" id="2_sa0gw"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dxw7x2m37dfki" path="res://Scenes/Props/lightningScene.tscn" id="7_4awsa"]
 [ext_resource type="Texture2D" uid="uid://ustu2idmbmin" path="res://Assets/Props/sign.png" id="8_34xlj"]
 [ext_resource type="PackedScene" uid="uid://du1on700oxenx" path="res://Scenes/Props/door.tscn" id="10_lh7je"]
+[ext_resource type="Texture2D" uid="uid://ug8j6wfkpqdb" path="res://Assets/UIAssets/Sprite-0003.png" id="11_txbib"]
+[ext_resource type="PackedScene" uid="uid://ehgrixoqenig" path="res://Scenes/Particles/stars.tscn" id="12_juqa5"]
 
 [sub_resource type="Animation" id="Animation_7q5jm"]
 resource_name = "FadeOut&In"
@@ -526,3 +528,17 @@ position = Vector2(1733, -963)
 
 [node name="NPC16" parent="." instance=ExtResource("5_uqw8v")]
 position = Vector2(-63, 125)
+
+[node name="Background" type="TextureRect" parent="."]
+z_index = -5
+offset_left = -9882.0
+offset_top = -7000.0
+offset_right = -9842.0
+offset_bottom = -6960.0
+scale = Vector2(575.083, 794.346)
+texture = ExtResource("11_txbib")
+
+[node name="Stars" parent="." instance=ExtResource("12_juqa5")]
+z_index = -3
+position = Vector2(919, 62)
+scale = Vector2(2.2, 1)

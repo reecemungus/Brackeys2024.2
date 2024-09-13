@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnm1mvnfrbd5t"]
+[gd_scene load_steps=13 format=3 uid="uid://cnm1mvnfrbd5t"]
 
 [ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="1_sclwj"]
 [ext_resource type="Script" path="res://settings.gd" id="2_yh8vl"]
 [ext_resource type="PackedScene" uid="uid://kgnxo0qthuw0" path="res://Scenes/Particles/meteorite main  menu.tscn" id="3_mqw3e"]
 [ext_resource type="Texture2D" uid="uid://wqmheqbtdhqr" path="res://Assets/UIAssets/SAPCE.webp" id="4_5egsi"]
 [ext_resource type="PackedScene" uid="uid://ehgrixoqenig" path="res://Scenes/Particles/stars.tscn" id="5_6y5lm"]
+[ext_resource type="FontFile" uid="uid://bwaaiwv5lnc6s" path="res://Assets/UIAssets/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="5_pfstj"]
 [ext_resource type="Texture2D" uid="uid://bqos7qog2g1dg" path="res://Assets/UIAssets/Grabber.png" id="5_r1l0b"]
 [ext_resource type="Texture2D" uid="uid://nrwetwm52j5b" path="res://Assets/UIAssets/backarrow.png" id="6_b357q"]
 [ext_resource type="Texture2D" uid="uid://p1w4x3t8jkac" path="res://Assets/UIAssets/backarrowpressed.png" id="6_osnig"]
@@ -41,6 +42,7 @@ position = Vector2(-7.38919, -67.9803)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 z_index = -1
+layout_mode = 0
 offset_left = -468.966
 offset_top = -297.044
 offset_right = 510.034
@@ -71,6 +73,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("5_pfstj")
 text = "Master Volume"
 horizontal_alignment = 1
 

@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccl38q624ah8h"]
+[gd_scene load_steps=5 format=3 uid="uid://ccl38q624ah8h"]
 
 [ext_resource type="Script" path="res://Scripts/UI/player_hudScript.gd" id="1_flcg1"]
+[ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="2_plo1a"]
+[ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="3_e4m4s"]
+[ext_resource type="FontFile" uid="uid://bwaaiwv5lnc6s" path="res://Assets/UIAssets/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="4_nxw56"]
 
 [node name="PlayerHUD" type="CanvasLayer"]
 script = ExtResource("1_flcg1")
@@ -12,6 +15,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_plo1a")
+
+[node name="TextureRect" type="TextureRect" parent="HUDControl"]
+offset_left = 441.0
+offset_top = 22.0
+offset_right = 481.0
+offset_bottom = 62.0
+scale = Vector2(1.96, 1)
+theme = ExtResource("2_plo1a")
+texture = ExtResource("3_e4m4s")
 
 [node name="MarginContainer" type="MarginContainer" parent="HUDControl"]
 layout_mode = 1
@@ -37,4 +50,6 @@ size_flags_horizontal = 4
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
+theme = ExtResource("2_plo1a")
+theme_override_fonts/font = ExtResource("4_nxw56")
 text = "0000"
