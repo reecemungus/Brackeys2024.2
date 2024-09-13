@@ -9,7 +9,7 @@ var canSwing : bool = true
 func _ready() -> void:
 	player.OnAttack.connect(Swing)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var mousePos = get_global_mouse_position()
 	
 	look_at(mousePos)

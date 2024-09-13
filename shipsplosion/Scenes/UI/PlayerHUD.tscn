@@ -18,6 +18,7 @@ grow_vertical = 2
 theme = ExtResource("2_plo1a")
 
 [node name="TextureRect" type="TextureRect" parent="HUDControl"]
+layout_mode = 0
 offset_left = 441.0
 offset_top = 22.0
 offset_right = 481.0

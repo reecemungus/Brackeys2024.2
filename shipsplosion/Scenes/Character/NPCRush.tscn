@@ -50,6 +50,7 @@ animations = [{
 z_index = 1
 y_sort_enabled = true
 collision_layer = 0
+collision_mask = 0
 motion_mode = 1
 platform_on_leave = 2
 script = ExtResource("1_nyp8p")
