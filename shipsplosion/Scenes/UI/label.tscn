@@ -1,0 +1,201 @@
+[gd_scene load_steps=12 format=4 uid="uid://cv3fxutc23x7i"]
+
+[ext_resource type="Texture2D" uid="uid://b2twt7p1qsr4a" path="res://Assets/Props/escapepod (1).png" id="1_m17ii"]
+[ext_resource type="PackedScene" uid="uid://cgp27lhmgy66s" path="res://Scenes/Particles/fire.tscn" id="2_5yjpt"]
+[ext_resource type="PackedScene" uid="uid://ehgrixoqenig" path="res://Scenes/Particles/stars.tscn" id="3_uvj68"]
+[ext_resource type="Texture2D" uid="uid://ug8j6wfkpqdb" path="res://Assets/UIAssets/Sprite-0003.png" id="4_pqmce"]
+[ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="5_g80vw"]
+[ext_resource type="Script" path="res://label.gd" id="6_1cntl"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p267v"]
+texture = ExtResource("1_m17ii")
+1:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+6:4/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+9:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+0:6/0 = 0
+1:6/0 = 0
+2:6/0 = 0
+3:6/0 = 0
+4:6/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+10:6/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+4:7/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+4:8/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+4:9/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_eo00w"]
+sources/0 = SubResource("TileSetAtlasSource_p267v")
+
+[sub_resource type="Animation" id="Animation_kbne4"]
+resource_name = "Ship"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileMapLayer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-316.575, 369), Vector2(804, 369)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.56667, 4.53333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_r8qur"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TileMapLayer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-316.575, 369)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0gvfd"]
+_data = {
+"RESET": SubResource("Animation_r8qur"),
+"Ship": SubResource("Animation_kbne4")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+position = Vector2(-316.575, 369)
+rotation = -1.5708
+tile_map_data = PackedByteArray("AAABAA4AAAAAAAUAAAABAA8AAAAAAAYAAAACAA0AAAABAAQAAAACAA4AAAABAAUAAAACAA8AAAABAAYAAAACABAAAAABAAcAAAACABEAAAABAAgAAAACABIAAAABAAkAAAADAA0AAAACAAQAAAADAA4AAAACAAUAAAADAA8AAAACAAYAAAADABAAAAACAAcAAAADABEAAAACAAgAAAADABIAAAACAAkAAAAEAA0AAAADAAQAAAAEAA4AAAADAAUAAAAEAA8AAAADAAYAAAAEABAAAAADAAcAAAAEABEAAAADAAgAAAAEABIAAAADAAkAAAAFAA0AAAAEAAQAAAAFAA4AAAAEAAUAAAAFAA8AAAAEAAYAAAAFABAAAAAEAAcAAAAFABEAAAAEAAgAAAAFABIAAAAEAAkAAAAGAA0AAAAFAAQAAAAGAA4AAAAFAAUAAAAGAA8AAAAFAAYAAAAGABAAAAAFAAcAAAAGABEAAAAFAAgAAAAGABIAAAAFAAkAAAAHAA0AAAAGAAQAAAAHAA4AAAAGAAUAAAAHAA8AAAAGAAYAAAAHABAAAAAGAAcAAAAHABEAAAAGAAgAAAAHABIAAAAGAAkAAAAIAA0AAAAHAAQAAAAIAA4AAAAHAAUAAAAIAA8AAAAHAAYAAAAIABAAAAAHAAcAAAAIABEAAAAHAAgAAAAIABIAAAAHAAkAAAAJAA0AAAAIAAQAAAAJAA4AAAAIAAUAAAAJAA8AAAAIAAYAAAAJABAAAAAIAAcAAAAJABEAAAAIAAgAAAAJABIAAAAIAAkAAAAKAA0AAAAJAAQAAAAKAA4AAAAJAAUAAAAKAA8AAAAJAAYAAAAKABAAAAAJAAcAAAAKABEAAAAJAAgAAAAKABIAAAAJAAkAAAALAA4AAAAKAAUAAAALAA8AAAAKAAYAAAA=")
+tile_set = SubResource("TileSet_eo00w")
+
+[node name="Fire" parent="TileMapLayer" instance=ExtResource("2_5yjpt")]
+position = Vector2(45, 270)
+rotation = -0.0488691
+scale = Vector2(0.61, 0.759)
+
+[node name="Fire2" parent="TileMapLayer" instance=ExtResource("2_5yjpt")]
+position = Vector2(163, 265)
+rotation = -0.0488691
+scale = Vector2(0.61, 0.759)
+
+[node name="Stars" parent="." instance=ExtResource("3_uvj68")]
+z_index = -3
+position = Vector2(919, 62)
+scale = Vector2(2.2, 1)
+
+[node name="Background" type="TextureRect" parent="Stars"]
+z_index = -5
+offset_left = -9882.0
+offset_top = -7000.0
+offset_right = -9842.0
+offset_bottom = -6960.0
+scale = Vector2(575.083, 794.346)
+texture = ExtResource("4_pqmce")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_0gvfd")
+}
+autoplay = "Ship"
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 354.0
+offset_top = 49.0
+offset_right = 636.0
+offset_bottom = 92.0
+grow_horizontal = 2
+theme = ExtResource("5_g80vw")
+theme_override_font_sizes/font_size = 35
+text = "Was it worth it?"
+visible_characters = 0
+visible_ratio = 0.0
+script = ExtResource("6_1cntl")

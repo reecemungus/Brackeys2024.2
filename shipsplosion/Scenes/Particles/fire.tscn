@@ -13,6 +13,7 @@ colors = PackedColorArray(0.968627, 0.301961, 0.137255, 1, 0.972549, 0.266667, 0
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 amount = 2000
 lifetime = 0.5
+local_coords = true
 emission_shape = 1
 emission_sphere_radius = 10.0
 gravity = Vector2(0, -600)
