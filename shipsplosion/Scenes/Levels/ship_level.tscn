@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://qqjadxciqvnx" path="res://Scenes/Props/bed.tscn" id="3_2vq62"]
 [ext_resource type="PackedScene" uid="uid://dmoctpykqcsx4" path="res://Scenes/game_manager.tscn" id="4_tg6ta"]
 [ext_resource type="PackedScene" uid="uid://6bmg6cemniwx" path="res://Scenes/Character/NPC.tscn" id="5_uqw8v"]
-[ext_resource type="PackedScene" uid="uid://cupdaxtx1s5eb" path="res://Scenes/Character/UniqueNPC.tscn" id="6_abfqa"]
+[ext_resource type="PackedScene" uid="uid://c8ssdynf847wn" path="res://Scenes/Character/UniqueNPCs/UniqueNPCBase.tscn" id="6_abfqa"]
 [ext_resource type="TileSet" uid="uid://cbo7xsaj1ul1d" path="res://Assets/Tilemap/TileMap.tres" id="6_r5sly"]
 [ext_resource type="PackedScene" uid="uid://dxw7x2m37dfki" path="res://Scenes/Props/lightningScene.tscn" id="7_4awsa"]
 [ext_resource type="Texture2D" uid="uid://ustu2idmbmin" path="res://Assets/Props/sign.png" id="8_34xlj"]
@@ -144,7 +144,6 @@ libraries = {
 
 [node name="NPCCharacter" parent="." instance=ExtResource("6_abfqa")]
 position = Vector2(1437, -368)
-dialog = "testTimeline"
 
 [node name="ShipMap" type="Node2D" parent="."]
 z_index = -1
