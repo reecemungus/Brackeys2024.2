@@ -17,11 +17,11 @@
 "portraits": {
 "Patrick": {
 "export_overrides": {
-"image": "\"res://Assets/Characters/NPCs/Portraits/Patrick Portrait.png\""
+"image": "\"res://Dialog/Portraits/Patrick Portrait.png\""
 },
 "mirror": false,
-"offset": Vector2(-200, -160),
-"scale": 0.2,
+"offset": Vector2(-185, -160),
+"scale": 0.4,
 "scene": ""
 }
 },
