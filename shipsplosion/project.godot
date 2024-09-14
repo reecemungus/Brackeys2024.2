@@ -200,6 +200,7 @@ G_Fade=""
 G_Bed="G_Bed"
 G_Crowbar=""
 G_Knife=""
+G_Level=""
 
 [input]
 

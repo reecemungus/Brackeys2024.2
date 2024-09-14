@@ -222,7 +222,8 @@ tree_root = SubResource("AnimationNodeBlendTree_tge48")
 anim_player = NodePath("../AnimationPlayer")
 parameters/BlendSpace1D/blend_position = -0.0519248
 
-[node name="CollisionBlocker" type="Area2D" parent="."]
+[node name="CollisionBlocker" type="StaticBody2D" parent="."]
+unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBlocker"]
 shape = SubResource("RectangleShape2D_1m7fv")

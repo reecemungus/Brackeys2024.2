@@ -2,7 +2,7 @@ extends Node
 
 signal OnAdvanceDay
 
-var DAY : int = 0
+var DAY : int = 1
 var TIME : String = "08:00"
 
 var Hours : int = 8
