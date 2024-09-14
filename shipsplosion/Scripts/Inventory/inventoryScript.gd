@@ -2,6 +2,7 @@ extends Resource
 class_name Inventory
 
 signal UpdateInventory # update UI
+signal GiveKeycard(keycardGroup : String)
 
 @export var slots : Array[InventorySlot]
 var shouldDestroy : bool = false
@@ -23,3 +24,6 @@ func Insert(item : InventoryItem) -> void:
 		slots[inc].slotAmount += 1
 	
 	UpdateInventory.emit()
+	
+	if item.ItemName.contains("keycard"):
+		GiveKeycard.emit(item.ItemName)

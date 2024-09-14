@@ -5,10 +5,16 @@ var bodies : Array[Area2D]
 var shouldOpen : bool = false
 var anims : Array
 
+var blendValue : float = 0
+var targetBlendValue : float = 0
+@export var doorSpeed : float = 0.1
+
 func _ready() -> void:
-	anims = %AnimationPlayer.get_animation_list()
-	
-	%AnimationPlayer.play("DoorClose")
+	pass
+
+func _physics_process(delta: float) -> void:
+	blendValue = lerpf(blendValue, targetBlendValue, doorSpeed)
+	%AnimationTree.set("parameters/BlendSpace1D/blend_position", blendValue)
 
 func _on_area_entered(_area: Area2D) -> void:
 	CheckAreas()
@@ -26,6 +32,7 @@ func CheckAreas() -> void:
 			groupedBodies.insert(0, bodies[i])
 	
 	if groupedBodies.size() > 0:
-		%AnimationPlayer.current_animation = anims[1]
+		targetBlendValue = 1
+		
 	else:
-		%AnimationPlayer.current_animation = anims[0]
+		targetBlendValue = 0

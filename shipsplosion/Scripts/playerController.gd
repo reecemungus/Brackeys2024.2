@@ -16,7 +16,8 @@ var canTalk : bool = true
 func _ready() -> void:
 	Dialogic.timeline_started.connect(PreventDialog)
 	Dialogic.timeline_ended.connect(AllowDialog)
-	pass
+	
+	inventory.GiveKeycard.connect(GetKeycard)
 
 func _physics_process(delta: float) -> void:
 	var inputVector = Input.get_vector("Move_Left", "Move_Right", "Move_Up", "Move_Down")
@@ -42,3 +43,7 @@ func PreventDialog() -> void:
 
 func AllowDialog() -> void:
 	canTalk = true
+
+func GetKeycard(keycardGroup : String) -> void:
+	print("Get")
+	%HitBox.add_to_group("G_%s" % [keycardGroup])

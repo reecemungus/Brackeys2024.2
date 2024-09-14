@@ -1,12 +1,59 @@
-[gd_scene load_steps=14 format=3 uid="uid://du1on700oxenx"]
+[gd_scene load_steps=15 format=3 uid="uid://bjkcoek73l5ou"]
 
-[ext_resource type="Texture2D" uid="uid://cmlyjt326df7j" path="res://Assets/spritesheet1COMPLETE (1).png" id="1_jqxto"]
-[ext_resource type="Script" path="res://Scripts/Doors/doorScript.gd" id="1_p52eu"]
-[ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="1_pmqkw"]
-[ext_resource type="Script" path="res://Scripts/Tools/hiddenInGame.gd" id="4_vg5mv"]
+[ext_resource type="Script" path="res://Scripts/Doors/lockedDoorScript.gd" id="1_ebfbc"]
+[ext_resource type="Resource" uid="uid://b182pjegpsb57" path="res://Scenes/Inventory/Items/keycardRed.tres" id="2_1m8e6"]
+[ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="2_wqs87"]
+[ext_resource type="Texture2D" uid="uid://cmlyjt326df7j" path="res://Assets/spritesheet1COMPLETE (1).png" id="3_2ud65"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3wr76"]
 radius = 45.0
+
+[sub_resource type="Animation" id="Animation_ghju6"]
+resource_name = "DoorClosed"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Clipper/DoorRight:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(8.42105, -0.25, 0, 0.25, 0, 8.42105, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Clipper/DoorRight:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Clipper/DoorLeft:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-8.42105, -0.25, 0, 0.25, 0, -8.42105, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Clipper/DoorLeft:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
 
 [sub_resource type="Animation" id="Animation_5rnnj"]
 resource_name = "DoorOpen"
@@ -102,53 +149,6 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0)
 }
 
-[sub_resource type="Animation" id="Animation_ghju6"]
-resource_name = "DoorClosed"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Clipper/DoorRight:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(8.42105, -0.25, 0, 0.25, 0, 8.42105, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Clipper/DoorRight:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Clipper/DoorLeft:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-8.42105, -0.25, 0, 0.25, 0, -8.42105, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Clipper/DoorLeft:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mr2qk"]
 _data = {
 "DoorClosed": SubResource("Animation_ghju6"),
@@ -176,9 +176,14 @@ nodes/BlendSpace1D/position = Vector2(-100, 100)
 nodes/output/position = Vector2(100, 100)
 node_connections = [&"output", 0, &"BlendSpace1D"]
 
-[node name="Door" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1m7fv"]
+size = Vector2(16, 16)
+
+[node name="LockedDoor" type="Area2D"]
 scale = Vector2(2.5, 2.5)
-script = ExtResource("1_p52eu")
+script = ExtResource("1_ebfbc")
+keycardNeeded = ExtResource("2_1m8e6")
+modulateColor = Color(1, 0, 0, 1)
 
 [node name="EntryZone" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3wr76")
@@ -186,28 +191,23 @@ shape = SubResource("CircleShape2D_3wr76")
 [node name="Clipper" type="Sprite2D" parent="."]
 clip_children = 1
 scale = Vector2(0.475, 0.475)
-texture = ExtResource("1_pmqkw")
+texture = ExtResource("2_wqs87")
 
 [node name="DoorRight" type="Sprite2D" parent="Clipper"]
+unique_name_in_owner = true
 position = Vector2(29.4737, 0)
 scale = Vector2(2.10526, 2.10526)
-texture = ExtResource("1_jqxto")
+texture = ExtResource("3_2ud65")
 region_enabled = true
 region_rect = Rect2(120, 160, 8, 16)
 
 [node name="DoorLeft" type="Sprite2D" parent="Clipper"]
+unique_name_in_owner = true
 position = Vector2(-29.4737, 0)
 scale = Vector2(2.10526, 2.10526)
-texture = ExtResource("1_jqxto")
+texture = ExtResource("3_2ud65")
 region_enabled = true
 region_rect = Rect2(112, 160, 8, 16)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("1_jqxto")
-region_enabled = true
-region_rect = Rect2(112, 160, 16, 16)
-script = ExtResource("4_vg5mv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../AnimationTree")
@@ -221,6 +221,12 @@ root_node = NodePath(".")
 tree_root = SubResource("AnimationNodeBlendTree_tge48")
 anim_player = NodePath("../AnimationPlayer")
 parameters/BlendSpace1D/blend_position = -0.0519248
+
+[node name="CollisionBlocker" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBlocker"]
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1m7fv")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

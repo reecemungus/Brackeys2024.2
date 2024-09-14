@@ -274,7 +274,6 @@ libraries = {
 script = ExtResource("9_vil8j")
 
 [node name="HitBox" parent="." groups=["G_Player"] instance=ExtResource("12_vcgw6")]
-unique_name_in_owner = true
 position = Vector2(0, -15)
 
 [node name="Crowbar" parent="." instance=ExtResource("13_s87ro")]
