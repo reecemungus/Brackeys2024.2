@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+@onready var playerWalkingAudioStream = $MetalFootsteps
+@onready var playingAttackAudioStream = $AttackSound
+
 signal Interact
 signal OnAttack
 signal InventoryToggle
@@ -33,6 +36,8 @@ func _input(event: InputEvent) -> void:
 		
 	if event.is_action_pressed("Attack"):
 		OnAttack.emit()
+		playingAttackAudioStream.play()
+		
 
 func Collect(item : InventoryItem) -> void:
 	inventory.Insert(item)
@@ -42,3 +47,7 @@ func PreventDialog() -> void:
 
 func AllowDialog() -> void:
 	canTalk = true
+
+func _on_footstep_timer_timeout() -> void:
+	if velocity.length() > 0:
+		playerWalkingAudioStream.play()

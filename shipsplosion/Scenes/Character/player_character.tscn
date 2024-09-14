@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://begrf0occhpgk"]
+[gd_scene load_steps=25 format=3 uid="uid://begrf0occhpgk"]
 
 [ext_resource type="Script" path="res://Scripts/playerController.gd" id="1_3c8mn"]
 [ext_resource type="PackedScene" uid="uid://ccl38q624ah8h" path="res://Scenes/UI/PlayerHUD.tscn" id="2_1v0iv"]
@@ -13,6 +13,8 @@
 [ext_resource type="Script" path="res://Scripts/charAnimator.gd" id="9_vil8j"]
 [ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="12_vcgw6"]
 [ext_resource type="PackedScene" uid="uid://3kq8dbafui8a" path="res://Scenes/Weapons/Crowbar.tscn" id="13_s87ro"]
+[ext_resource type="AudioStream" uid="uid://cg1ndyc3lgmjo" path="res://Assets/Audio/melee_attack.mp3" id="14_iwp1r"]
+[ext_resource type="AudioStream" uid="uid://clxne343qgqxk" path="res://Assets/Audio/metal_footsteps1.wav" id="14_suukq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ew0od"]
 radius = 25.0
@@ -277,3 +279,17 @@ script = ExtResource("9_vil8j")
 position = Vector2(0, -15)
 
 [node name="Crowbar" parent="." instance=ExtResource("13_s87ro")]
+
+[node name="FootstepTimer" type="Timer" parent="."]
+wait_time = 0.7
+autostart = true
+
+[node name="MetalFootsteps" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_suukq")
+volume_db = -6.29
+bus = &"SFX"
+
+[node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_iwp1r")
+
+[connection signal="timeout" from="FootstepTimer" to="." method="_on_footstep_timer_timeout"]
