@@ -279,8 +279,6 @@ script = ExtResource("9_vil8j")
 unique_name_in_owner = true
 position = Vector2(0, -15)
 
-[node name="Crowbar" parent="." instance=ExtResource("13_s87ro")]
-
 [node name="FootstepTimer" type="Timer" parent="."]
 wait_time = 0.7
 autostart = true
@@ -294,5 +292,7 @@ bus = &"SFX"
 [node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("14_iwp1r")
+
+[node name="Weapon" parent="." instance=ExtResource("13_s87ro")]
 
 [connection signal="timeout" from="FootstepTimer" to="." method="_on_footstep_timer_timeout"]

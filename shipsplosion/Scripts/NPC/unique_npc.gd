@@ -34,6 +34,8 @@ var targetLocation : Vector2
 var initialLocation : Vector2
 
 func _ready() -> void:
+	%Sprite.texture = sprite
+	
 	initialLocation = global_position
 	
 	player.Interact.connect(OnSpokenTo)

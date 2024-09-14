@@ -1,7 +1,6 @@
 extends Control
 
 func _on_start_pressed() -> void:
-	print("Button pressed!")
 	get_tree().change_scene_to_file("res://Scenes/Levels/ship_level.tscn") 
 	
 

@@ -18,7 +18,6 @@ func Swing() -> void:
 	if canSwing:
 		canSwing = false
 		%Delay.start()
-		
 		%SwingParticle.emitting = true
 		player.playAttackSound()
 		
@@ -28,6 +27,8 @@ func Swing() -> void:
 			if bodies[i].is_in_group("G_Attackable"):
 				var parent = bodies[i].get_node("..")
 				parent.onHit(Damage)
+				
+		print(bodies)
 
 func _on_delay_timeout() -> void:
 	canSwing = true

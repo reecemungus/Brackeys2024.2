@@ -1,13 +1,11 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=14 format=3 uid="uid://bc1p5ym0m6m1q"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=13 format=3 uid="uid://bc1p5ym0m6m1q"]
 
 [ext_resource type="Script" path="res://Scripts/Inventory/inventorySlot.gd" id="2_0yfvy"]
 [ext_resource type="Script" path="res://Scripts/Inventory/inventoryScript.gd" id="2_1cxee"]
-[ext_resource type="Resource" uid="uid://mckrnys5sq8h" path="res://Scenes/Inventory/Items/Crowbar.tres" id="3_sa4gf"]
 
 [sub_resource type="Resource" id="Resource_d3qed"]
 script = ExtResource("2_0yfvy")
-slotItem = ExtResource("3_sa4gf")
-slotAmount = 1
+slotAmount = 0
 
 [sub_resource type="Resource" id="Resource_8e7kd"]
 script = ExtResource("2_0yfvy")

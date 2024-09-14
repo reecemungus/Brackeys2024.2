@@ -15,9 +15,10 @@ point_count = 3
 offsets = PackedFloat32Array(0, 0.762763, 1)
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
 
-[node name="Weapon" type="Area2D"]
+[node name="Weapon" type="Area2D" groups=["G_Crowbar"]]
 z_index = 2
 script = ExtResource("1_plja0")
+Damage = 65.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(60, 0)
@@ -25,6 +26,7 @@ shape = SubResource("CapsuleShape2D_e5kqf")
 
 [node name="Delay" type="Timer" parent="."]
 unique_name_in_owner = true
+autostart = true
 
 [node name="SwingParticle" type="CPUParticles2D" parent="."]
 unique_name_in_owner = true

@@ -3,6 +3,7 @@ class_name Inventory
 
 signal UpdateInventory # update UI
 signal GiveKeycard(keycardGroup : String)
+signal GiveCrowbar
 
 @export var slots : Array[InventorySlot]
 var shouldDestroy : bool = false
@@ -27,3 +28,6 @@ func Insert(item : InventoryItem) -> void:
 	
 	if item.ItemName.contains("keycard"):
 		GiveKeycard.emit(item.ItemName)
+		
+	if item.ItemName.contains("Crowbar"):
+		GiveCrowbar.emit()

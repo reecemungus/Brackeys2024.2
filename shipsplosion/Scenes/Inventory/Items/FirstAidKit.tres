@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://c8ty7jjj2vxct"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/inventoryItem.gd" id="1_ukqpc"]
+[ext_resource type="Texture2D" uid="uid://chbqblf10qijv" path="res://Assets/Items/firstaidkit.png" id="1_x43mc"]
+
+[resource]
+script = ExtResource("1_ukqpc")
+ItemName = "FirstAidKit"
+ItemTexture = ExtResource("1_x43mc")

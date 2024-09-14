@@ -164,6 +164,10 @@ G_Character="NPCs"
 G_Attackable="Damagable NPCs"
 G_keycardRed=""
 G_keycardBlue=""
+G_Fade=""
+G_Bed="G_Bed"
+G_Crowbar=""
+G_Knife=""
 
 [input]
 
