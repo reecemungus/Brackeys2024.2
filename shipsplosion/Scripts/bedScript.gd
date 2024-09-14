@@ -24,3 +24,6 @@ func AdvanceDay() -> void:
 	if isActive: # advance day if player is within range of bed
 		GameInformation.AdvanceDay()
 		fade.play("FadeOut&In")
+
+func OnSleep() -> void:
+	pass

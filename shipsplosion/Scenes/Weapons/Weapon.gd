@@ -20,6 +20,7 @@ func Swing() -> void:
 		%Delay.start()
 		
 		%SwingParticle.emitting = true
+		player.playAttackSound()
 		
 		var bodies : Array[Area2D] = get_overlapping_areas()
 		

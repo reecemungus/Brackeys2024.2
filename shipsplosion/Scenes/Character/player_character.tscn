@@ -286,11 +286,13 @@ wait_time = 0.7
 autostart = true
 
 [node name="MetalFootsteps" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
 stream = ExtResource("14_suukq")
 volume_db = -6.29
 bus = &"SFX"
 
 [node name="AttackSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
 stream = ExtResource("14_iwp1r")
 
 [connection signal="timeout" from="FootstepTimer" to="." method="_on_footstep_timer_timeout"]

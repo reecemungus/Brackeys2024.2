@@ -10,11 +10,16 @@ var dir : Vector2
 
 var targetLocation : Vector2 
 
+var initialLocation : Vector2 
+
 func _ready() -> void:
 	%WonderTimer.wait_time = %WonderTimer.wait_time + randf_range(-2, 2)
 	%WaitTimer.wait_time = randf_range(0, 5)
 	
 	%WaitTimer.start()
+	
+	GameInformation.OnAdvanceDay.connect(AdvanceDay)
+	initialLocation = global_position
 
 func _physics_process(delta: float) -> void:
 	if navAgent.distance_to_target() > acceptableRadius:
@@ -39,3 +44,6 @@ func getRandomReachablePointInRadius(origin : Vector2, radius : float) -> Vector
 	vec = vec + origin
 	
 	return vec
+
+func AdvanceDay() -> void:
+	global_position = initialLocation

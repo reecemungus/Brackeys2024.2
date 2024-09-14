@@ -1,8 +1,9 @@
 extends CharacterBody2D
 
 signal Interact
-signal OnAttack
 signal InventoryToggle
+signal OnAttack
+signal OnTrade
 
 @export_group("Movement")
 @export var speed : float = 7500.0
@@ -12,6 +13,8 @@ signal InventoryToggle
 
 @export_group("Dialog")
 var canTalk : bool = true
+
+var weaponEquipped : InventoryItem
 
 func _ready() -> void:
 	Dialogic.timeline_started.connect(PreventDialog)
@@ -34,6 +37,9 @@ func _input(event: InputEvent) -> void:
 		
 	if event.is_action_pressed("Attack"):
 		OnAttack.emit()
+		
+	if event.is_action_pressed("Trade"):
+		OnTrade.emit()
 
 func Collect(item : InventoryItem) -> void:
 	inventory.Insert(item)
@@ -47,3 +53,9 @@ func AllowDialog() -> void:
 func GetKeycard(keycardGroup : String) -> void:
 	print("Get")
 	%HitBox.add_to_group("G_%s" % [keycardGroup])
+
+func _on_footstep_timer_timeout() -> void:
+	%MetalFootsteps.play()
+
+func playAttackSound() -> void:
+	%AttackSound.play()

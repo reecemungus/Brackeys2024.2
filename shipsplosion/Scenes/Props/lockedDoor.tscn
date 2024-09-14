@@ -225,7 +225,6 @@ parameters/BlendSpace1D/blend_position = -0.0519248
 [node name="CollisionBlocker" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBlocker"]
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1m7fv")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
