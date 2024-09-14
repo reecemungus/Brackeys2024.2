@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tj4den37ftr1"
-path="res://.godot/imported/engine.png-25c74a0c1aa67c959f78f786f812a6de.ctex"
+uid="uid://cmy1xsb3hnfqs"
+path="res://.godot/imported/ControlCentre.png-56e7a68f42b37ac5397b04fb2d77f8a7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tilemap/engine.png"
-dest_files=["res://.godot/imported/engine.png-25c74a0c1aa67c959f78f786f812a6de.ctex"]
+source_file="res://Assets/Props/ControlCentre.png"
+dest_files=["res://.godot/imported/ControlCentre.png-56e7a68f42b37ac5397b04fb2d77f8a7.ctex"]
 
 [params]
 
