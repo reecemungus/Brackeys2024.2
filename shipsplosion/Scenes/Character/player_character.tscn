@@ -1,14 +1,12 @@
-[gd_scene load_steps=29 format=3 uid="uid://begrf0occhpgk"]
+[gd_scene load_steps=27 format=3 uid="uid://begrf0occhpgk"]
 
 [ext_resource type="Script" path="res://Scripts/playerController.gd" id="1_3c8mn"]
 [ext_resource type="PackedScene" uid="uid://ccl38q624ah8h" path="res://Scenes/UI/PlayerHUD.tscn" id="2_1v0iv"]
 [ext_resource type="Resource" uid="uid://bc1p5ym0m6m1q" path="res://Scenes/Inventory/Inventories/playerInventory.tres" id="2_4qojt"]
 [ext_resource type="Shape2D" uid="uid://bdo387rdebn18" path="res://Scenes/Character/CharCollision.tres" id="2_42tcq"]
-[ext_resource type="Texture2D" uid="uid://cby4i2kmt2jn8" path="res://Assets/Characters/Base/head.png" id="2_tuyq0"]
 [ext_resource type="PackedScene" uid="uid://dnxclndhuo5rf" path="res://Scenes/Inventory/inventoryUI.tscn" id="3_cqvpp"]
-[ext_resource type="Texture2D" uid="uid://uvfgbs84njrv" path="res://Assets/Characters/Base/torso.png" id="3_etdp4"]
-[ext_resource type="Texture2D" uid="uid://by2ijonb7onha" path="res://Assets/Characters/Base/legs.png" id="4_gndeo"]
 [ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="5_aebok"]
+[ext_resource type="Texture2D" uid="uid://sex8t3t57jeb" path="res://Assets/Characters/mainCharacter.png" id="6_0kc3y"]
 [ext_resource type="Texture2D" uid="uid://cvbnr1qjlepmo" path="res://Assets/Characters/Base/hands.png" id="8_q2j74"]
 [ext_resource type="Script" path="res://Scripts/charAnimator.gd" id="9_vil8j"]
 [ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="12_vcgw6"]
@@ -366,6 +364,7 @@ script = ExtResource("1_3c8mn")
 inventory = ExtResource("2_4qojt")
 
 [node name="Fade" type="CanvasModulate" parent="."]
+visible = false
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Fade" groups=["G_Fade"]]
@@ -391,6 +390,7 @@ color = Color(0.0653282, 8.31218e-05, 0.154346, 1)
 
 [node name="InteractArea" type="Area2D" parent="."]
 unique_name_in_owner = true
+visible = false
 position = Vector2(0, -15)
 
 [node name="InteractShape" type="CollisionShape2D" parent="InteractArea"]
@@ -400,17 +400,12 @@ shape = SubResource("CircleShape2D_ew0od")
 position = Vector2(0, -15)
 scale = Vector2(30, 30)
 
-[node name="PlayerHead" type="Sprite2D" parent="SpriteContainer"]
+[node name="MainCharacter" type="Sprite2D" parent="SpriteContainer"]
+position = Vector2(0, -0.2)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_tuyq0")
-
-[node name="PlayerTorso" type="Sprite2D" parent="SpriteContainer"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_etdp4")
-
-[node name="PlayerLegs" type="Sprite2D" parent="SpriteContainer"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("4_gndeo")
+texture = ExtResource("6_0kc3y")
+region_enabled = true
+region_rect = Rect2(0, 0, 20, 16)
 
 [node name="Feet" type="AnimatedSprite2D" parent="SpriteContainer"]
 unique_name_in_owner = true
@@ -420,11 +415,13 @@ animation = &"Moving"
 frame_progress = 0.44072
 
 [node name="PlayerHand_L" type="Sprite2D" parent="SpriteContainer"]
+modulate = Color(0.85098, 0.627451, 0.4, 1)
 position = Vector2(0.400119, 0.385253)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_q2j74")
 
 [node name="PlayerHand_R" type="Sprite2D" parent="SpriteContainer"]
+modulate = Color(0.85098, 0.627451, 0.4, 1)
 position = Vector2(-0.4, 0.385)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_q2j74")
@@ -437,6 +434,7 @@ script = ExtResource("9_vil8j")
 
 [node name="HitBox" parent="." groups=["G_Player"] instance=ExtResource("12_vcgw6")]
 unique_name_in_owner = true
+visible = false
 position = Vector2(0, -15)
 
 [node name="FootstepTimer" type="Timer" parent="."]
