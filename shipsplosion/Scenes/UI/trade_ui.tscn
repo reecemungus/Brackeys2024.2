@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://guf87wou7sdr"]
+[gd_scene load_steps=5 format=3 uid="uid://guf87wou7sdr"]
 
+[ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="1_k32r2"]
 [ext_resource type="Texture2D" uid="uid://dj3hys4q7hn1f" path="res://Assets/Items/crowbar.png" id="1_yk82a"]
+[ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="2_2wjp0"]
+[ext_resource type="Texture2D" uid="uid://nrwetwm52j5b" path="res://Assets/UIAssets/backarrow.png" id="4_v67wg"]
 
 [node name="TradeUI" type="CanvasLayer"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k32r2")
+region_rect = Rect2(2, 2, 34, 34)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -11,6 +27,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_2wjp0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 1
@@ -19,17 +36,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_2wjp0")
 alignment = 1
 
 [node name="Label" type="Label" parent="Control/VBoxContainer"]
 layout_mode = 2
-text = "name wants item
-Do you want to give it to them?"
+text = "Do you want to trade x for y?"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer"]
 custom_minimum_size = Vector2(0, 32)
+layout_direction = 1
 layout_mode = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Control/VBoxContainer"]
@@ -83,3 +101,8 @@ layout_mode = 2
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 text = "Yes"
+
+[node name="Backarrow" type="Sprite2D" parent="."]
+position = Vector2(485.159, 275.75)
+scale = Vector2(1.68182, 1.68182)
+texture = ExtResource("4_v67wg")

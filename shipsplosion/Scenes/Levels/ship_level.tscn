@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bnx3tcerk6wc5" path="res://Dialog/Sprites/Harry.png" id="18_xsk3o"]
 [ext_resource type="Texture2D" uid="uid://shdcp3527w4a" path="res://Dialog/Sprites/Jeremy.png" id="19_aa2w4"]
 [ext_resource type="Texture2D" uid="uid://c5fidacm2amx0" path="res://Dialog/Sprites/Patrick.png" id="20_jo5ef"]
-[ext_resource type="PackedScene" uid="uid://bns6n8yxs18bc" path="res://Scenes/game_end.tscn" id="21_63scu"]
+[ext_resource type="PackedScene" path="res://Scenes/game_end.tscn" id="21_63scu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixjmq"]
 texture = ExtResource("8_34xlj")

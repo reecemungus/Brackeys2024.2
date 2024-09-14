@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://bsbn8nlhtbbkv"]
+[gd_scene load_steps=17 format=4 uid="uid://dhs7sophhwfby"]
 
 [ext_resource type="PackedScene" uid="uid://begrf0occhpgk" path="res://Scenes/Character/player_character.tscn" id="1_djnip"]
 [ext_resource type="Script" path="res://Scripts/FinalSetPieceLevelScript.gd" id="1_pmlv4"]
@@ -371,6 +371,7 @@ position = Vector2(1700, 620)
 modulateColor = Color(1, 1, 1, 1)
 
 [node name="Background" type="TextureRect" parent="."]
+visible = false
 z_index = -5
 offset_left = -9899.0
 offset_top = -7197.0

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://b36uhs7f76bbb"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/inventoryItem.gd" id="1_plowk"]
+
+[resource]
+script = ExtResource("1_plowk")
+ItemName = "Microphone"
