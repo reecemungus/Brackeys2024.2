@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-@onready var playerWalkingAudioStream = $MetalFootsteps
-@onready var playingAttackAudioStream = $AttackSound
-
 signal Interact
 signal OnAttack
 signal InventoryToggle
@@ -19,7 +16,8 @@ var canTalk : bool = true
 func _ready() -> void:
 	Dialogic.timeline_started.connect(PreventDialog)
 	Dialogic.timeline_ended.connect(AllowDialog)
-	pass
+	
+	inventory.GiveKeycard.connect(GetKeycard)
 
 func _physics_process(delta: float) -> void:
 	var inputVector = Input.get_vector("Move_Left", "Move_Right", "Move_Up", "Move_Down")
@@ -36,8 +34,6 @@ func _input(event: InputEvent) -> void:
 		
 	if event.is_action_pressed("Attack"):
 		OnAttack.emit()
-		playingAttackAudioStream.play()
-		
 
 func Collect(item : InventoryItem) -> void:
 	inventory.Insert(item)
@@ -48,6 +44,6 @@ func PreventDialog() -> void:
 func AllowDialog() -> void:
 	canTalk = true
 
-func _on_footstep_timer_timeout() -> void:
-	if velocity.length() > 0:
-		playerWalkingAudioStream.play()
+func GetKeycard(keycardGroup : String) -> void:
+	print("Get")
+	%HitBox.add_to_group("G_%s" % [keycardGroup])

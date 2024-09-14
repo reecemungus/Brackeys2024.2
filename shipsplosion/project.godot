@@ -162,6 +162,8 @@ folder_colors={
 G_Player="Active player, 1 per scene"
 G_Character="NPCs"
 G_Attackable="Damagable NPCs"
+G_keycardRed=""
+G_keycardBlue=""
 
 [input]
 
