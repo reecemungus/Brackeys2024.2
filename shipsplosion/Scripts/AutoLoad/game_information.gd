@@ -47,3 +47,8 @@ func AdvanceDay() -> void:
 	DAY = DAY + 1
 	
 	OnAdvanceDay.emit()
+
+func _physics_process(_delta: float) -> void:
+	if TIME == "24:00":
+		var bed = get_tree().get_first_node_in_group("G_Bed")
+		bed.AdvanceDay(true)

@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://db65jdohlvy16"]
+
+[ext_resource type="Texture2D" uid="uid://cmy1xsb3hnfqs" path="res://Assets/Props/ControlCentre.png" id="1_rf2u4"]
+[ext_resource type="Texture2D" uid="uid://byemwbffqbvjl" path="res://Assets/Props/Wheel.png" id="2_m0lqm"]
+[ext_resource type="Script" path="res://Scripts/Tools/randomRotate.gd" id="3_1741d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u217j"]
+radius = 35.0
+height = 275.0
+
+[node name="NavDesk" type="Area2D"]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+scale = Vector2(3, 3)
+texture = ExtResource("1_rf2u4")
+
+[node name="Wheel" type="Sprite2D" parent="."]
+position = Vector2(0, 1.5)
+scale = Vector2(2, 2)
+texture = ExtResource("2_m0lqm")
+script = ExtResource("3_1741d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = -1.57079
+shape = SubResource("CapsuleShape2D_u217j")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="Wheel" method="_on_timer_timeout"]

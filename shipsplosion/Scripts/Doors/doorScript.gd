@@ -12,7 +12,7 @@ var targetBlendValue : float = 0
 func _ready() -> void:
 	pass
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	blendValue = lerpf(blendValue, targetBlendValue, doorSpeed)
 	%AnimationTree.set("parameters/BlendSpace1D/blend_position", blendValue)
 

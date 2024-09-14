@@ -31,10 +31,12 @@ var dir : Vector2
 
 var targetLocation : Vector2 
 
-var iniialLocation : Vector2
+var initialLocation : Vector2
 
 func _ready() -> void:
-	iniialLocation = global_position
+	%Sprite.texture = sprite
+	
+	initialLocation = global_position
 	
 	player.Interact.connect(OnSpokenTo)
 	GameInformation.OnAdvanceDay.connect(AdvanceDay)
@@ -88,7 +90,7 @@ func AdvanceDay() -> void:
 		
 	spokenToToday = false
 	
-	global_position = iniialLocation
+	global_position = initialLocation
 
 func _on_nav_updater_timeout() -> void:
 	navAgent.target_position = targetLocation
@@ -104,3 +106,6 @@ func getRandomReachablePointInRadius(origin : Vector2, radius : float) -> Vector
 	vec = vec + origin
 	
 	return vec
+
+func OnTraded() -> void:
+	pass
