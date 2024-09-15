@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl404vfhwiwej"
-path="res://.godot/imported/book.png-991dd94cd9532f3a69b800362d84bd7a.ctex"
+uid="uid://cbof0allxtq7h"
+path="res://.godot/imported/Spritesheet2 (1).png-2bf0ac5d01477b7ce0967257836c445f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/book.png"
-dest_files=["res://.godot/imported/book.png-991dd94cd9532f3a69b800362d84bd7a.ctex"]
+source_file="res://Assets/Tilemap/Spritesheet2 (1).png"
+dest_files=["res://.godot/imported/Spritesheet2 (1).png-2bf0ac5d01477b7ce0967257836c445f.ctex"]
 
 [params]
 

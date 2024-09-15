@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl404vfhwiwej"
-path="res://.godot/imported/book.png-991dd94cd9532f3a69b800362d84bd7a.ctex"
+uid="uid://0573ap20t88t"
+path="res://.godot/imported/jukebox.png-e27a15e5e7ba7b6a7fe384fee1f402e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/book.png"
-dest_files=["res://.godot/imported/book.png-991dd94cd9532f3a69b800362d84bd7a.ctex"]
+source_file="res://Assets/Props/jukebox.png"
+dest_files=["res://.godot/imported/jukebox.png-e27a15e5e7ba7b6a7fe384fee1f402e3.ctex"]
 
 [params]
 

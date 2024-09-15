@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl404vfhwiwej"
-path="res://.godot/imported/book.png-991dd94cd9532f3a69b800362d84bd7a.ctex"
+uid="uid://naw6qevfawib"
+path="res://.godot/imported/Piano.png-8e884ce64b2184ed49d6db1d579c6dec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/book.png"
-dest_files=["res://.godot/imported/book.png-991dd94cd9532f3a69b800362d84bd7a.ctex"]
+source_file="res://Assets/Props/Piano.png"
+dest_files=["res://.godot/imported/Piano.png-8e884ce64b2184ed49d6db1d579c6dec.ctex"]
 
 [params]
 
