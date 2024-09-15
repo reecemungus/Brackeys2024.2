@@ -12,8 +12,8 @@
 [ext_resource type="Script" path="res://Scripts/charAnimator.gd" id="9_vil8j"]
 [ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="12_vcgw6"]
 [ext_resource type="PackedScene" uid="uid://3kq8dbafui8a" path="res://Scenes/Weapons/Crowbar.tscn" id="13_s87ro"]
-[ext_resource type="AudioStream" uid="uid://cg1ndyc3lgmjo" path="res://Assets/Audio/melee_attack.mp3" id="14_iwp1r"]
-[ext_resource type="AudioStream" uid="uid://clxne343qgqxk" path="res://Assets/Audio/metal_footsteps1.wav" id="14_suukq"]
+[ext_resource type="AudioStream" uid="uid://cg1ndyc3lgmjo" path="res://Assets/Audio/Combat/melee_attack.mp3" id="14_iwp1r"]
+[ext_resource type="AudioStream" uid="uid://clxne343qgqxk" path="res://Assets/Audio/Footsteps/metal_footsteps1.wav" id="14_suukq"]
 
 [sub_resource type="Animation" id="Animation_il8ju"]
 resource_name = "FadeIn"

@@ -26,5 +26,5 @@ func addRep(character : String) -> void:
 			angelaRep += 1
 
 func PanickCharacter(character : String) -> void:
-	var char = get_tree().get_first_node_in_group("C_%s" % [character])
-	char.OnPanicked()
+	var targetChar = get_tree().get_first_node_in_group("C_%s" % [character])
+	targetChar.OnPanicked()

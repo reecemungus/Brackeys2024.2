@@ -10,4 +10,9 @@ metadata/_edit_horizontal_guides_ = [1110.0]
 wait_time = 2.0
 autostart = true
 
+[node name="EnemySpawner" type="Timer" parent="."]
+unique_name_in_owner = true
+autostart = true
+
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]
+[connection signal="timeout" from="EnemySpawner" to="." method="_on_enemy_spawner_timeout"]

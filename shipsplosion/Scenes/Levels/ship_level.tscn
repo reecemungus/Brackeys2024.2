@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://shdcp3527w4a" path="res://Dialog/Sprites/Jeremy.png" id="19_aa2w4"]
 [ext_resource type="Texture2D" uid="uid://c5fidacm2amx0" path="res://Dialog/Sprites/Patrick.png" id="20_jo5ef"]
 [ext_resource type="PackedScene" uid="uid://bns6n8yxs18bc" path="res://Scenes/game_end.tscn" id="21_63scu"]
-[ext_resource type="PackedScene" path="res://Scenes/Props/nav_desk.tscn" id="22_e0kh8"]
+[ext_resource type="PackedScene" uid="uid://db65jdohlvy16" path="res://Scenes/Props/nav_desk.tscn" id="22_e0kh8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixjmq"]
 texture = ExtResource("8_34xlj")
@@ -353,8 +353,33 @@ position = Vector2(1780, -594)
 
 [node name="GameManager" parent="." instance=ExtResource("4_tg6ta")]
 
-[node name="NPCCharacter" parent="." instance=ExtResource("6_abfqa")]
-position = Vector2(1440, -360)
+[node name="Angela" parent="." groups=["C_Angela"] instance=ExtResource("6_abfqa")]
+position = Vector2(-700, -593)
+
+[node name="Avi" parent="." groups=["C_Avi"] instance=ExtResource("6_abfqa")]
+position = Vector2(18, -118)
+characterName = "Avi"
+sprite = ExtResource("16_1b6nr")
+
+[node name="Charlotte" parent="." groups=["C_Charlotte"] instance=ExtResource("6_abfqa")]
+position = Vector2(716, 78)
+characterName = "Charlotte"
+sprite = ExtResource("17_125gt")
+
+[node name="Harry" parent="." groups=["C_Harry"] instance=ExtResource("6_abfqa")]
+position = Vector2(-794, 823)
+characterName = "Harry"
+sprite = ExtResource("18_xsk3o")
+
+[node name="Jeremy" parent="." groups=["C_Jeremy"] instance=ExtResource("6_abfqa")]
+position = Vector2(1727, -72)
+characterName = "Jeremy"
+sprite = ExtResource("19_aa2w4")
+
+[node name="Patrick" parent="." groups=["C_Patrick"] instance=ExtResource("6_abfqa")]
+position = Vector2(2018, -656)
+characterName = "Patrick"
+sprite = ExtResource("20_jo5ef")
 
 [node name="ShipMap" type="Node2D" parent="."]
 z_index = 1
@@ -759,31 +784,6 @@ texture = ExtResource("11_txbib")
 z_index = -3
 position = Vector2(919, 62)
 scale = Vector2(2.2, 1)
-
-[node name="NPC13" parent="." instance=ExtResource("6_abfqa")]
-position = Vector2(1608, -364)
-characterName = "Avi"
-sprite = ExtResource("16_1b6nr")
-
-[node name="NPC17" parent="." instance=ExtResource("6_abfqa")]
-position = Vector2(1774, -366)
-characterName = "Charlotte"
-sprite = ExtResource("17_125gt")
-
-[node name="NPC18" parent="." instance=ExtResource("6_abfqa")]
-position = Vector2(1460, -246)
-characterName = "Harry"
-sprite = ExtResource("18_xsk3o")
-
-[node name="NPC19" parent="." instance=ExtResource("6_abfqa")]
-position = Vector2(1460, -145)
-characterName = "Jeremy"
-sprite = ExtResource("19_aa2w4")
-
-[node name="NPC20" parent="." instance=ExtResource("6_abfqa")]
-position = Vector2(1461, -42)
-characterName = "Patrick"
-sprite = ExtResource("20_jo5ef")
 
 [node name="GameEnd" parent="." instance=ExtResource("21_63scu")]
 position = Vector2(1700, 660)
