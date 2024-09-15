@@ -26,4 +26,11 @@ func _ready() -> void:
 	print(chosenChar)
 	
 	Dialogic.start(chosenChar+"Finale")
-	%Character.texture = load("res://Dialog/Sprites/%s.png" % [chosenChar])
+	%Character.texture = load ("res://Dialog/Sprites/%s.png" % [chosenChar])
+	
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "Stay":
+		get_tree().change_scene_to_file("res://Scenes/Levels/MainMenu/Day Transitions/EndOfGame.tscn")
+	if anim_name == "Leave":
+		get_tree().change_scene_to_file("res://Scenes/Levels/MainMenu/Day Transitions/EndOfGame.tscn")

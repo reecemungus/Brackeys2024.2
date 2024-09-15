@@ -3,9 +3,11 @@ Jeremy: What are you doing? Get out of my way! I paid good money for that escape
 Jeremy: What makes you think that you deserve that escape pod more than me? I've worked so damn hard to get where I am.
 Jeremy: So many people have been praying on my downfall. You're just someone else whose trying to put me down.
 Jeremy: So, I'll tell you now. Get out of my way!
-- Let Jeremy take the escape pod
+- Let Jeremy take the escape pod.
 	Jeremy: That's right.... Wait, you're actually letting me?
-	Jeremy: I'm so used to being beaten down, I think I deserved a kind gesture like this.
 	Jeremy: The world works in funny ways, I suppose. Thank you. I...I won't forget what you did for me today. It's so much more than you think.
-- Take the escape pod yourself
 	Jeremy: No! Dammit, you can't do this to me! Not again! I just wanted to deserve some kindness.
+	do EndAnimation.Anim("Stay")
+- Take the escape pod yourself.
+	Jeremy: No! Dammit, you can't do this to me! Not again! I just wanted to deserve some kindness.
+	do EndAnimation.Anim("Leave")

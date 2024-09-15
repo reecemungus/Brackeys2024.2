@@ -6,6 +6,8 @@ Harry: Fulfill my promise, keep her dream alive.
 - Let Harry take the escape pod
 	Harry: But...but why? You've got your whole life ahead of you. Mine's dwindling away.
 	Harry: Well, I must thank you. I get to see Hayley one last time.
+	do EndAnimation.Anim("Stay")
 - Take the escape pod yourself
 	Harry: Thank you. Y'know, you've got a good heart kid.
 	Harry: Goodbye, Hayley...I love you so much.
+	do EndAnimation.Anim("Leave")

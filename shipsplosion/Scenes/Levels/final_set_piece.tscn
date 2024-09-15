@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dhs7sophhwfby"]
+[gd_scene load_steps=21 format=4 uid="uid://dhs7sophhwfby"]
 
 [ext_resource type="Script" path="res://Scripts/FinalSetPieceLevelScript.gd" id="1_pmlv4"]
 [ext_resource type="TileSet" uid="uid://cbo7xsaj1ul1d" path="res://Assets/Tilemap/TileMap.tres" id="2_owraq"]
@@ -328,6 +328,72 @@ sources/2 = SubResource("TileSetAtlasSource_l2ahl")
 sources/4 = SubResource("TileSetAtlasSource_yx18o")
 sources/5 = SubResource("TileSetAtlasSource_x2top")
 
+[sub_resource type="Animation" id="Animation_4yjid"]
+resource_name = "Stay"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2102, 741), Vector2(2258, 815), Vector2(2258, 1002)]
+}
+
+[sub_resource type="Animation" id="Animation_cmg8v"]
+resource_name = "Leave"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainCharacter:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(2220, 740), Vector2(2262, 813), Vector2(2262, 956)]
+}
+
+[sub_resource type="Animation" id="Animation_qej8t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2102, 741)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainCharacter:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2220, 740)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7we8e"]
+_data = {
+"Leave": SubResource("Animation_cmg8v"),
+"RESET": SubResource("Animation_qej8t"),
+"Stay": SubResource("Animation_4yjid")
+}
+
 [node name="FinalSetPiece" type="Node2D"]
 script = ExtResource("1_pmlv4")
 
@@ -389,3 +455,10 @@ scale = Vector2(2.5, 2.5)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(2144, 742)
 zoom = Vector2(1.5, 1.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["g_endanimation"]]
+libraries = {
+"": SubResource("AnimationLibrary_7we8e")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

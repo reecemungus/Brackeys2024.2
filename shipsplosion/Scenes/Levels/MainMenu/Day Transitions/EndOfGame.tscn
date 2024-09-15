@@ -250,6 +250,7 @@ frame_progress = 0.229232
 libraries = {
 "": SubResource("AnimationLibrary_lml4s")
 }
+autoplay = "Ship"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
