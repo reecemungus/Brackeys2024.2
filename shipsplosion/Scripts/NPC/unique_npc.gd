@@ -10,7 +10,7 @@ var isActive : bool = false
 
 var daysSpokenTo : int = 1
 var dailyDialog : int = 1
-var isPanicked : bool = true
+var isPanicked : bool = false
 
 var currentDay : int = 1
 var spokenToToday : bool = false
@@ -87,6 +87,9 @@ func OnSpokenTo() -> void:
 			PlayerInformation.addRep(characterName)
 			
 			runDialog(GetTimeLinePanicked())
+			
+			if dailyDialog != 2:
+				dailyDialog = dailyDialog + 1
 
 func GetTimeLine() -> String:
 	var timelineString : String = "%s%s_%s" % [characterName, daysSpokenTo, dailyDialog]
@@ -128,3 +131,5 @@ func OnPanicked() -> void:
 	dailyDialog = 1
 	
 	spokenToToday = false
+	
+	print("AAAAAhhh")

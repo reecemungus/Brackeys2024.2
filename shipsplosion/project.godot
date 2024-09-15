@@ -201,6 +201,12 @@ G_Bed="G_Bed"
 G_Crowbar=""
 G_Knife=""
 G_Level=""
+C_Angela=""
+C_Avi=""
+C_Charlotte=""
+C_Harry=""
+C_Jeremy=""
+C_Patrick=""
 
 [input]
 

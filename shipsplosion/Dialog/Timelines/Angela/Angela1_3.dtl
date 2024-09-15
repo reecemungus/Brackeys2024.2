@@ -1,3 +1,6 @@
 join Angela center
 Angela: A lovely man called Harry told me the shops here are great.
 Angela: I might even be able to buy some baby clothes!
+- Tell her
+	do PlayerInformation.PanickCharacter("Angela")
+- Dont tell her
