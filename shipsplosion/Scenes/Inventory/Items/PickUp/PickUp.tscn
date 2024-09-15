@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Inventory/pickUp.gd" id="1_ww4ru"]
 
 [node name="PickUp" type="Area2D"]
-z_index = 1
+z_index = 5
 y_sort_enabled = true
 script = ExtResource("1_ww4ru")
 

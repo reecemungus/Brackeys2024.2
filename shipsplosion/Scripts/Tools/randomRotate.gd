@@ -8,5 +8,5 @@ func _ready() -> void:
 func _on_timer_timeout() -> void:
 	targetAngle = randf_range(-360, 360)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	global_rotation = lerp_angle(global_rotation, targetAngle, 0.01)

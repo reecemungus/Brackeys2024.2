@@ -13,6 +13,7 @@ var targetBlendValue : float = 0
 @export var modulateColor : Color
 
 var isOpen : bool = false
+var hasOpened : bool = false
 
 func _ready() -> void:
 	%DoorRight.modulate = modulateColor
@@ -39,6 +40,9 @@ func CheckAreas() -> void:
 	
 	if groupedBodies.size() > 0:
 		targetBlendValue = 1
-		%CollisionBlocker.queue_free()
+		
+		if !hasOpened:
+			%CollisionBlocker.queue_free()
+			hasOpened = true
 	else:
 		targetBlendValue = 0
