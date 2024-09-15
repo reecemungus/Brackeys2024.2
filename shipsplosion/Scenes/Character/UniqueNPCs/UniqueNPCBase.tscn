@@ -55,7 +55,8 @@ platform_on_leave = 2
 script = ExtResource("1_qrf46")
 characterName = "Angela"
 sprite = ExtResource("2_r8rq1")
-speed = 5000.0
+speed = 0.0
+wanderRadius = 0.0
 
 [node name="NPCCollision" type="CollisionShape2D" parent="."]
 rotation = 1.57079
