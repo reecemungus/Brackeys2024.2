@@ -380,12 +380,3 @@ offset_right = -9947.0
 offset_bottom = -7213.0
 scale = Vector2(575.083, 794.346)
 texture = ExtResource("10_2ywuu")
-
-[node name="Character" type="Sprite2D" parent="."]
-unique_name_in_owner = true
-position = Vector2(2102, 741)
-scale = Vector2(2.5, 2.5)
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(2144, 742)
-zoom = Vector2(1.5, 1.5)
