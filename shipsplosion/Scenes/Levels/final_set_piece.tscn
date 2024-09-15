@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://dhs7sophhwfby"]
+[gd_scene load_steps=18 format=4 uid="uid://dhs7sophhwfby"]
 
 [ext_resource type="PackedScene" uid="uid://begrf0occhpgk" path="res://Scenes/Character/player_character.tscn" id="1_djnip"]
 [ext_resource type="Script" path="res://Scripts/FinalSetPieceLevelScript.gd" id="1_pmlv4"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dg4rjsc8os8e4" path="res://Assets/Props/Water Cooler.png" id="7_x6pju"]
 [ext_resource type="PackedScene" uid="uid://bjkcoek73l5ou" path="res://Scenes/Props/lockedDoor.tscn" id="8_3oxgh"]
 [ext_resource type="Texture2D" uid="uid://ug8j6wfkpqdb" path="res://Assets/UIAssets/Sprite-0003.png" id="10_2ywuu"]
+[ext_resource type="FontFile" uid="uid://dw3s7fowrhlkh" path="res://Assets/UIAssets/Pixelify_Sans/static/PixelifySans-Bold.ttf" id="11_3dp0n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e20kd"]
 texture = ExtResource("4_qxdl6")
@@ -379,3 +380,26 @@ offset_right = -9859.0
 offset_bottom = -7157.0
 scale = Vector2(575.083, 794.346)
 texture = ExtResource("10_2ywuu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0199145, 1, 0.986238, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("11_3dp0n")
+theme_override_font_sizes/font_size = 40
+text = "WE FORGOT TO PUSH 
+THE ENDING SETPIECE :(
+
+GUESS YOU'LL HAVE TO BUY IT 
+ON STEAM TO SEE HOW
+IT ENDS
+
+THANKS FOR PLAYING"
+horizontal_alignment = 1
+vertical_alignment = 1

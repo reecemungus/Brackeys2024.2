@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cs7ogcuny2col"]
+
+[ext_resource type="Script" path="res://Scripts/audio_manager.gd" id="1_mgbj2"]
+[ext_resource type="AudioStream" uid="uid://cnwsh1fhk3o12" path="res://Assets/Audio/Interactions/item_pickup.mp3" id="2_7ipdj"]
+[ext_resource type="AudioStream" uid="uid://d3dl2pevl77xw" path="res://Assets/Audio/Music/WeatherWarningMainThemeFinished.wav" id="3_gcst7"]
+[ext_resource type="AudioStream" uid="uid://djymalb1j65a1" path="res://Assets/Audio/Music/WeatherWarningChaosTheme.wav" id="4_kklaq"]
+
+[node name="AudioManager" type="Node2D"]
+script = ExtResource("1_mgbj2")
+
+[node name="Pickup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_7ipdj")
+
+[node name="MusicDay" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_gcst7")
+volume_db = -15.0
+
+[node name="MusicRush" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_kklaq")
+volume_db = -15.0
+
+[connection signal="finished" from="MusicDay" to="." method="_on_music_day_finished"]
+[connection signal="finished" from="MusicRush" to="." method="_on_music_rush_finished"]

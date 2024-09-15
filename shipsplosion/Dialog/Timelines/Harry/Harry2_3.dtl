@@ -1,2 +1,5 @@
 join Harry center
 Harry: For me, being surrounded with what you love and the people you love, that's what dreams are made of.
+- Tell him
+	do PlayerInformation.PanickCharacter("Harry")
+- Dont tell him

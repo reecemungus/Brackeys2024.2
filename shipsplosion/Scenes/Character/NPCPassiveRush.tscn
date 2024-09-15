@@ -1,0 +1,114 @@
+[gd_scene load_steps=16 format=3 uid="uid://cne3wwb7e1qpy"]
+
+[ext_resource type="Script" path="res://Scripts/NPC/NPCFodder.gd" id="1_6y1ix"]
+[ext_resource type="Shape2D" uid="uid://bdo387rdebn18" path="res://Scenes/Character/CharCollision.tres" id="2_vsp8d"]
+[ext_resource type="Script" path="res://Scripts/NPC/NPCSpriteScript.gd" id="3_3yvyc"]
+[ext_resource type="Gradient" uid="uid://c3dh6e6ux5v08" path="res://Scenes/Character/ClothingColorGradient.tres" id="4_4kesy"]
+[ext_resource type="Gradient" uid="uid://b8xcf7d78mn1b" path="res://Scenes/Character/SkinColorGradient.tres" id="5_r1tvp"]
+[ext_resource type="Texture2D" uid="uid://cby4i2kmt2jn8" path="res://Assets/Characters/Base/head.png" id="6_jyu4g"]
+[ext_resource type="Texture2D" uid="uid://uvfgbs84njrv" path="res://Assets/Characters/Base/torso.png" id="7_c2itf"]
+[ext_resource type="Texture2D" uid="uid://by2ijonb7onha" path="res://Assets/Characters/Base/legs.png" id="8_41p3w"]
+[ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="9_pkhds"]
+[ext_resource type="Script" path="res://Scripts/feetAnim.gd" id="10_ovoec"]
+[ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="11_kryij"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sglo4"]
+atlas = ExtResource("9_pkhds")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k458q"]
+atlas = ExtResource("9_pkhds")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gd1s"]
+atlas = ExtResource("9_pkhds")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rt1o4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sglo4")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k458q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gd1s")
+}],
+"loop": true,
+"name": &"Moving",
+"speed": 5.0
+}]
+
+[node name="NPC" type="CharacterBody2D"]
+z_index = 1
+y_sort_enabled = true
+collision_layer = 0
+collision_mask = 0
+motion_mode = 1
+platform_on_leave = 2
+script = ExtResource("1_6y1ix")
+speed = 10000.0
+
+[node name="NPCCollision" type="CollisionShape2D" parent="."]
+rotation = 1.57079
+shape = ExtResource("2_vsp8d")
+
+[node name="SpriteContainer" type="Node2D" parent="."]
+position = Vector2(0, -15)
+scale = Vector2(30, 30)
+script = ExtResource("3_3yvyc")
+ClothingColors = ExtResource("4_4kesy")
+skinColors = ExtResource("5_r1tvp")
+
+[node name="NPCHead" type="Sprite2D" parent="SpriteContainer"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_jyu4g")
+
+[node name="NPCTorso" type="Sprite2D" parent="SpriteContainer"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_c2itf")
+
+[node name="NPCLegs" type="Sprite2D" parent="SpriteContainer"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_41p3w")
+
+[node name="NPCFeet" type="AnimatedSprite2D" parent="SpriteContainer"]
+scale = Vector2(0.099836, 0.099836)
+sprite_frames = SubResource("SpriteFrames_rt1o4")
+animation = &"Idle"
+script = ExtResource("10_ovoec")
+
+[node name="HitBox" parent="." instance=ExtResource("11_kryij")]
+position = Vector2(0, -15)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+unique_name_in_owner = true
+
+[node name="NavUpdater" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+wait_time = 0.5
+autostart = true
+
+[node name="WonderTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+wait_time = 2.0
+autostart = true
+
+[node name="WaitTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+process_callback = 0
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="NavUpdater" to="." method="_on_nav_updater_timeout"]
+[connection signal="timeout" from="WonderTimer" to="." method="_on_wonder_timer_timeout"]
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

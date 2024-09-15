@@ -1,2 +1,5 @@
 join Charlotte center
 Charlotte: There's a weird energy about this ship, don't you think?
+- Tell her
+	do PlayerInformation.PanickCharacter("Charlotte")
+- Dont tell her

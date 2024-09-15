@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://begrf0occhpgk"]
+[gd_scene load_steps=30 format=3 uid="uid://begrf0occhpgk"]
 
 [ext_resource type="Script" path="res://Scripts/playerController.gd" id="1_3c8mn"]
 [ext_resource type="PackedScene" uid="uid://ccl38q624ah8h" path="res://Scenes/UI/PlayerHUD.tscn" id="2_1v0iv"]
@@ -8,12 +8,14 @@
 [ext_resource type="Script" path="res://Scripts/Tools/hiddenInEditor.gd" id="3_iqdf8"]
 [ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="5_aebok"]
 [ext_resource type="Texture2D" uid="uid://sex8t3t57jeb" path="res://Assets/Characters/mainCharacter.png" id="6_0kc3y"]
+[ext_resource type="Script" path="res://Scenes/Character/cameraShake.gd" id="7_qvtqt"]
 [ext_resource type="Texture2D" uid="uid://cvbnr1qjlepmo" path="res://Assets/Characters/Base/hands.png" id="8_q2j74"]
 [ext_resource type="Script" path="res://Scripts/charAnimator.gd" id="9_vil8j"]
 [ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="12_vcgw6"]
 [ext_resource type="PackedScene" uid="uid://3kq8dbafui8a" path="res://Scenes/Weapons/Crowbar.tscn" id="13_s87ro"]
 [ext_resource type="AudioStream" uid="uid://cg1ndyc3lgmjo" path="res://Assets/Audio/Combat/melee_attack.mp3" id="14_iwp1r"]
 [ext_resource type="AudioStream" uid="uid://clxne343qgqxk" path="res://Assets/Audio/Footsteps/metal_footsteps1.wav" id="14_suukq"]
+[ext_resource type="PackedScene" uid="uid://cs7ogcuny2col" path="res://Scenes/audio_manager.tscn" id="15_uhiqt"]
 
 [sub_resource type="Animation" id="Animation_il8ju"]
 resource_name = "FadeIn"
@@ -382,13 +384,18 @@ libraries = {
 rotation = 1.5708
 shape = ExtResource("2_42tcq")
 
-[node name="PlayerCamera" type="Camera2D" parent="."]
+[node name="PlayerCamera" type="Camera2D" parent="." groups=["G_Camera"]]
 scale = Vector2(30, 30)
 position_smoothing_enabled = true
+script = ExtResource("7_qvtqt")
 
 [node name="ColorRect" type="ColorRect" parent="PlayerCamera"]
 z_index = -10
 color = Color(0.0653282, 8.31218e-05, 0.154346, 1)
+
+[node name="ShakeTimer" type="Timer" parent="PlayerCamera"]
+unique_name_in_owner = true
+autostart = true
 
 [node name="InteractArea" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -453,4 +460,8 @@ stream = ExtResource("14_iwp1r")
 
 [node name="Weapon" parent="." instance=ExtResource("13_s87ro")]
 
+[node name="AudioManager" parent="." instance=ExtResource("15_uhiqt")]
+unique_name_in_owner = true
+
+[connection signal="timeout" from="PlayerCamera/ShakeTimer" to="PlayerCamera" method="_on_shake_timer_timeout"]
 [connection signal="timeout" from="FootstepTimer" to="." method="_on_footstep_timer_timeout"]

@@ -1,2 +1,5 @@
 join Harry center
 Harry: I'm grateful to be able to cross one last thing off my bucket list.
+- Tell him
+	do PlayerInformation.PanickCharacter("Harry")
+- Dont tell him

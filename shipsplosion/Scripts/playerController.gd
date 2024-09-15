@@ -50,6 +50,7 @@ func _input(event: InputEvent) -> void:
 
 func Collect(item : InventoryItem) -> void:
 	inventory.Insert(item)
+	%AudioManager.playSound("Pickup")
 
 func PreventDialog() -> void:
 	canTalk = false
@@ -62,7 +63,8 @@ func GetKeycard(keycardGroup : String) -> void:
 	%HitBox.add_to_group("G_%s" % [keycardGroup])
 
 func _on_footstep_timer_timeout() -> void:
-	%MetalFootsteps.play()
+	if velocity.length() != 0:
+		%MetalFootsteps.play()
 
 func playAttackSound() -> void:
 	%AttackSound.play()

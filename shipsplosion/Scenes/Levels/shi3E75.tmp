@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=4 uid="uid://baj082ltpbi8e"]
+[gd_scene load_steps=37 format=4 uid="uid://baj082ltpbi8e"]
 
 [ext_resource type="Script" path="res://Scripts/ship_levelScript.gd" id="1_vl32y"]
 [ext_resource type="PackedScene" uid="uid://begrf0occhpgk" path="res://Scenes/Character/player_character.tscn" id="2_sa0gw"]
@@ -28,6 +28,8 @@
 [ext_resource type="PackedScene" uid="uid://bjkcoek73l5ou" path="res://Scenes/Props/lockedDoor.tscn" id="26_dgrqf"]
 [ext_resource type="Resource" uid="uid://b182pjegpsb57" path="res://Scenes/Inventory/Items/keycardRed.tres" id="27_jui0f"]
 [ext_resource type="Resource" uid="uid://8pk6p8yqryx0" path="res://Scenes/Inventory/Items/keycardBlue.tres" id="28_c6py6"]
+[ext_resource type="PackedScene" uid="uid://cgp27lhmgy66s" path="res://Scenes/Particles/fire.tscn" id="29_qijow"]
+[ext_resource type="Script" path="res://Scripts/Tools/day4Only.gd" id="30_ujh00"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixjmq"]
 texture = ExtResource("8_34xlj")
@@ -828,3 +830,9 @@ modulateColor = Color(0, 0.488924, 1, 1)
 [node name="PickUp2" parent="." instance=ExtResource("23_aauyb")]
 position = Vector2(1780, -216)
 item = ExtResource("27_jui0f")
+
+[node name="Fire" parent="." instance=ExtResource("29_qijow")]
+z_index = 3
+position = Vector2(1438, -1020)
+scale = Vector2(6.09426, 6.09426)
+script = ExtResource("30_ujh00")

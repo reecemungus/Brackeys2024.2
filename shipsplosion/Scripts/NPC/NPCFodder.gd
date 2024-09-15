@@ -47,3 +47,7 @@ func getRandomReachablePointInRadius(origin : Vector2, radius : float) -> Vector
 
 func AdvanceDay() -> void:
 	global_position = initialLocation
+	
+	if GameInformation.DAY == 4:
+		speed = 10000
+		%WonderTimer.wait_time = 2 + randf_range(-1, 1)

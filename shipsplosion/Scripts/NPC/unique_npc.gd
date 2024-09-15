@@ -107,6 +107,9 @@ func AdvanceDay() -> void:
 	spokenToToday = false
 	
 	global_position = initialLocation
+	
+	if GameInformation.DAY == 4:
+		queue_free()
 
 func _on_nav_updater_timeout() -> void:
 	navAgent.target_position = targetLocation
