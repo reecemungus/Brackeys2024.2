@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 PlayerInformation="*res://Scripts/AutoLoad/player_information.gd"
 GameInformation="*res://Scripts/AutoLoad/game_information.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+EndAnimation="*res://Scripts/AutoLoad/end_animation.gd"
 
 [dialogic]
 
@@ -44,10 +45,10 @@ directories/dtl_directory={
 "Angela2_3": "res://Dialog/Timelines/Angela/Angela2_3.dtl",
 "Angela2_3Panic": "res://Dialog/Timelines/Angela/Angela2_3Panic.dtl",
 "Angela3_1": "res://Dialog/Timelines/Angela/Angela3_1.dtl",
+"Angela3_1Panic": "res://Dialog/Timelines/Angela/Angela3_1Panic.dtl",
 "Angela3_2": "res://Dialog/Timelines/Angela/Angela3_2.dtl",
 "Angela3_2Panic": "res://Dialog/Timelines/Angela/Angela3_2Panic.dtl",
 "Angela3_3": "res://Dialog/Timelines/Angela/Angela3_3.dtl",
-"Angela3_Panic": "res://Dialog/Timelines/Angela/Angela3_1Panic.dtl",
 "AngelaFinale": "res://Dialog/Timelines/Angela/AngelaFinale.dtl",
 "AngelaTrade_1": "res://Dialog/Timelines/Angela/AngelaTrade_1.dtl",
 "AngelaTrade_2": "res://Dialog/Timelines/Angela/AngelaTrade_2.dtl",

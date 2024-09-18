@@ -6,5 +6,7 @@ Charlotte: I just wanna go back to my little life in my little town. Please, let
 - Let Charlotte take the escape pod
 	Charlotte: Wait, really? Thank you...you remind me of my grandparents.
 	Charlotte: They would really like you. Thanks to you, I get to see them again.
+	do EndAnimation.Anim("Stay")
 - Take the escape rod yourself
 	Charlotte: Wait, please...don't leave me here. I'm so scared.
+	do EndAnimation.Anim("Leave")

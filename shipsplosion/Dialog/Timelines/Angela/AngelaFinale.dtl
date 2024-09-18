@@ -4,5 +4,7 @@ Angela: Please, think of my children. I can't die here. They need to live.
 Angela: I tried so hard to build a nice life for them...don't end it before it starts.
 - Let Angela take the escape pod
 	Angela: Thank you! Thank you so much! I won't forget this... My babies will live because of you.
+	do EndAnimation.Anim("Stay")
 - Take the escape pod yourself
 	Angela: No, please. You can't do this! Think of my babies, pleaseeee...
+	do EndAnimation.Anim("Leave")
