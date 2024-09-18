@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=3 uid="uid://djymxgkkp57ly"]
+[gd_scene load_steps=91 format=3 uid="uid://pqe81y2nj1bn"]
 
 [ext_resource type="Script" path="res://Scripts/intro_cutscene.gd" id="1_t4b2i"]
 [ext_resource type="Texture2D" uid="uid://cj7h6l80mtqbl" path="res://Assets/rocketanimation-Sheet.png" id="1_w6fc5"]
@@ -581,7 +581,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vbcyc")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
 "speed": 10.0
 }]
@@ -751,7 +751,7 @@ frame_progress = 0.596316
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 10.0
+wait_time = 15.0
 one_shot = true
 autostart = true
 
