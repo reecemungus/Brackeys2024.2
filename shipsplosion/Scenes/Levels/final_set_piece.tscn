@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=4 uid="uid://dhs7sophhwfby"]
 
-[ext_resource type="Script" path="res://Scripts/FinalSetPieceLevelScript.gd" id="1_pmlv4"]
+[ext_resource type="Script" path="res://Scripts/AutoLoad/FinalSetPieceLevelScript.gd" id="1_pmlv4"]
 [ext_resource type="TileSet" uid="uid://cbo7xsaj1ul1d" path="res://Assets/Tilemap/TileMap.tres" id="2_owraq"]
 [ext_resource type="PackedScene" uid="uid://dxw7x2m37dfki" path="res://Scenes/Props/lightningScene.tscn" id="3_ov5i2"]
 [ext_resource type="Texture2D" uid="uid://ustu2idmbmin" path="res://Assets/Props/sign.png" id="4_qxdl6"]

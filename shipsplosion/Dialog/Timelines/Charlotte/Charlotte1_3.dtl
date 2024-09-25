@@ -1,2 +1,5 @@
 join Charlotte center
 Charlotte: I really wanted to get tickets for my grandparents, as a thanks for all the times they've supported me, but they were too expensive.
+- Tell her
+	do PlayerInformation.PanickCharacter("Charlotte")
+- Dont tell her

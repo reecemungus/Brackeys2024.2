@@ -1,3 +1,6 @@
 join Patrick center
 Patrick: I've been talking to this sweet lady, Angela, about wedding planning.
 Patrick: Only thing keeping me sane on this damn ship.
+- Tell him
+	do PlayerInformation.PanickCharacter("Patrick")
+- Dont tell him

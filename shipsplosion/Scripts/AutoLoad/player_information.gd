@@ -2,7 +2,7 @@ extends Node
 
 @export_category("CharacterTracker")
 var angelaRep : int = 0
-var aviRep : int = 1
+var aviRep : int = 0
 var charlotteRep : int = 0
 var harryRep : int = 0
 var jeremyRep : int = 0

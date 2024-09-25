@@ -12,6 +12,7 @@ autostart = true
 
 [node name="EnemySpawner" type="Timer" parent="."]
 unique_name_in_owner = true
+wait_time = 2.0
 autostart = true
 
 [connection signal="timeout" from="HourTimer" to="." method="_on_hour_timer_timeout"]

@@ -1,3 +1,6 @@
 join Angela center
 Angela: I can't wait to meet my babies when we land.
 Angela: I can definitely wait to go back to work though!
+- Tell her
+	do PlayerInformation.PanickCharacter("Angela")
+- Dont tell her

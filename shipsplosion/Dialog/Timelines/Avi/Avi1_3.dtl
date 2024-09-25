@@ -1,2 +1,5 @@
 join Avi center
 Avi: It makes me so happy that my passion can put smiles on other people's faces.
+- Tell him
+	do PlayerInformation.PanickCharacter("Avi")
+- Dont tell him

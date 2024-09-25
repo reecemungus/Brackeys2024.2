@@ -5,10 +5,10 @@
 [ext_resource type="Script" path="res://Scripts/Tools/randomRotate.gd" id="3_1741d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u217j"]
-radius = 35.0
-height = 275.0
+radius = 55.0
+height = 288.0
 
-[node name="NavDesk" type="Area2D"]
+[node name="NavDesk" type="StaticBody2D"]
 z_index = 1
 y_sort_enabled = true
 

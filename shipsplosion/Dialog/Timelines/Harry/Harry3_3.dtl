@@ -1,2 +1,5 @@
 join Harry center
 Harry: If something's the matter, I'm sure we can work it out.
+- Tell him
+	do PlayerInformation.PanickCharacter("Harry")
+- Dont tell him

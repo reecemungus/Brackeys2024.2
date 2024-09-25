@@ -13,12 +13,13 @@ var targetBlendValue : float = 0
 @export var modulateColor : Color
 
 var isOpen : bool = false
+var hasOpened : bool = false
 
 func _ready() -> void:
 	%DoorRight.modulate = modulateColor
 	%DoorLeft.modulate = modulateColor
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	blendValue = lerpf(blendValue, targetBlendValue, doorSpeed)
 	%AnimationTree.set("parameters/BlendSpace1D/blend_position", blendValue)
 
@@ -39,6 +40,9 @@ func CheckAreas() -> void:
 	
 	if groupedBodies.size() > 0:
 		targetBlendValue = 1
-		%CollisionBlocker.queue_free()
+		
+		if !hasOpened:
+			%CollisionBlocker.queue_free()
+			hasOpened = true
 	else:
 		targetBlendValue = 0

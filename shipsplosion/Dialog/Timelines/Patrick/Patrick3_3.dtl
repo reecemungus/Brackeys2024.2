@@ -1,3 +1,6 @@
 join Patrick center
 Patrick: You know when you feel like something bad is about to happen?
 Patrick: Yeah, I feel like that right now.
+- Tell him
+	do PlayerInformation.PanickCharacter("Patrick")
+- Dont tell him

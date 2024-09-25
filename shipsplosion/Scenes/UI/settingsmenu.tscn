@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cnm1mvnfrbd5t"]
+[gd_scene load_steps=16 format=3 uid="uid://cnm1mvnfrbd5t"]
 
 [ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="1_sclwj"]
 [ext_resource type="Script" path="res://settings.gd" id="2_yh8vl"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://nrwetwm52j5b" path="res://Assets/UIAssets/backarrow.png" id="6_b357q"]
 [ext_resource type="Texture2D" uid="uid://p1w4x3t8jkac" path="res://Assets/UIAssets/backarrowpressed.png" id="6_osnig"]
 [ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="6_x5vx2"]
+[ext_resource type="Script" path="res://Scripts/UI/mastervolume.gd" id="8_y06ec"]
+[ext_resource type="Script" path="res://Scripts/UI/sfxvolume.gd" id="9_j3yin"]
+[ext_resource type="Script" path="res://Scripts/UI/musicvolume.gd" id="10_a2c2o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db1gw"]
 content_margin_left = 0.0
@@ -83,12 +86,52 @@ theme_override_icons/grabber = ExtResource("5_r1l0b")
 theme_override_icons/grabber_highlight = ExtResource("5_r1l0b")
 theme_override_styles/slider = SubResource("StyleBoxTexture_db1gw")
 theme_override_styles/grabber_area = SubResource("StyleBoxTexture_28lma")
-max_value = 50.0
+max_value = 2.0
+step = 0.001
+value = 0.5
+script = ExtResource("8_y06ec")
+bus_name = "Master"
+
+[node name="Label2" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_pfstj")
+text = "SFX Volume"
+horizontal_alignment = 1
+
+[node name="SFXVolume" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("5_r1l0b")
+theme_override_icons/grabber_highlight = ExtResource("5_r1l0b")
+theme_override_styles/slider = SubResource("StyleBoxTexture_db1gw")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_28lma")
+max_value = 2.0
+step = 0.001
+value = 0.5
+script = ExtResource("9_j3yin")
+bus_name = "SFX"
+
+[node name="Label3" type="Label" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_pfstj")
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="MusicVolume" type="HSlider" parent="CenterContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("5_r1l0b")
+theme_override_icons/grabber_highlight = ExtResource("5_r1l0b")
+theme_override_styles/slider = SubResource("StyleBoxTexture_db1gw")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_28lma")
+max_value = 2.0
+step = 0.001
+value = 0.5
+script = ExtResource("10_a2c2o")
+bus_name = "Music"
 
 [node name="Mute" type="CheckBox" parent="CenterContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Mute"
+text = "Mute all"
 
 [node name="Stars" parent="." instance=ExtResource("5_6y5lm")]
 position = Vector2(44.335, -20.197)
@@ -116,5 +159,8 @@ texture_normal = ExtResource("6_b357q")
 texture_hover = ExtResource("6_osnig")
 
 [connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/SFXVolume" to="." method="_on_sfx_volume_value_changed"]
+[connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/SFXVolume" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/MusicVolume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="CenterContainer/MarginContainer/VBoxContainer/Mute" to="." method="_on_check_box_toggled"]
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

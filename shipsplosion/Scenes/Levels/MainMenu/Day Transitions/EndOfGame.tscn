@@ -225,6 +225,7 @@ _data = {
 [node name="EndOfGame" type="Node2D"]
 
 [node name="Sapce" type="Sprite2D" parent="."]
+z_index = -7
 position = Vector2(477, 289)
 texture = ExtResource("1_fs1hp")
 

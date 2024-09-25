@@ -2,9 +2,9 @@ join Patrick center
 Patrick: Damn, I was hoping I wouldn't meet you here.
 Patrick: Please, let me go, weatherman. I was never cut out to be a security man.
 Patrick: I wanna be able to live the life I was meant to live, with the love of my life. Not rotting away at this company.
-- Let Patrick take the escape pod.
+- Let Patrick take the escape pod
 	Patrick: Thank you so much. This means so much to me. You're one of the good ones, weatherman.
 	do EndAnimation.Anim("Stay")
-- Take the escape pod yourself.
+- Take the escape pod yourself
 	Patrick: No, you can't. I thought the little guys were meant to look out for each other...
 	do EndAnimation.Anim("Leave")
