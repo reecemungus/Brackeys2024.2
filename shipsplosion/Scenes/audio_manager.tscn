@@ -10,16 +10,19 @@ script = ExtResource("1_mgbj2")
 
 [node name="Pickup" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_7ipdj")
+bus = &"SFX"
 
 [node name="MusicDay" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("3_gcst7")
 volume_db = -15.0
+bus = &"Music"
 
 [node name="MusicRush" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("4_kklaq")
 volume_db = -15.0
+bus = &"Music"
 
 [connection signal="finished" from="MusicDay" to="." method="_on_music_day_finished"]
 [connection signal="finished" from="MusicRush" to="." method="_on_music_rush_finished"]

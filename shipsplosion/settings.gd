@@ -12,3 +12,10 @@ func _on_check_box_toggled(toggled_on: bool) -> void:
 
 func _on_texture_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Levels/MainMenu/main_menu_level.tscn")
+
+
+func _on_sfxvolume_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), value)
+	
+func _on_musicvolume_value_changed(value: float) -> void:
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), value)

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cl3xrrqpr65bk"]
+
+[ext_resource type="Texture2D" uid="uid://bk7xgau37hhaw" path="res://Scenes/Particles/Meteorite.png" id="1_ia1if"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ijqm2"]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id="Gradient_fco0r"]
+offsets = PackedFloat32Array(0, 0.0533333, 0.426667, 0.746667, 1)
+colors = PackedColorArray(0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource("CanvasItemMaterial_ijqm2")
+amount = 15
+lifetime = 4.0
+texture = ExtResource("1_ia1if")
+gravity = Vector2(0, 0)
+color_ramp = SubResource("Gradient_fco0r")
+anim_speed_min = 0.8
+anim_speed_max = 0.8
