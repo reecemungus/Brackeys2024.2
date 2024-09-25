@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name PlayerController
 
 signal Interact
 signal InventoryToggle
@@ -48,9 +49,12 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Trade"):
 		OnTrade.emit()
 
-func Collect(item : InventoryItem) -> void:
-	inventory.Insert(item)
-	%AudioManager.playSound("Pickup")
+func Collect(item : InventoryItem) -> bool:
+	var hasPickedUp : bool = inventory.Insert(item)
+	
+	if hasPickedUp : %AudioManager.playSound("Pickup")
+	
+	return hasPickedUp
 
 func PreventDialog() -> void:
 	canTalk = false

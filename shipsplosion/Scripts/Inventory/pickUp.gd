@@ -1,9 +1,9 @@
 extends Area2D
+class_name PickUp
 
-@onready var player : CharacterBody2D = get_tree().get_first_node_in_group("G_Player") # player ref
-@onready var inventory : Inventory = preload("res://Scenes/Inventory/Inventories/playerInventory.tres")
+@export_group("Inventory")
+@onready var player : PlayerController = get_tree().get_first_node_in_group("G_Player") # player ref
 @export var item : InventoryItem
-
 var isActive : bool = false
 
 func _ready() -> void:
@@ -19,6 +19,5 @@ func _on_area_exited(area: Area2D) -> void:
 		isActive = true
 
 func OnPickup() -> void:
-	if isActive:
-		player.Collect(item)
-		queue_free()
+	if isActive && player.Collect(item): # If Player is in range & successfully picks up item
+		queue_free() # Destroy the PickUp (Self)

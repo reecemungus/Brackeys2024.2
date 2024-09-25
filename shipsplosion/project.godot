@@ -172,7 +172,6 @@ portraits/position_suggestion_names=""
 
 window/size/viewport_width=960
 window/size/viewport_height=540
-window/size/resizable=false
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://Assets/UIAssets/Cursor.png"
 
