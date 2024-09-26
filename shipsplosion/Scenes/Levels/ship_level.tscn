@@ -1,7 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=37 format=4 uid="uid://baj082ltpbi8e"]
+=======
+[gd_scene load_steps=36 format=4 uid="uid://baj082ltpbi8e"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Script" path="res://Scripts/ship_levelScript.gd" id="1_vl32y"]
 [ext_resource type="PackedScene" uid="uid://begrf0occhpgk" path="res://Scenes/Character/player_character.tscn" id="2_sa0gw"]
+[ext_resource type="Script" path="res://Scripts/AutoLoad/achievements.gd" id="2_vs83c"]
 [ext_resource type="PackedScene" uid="uid://qqjadxciqvnx" path="res://Scenes/Props/bed.tscn" id="3_2vq62"]
 [ext_resource type="PackedScene" uid="uid://dmoctpykqcsx4" path="res://Scenes/game_manager.tscn" id="4_tg6ta"]
 [ext_resource type="PackedScene" uid="uid://6bmg6cemniwx" path="res://Scenes/Character/NPC.tscn" id="5_uqw8v"]
@@ -351,6 +356,11 @@ sources/5 = SubResource("TileSetAtlasSource_oi1es")
 [node name="ShipLevel" type="Node2D" groups=["G_Level"]]
 y_sort_enabled = true
 script = ExtResource("1_vl32y")
+
+[node name="Node2D" type="Node2D" parent="."]
+z_index = 10
+position = Vector2(1646, 190)
+script = ExtResource("2_vs83c")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("2_sa0gw")]
 unique_name_in_owner = true

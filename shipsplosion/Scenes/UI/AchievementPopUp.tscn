@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://vec7ojgalpkn"]
+
+[ext_resource type="Script" path="res://Scripts/UI/achievement_pop_up.gd" id="1_nlmlp"]
+[ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="2_smfop"]
+[ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="3_o85ua"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nlmlp")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(48.35, 38.445)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 159.0
+offset_top = 118.0
+offset_right = 470.0
+offset_bottom = 238.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.997886, 1.0837)
+texture = ExtResource("2_smfop")
+region_rect = Rect2(2, 2, 34, 34)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="achv" type="Label" parent="NinePatchRect"]
+offset_left = 96.8896
+offset_top = 5.54727
+offset_right = 399.89
+offset_bottom = 115.547
+scale = Vector2(0.464238, 0.707499)
+theme = ExtResource("3_o85ua")
+theme_override_font_sizes/font_size = 32
+text = "Achievement Get!"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 169.146
+offset_top = 41.6044
+offset_right = 472.146
+offset_bottom = 151.604
+scale = Vector2(0.464238, 0.707499)
+theme = ExtResource("3_o85ua")
+theme_override_font_sizes/font_size = 31
+text = "Reach max affinity with a character!"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="NinePatchRect"]
+layout_mode = 0
+offset_left = 11.4954
+offset_top = 11.0945
+offset_right = 51.4954
+offset_bottom = 51.0945
+scale = Vector2(1.99537, 2.3868)
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
