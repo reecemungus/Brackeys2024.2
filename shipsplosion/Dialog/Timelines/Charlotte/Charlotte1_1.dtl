@@ -1,2 +1,10 @@
 join Charlotte center
 Charlotte: Hey! Nice to meet you! My name's Charlotte!
+Charlotte: It's really good to be so close to my studies in space. Field experience is so important!
+Charlotte: I really wanted to get tickets for my grandparents, as a thanks for all the times they've supported me, but they were too expensive.
+- Tell her about the meteor disaster.
+	do PlayerInformation.PanickCharacter()
+	Charlotte: What!? No way! This can't be happening...
+	Charlotte: I need to figure out a way off this ship.
+- Don't tell her.
+	Charlotte: See you around!

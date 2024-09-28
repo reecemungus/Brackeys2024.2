@@ -3,7 +3,9 @@ Avi: Hello there, I'm Avi. I perform songs for a living. It's truly my passion.
 Avi: I was surprised when Stratos approached me with the proposition for me to sing on their maiden voyage.
 Avi: This could be a big boost for my career!
 Avi: It makes me so happy that my passion can put smiles on other people's faces.
-- Tell him about the meteor disaster
+- Tell him about the meteor disaster.
 	do PlayerInformation.PanickCharacter()
 	Avi: Haha...a good joke, but your delivery was a bit intense.
 	Avi: Wait, you're not joking? But, all this people...this is awful news.
+- Don't tell him.
+	Avi: Don't be a stranger!

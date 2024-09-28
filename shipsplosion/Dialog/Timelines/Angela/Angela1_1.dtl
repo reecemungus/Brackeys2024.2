@@ -3,8 +3,9 @@ Angela: This ship is amazing, isn't it? It was so kind of my friend to buy me a 
 Angela: She thought I could use a break. How thoughtful!
 Angela: Oh sorry, I didn't introduce myself. I'm Angela, nice to meet you!
 Angela: A lovely man called Harry told me the shops here are great. I might even be able to buy some baby clothes!
-- Tell her about the meteor disaster
+- Tell her about the meteor disaster.
 	do PlayerInformation.PanickCharacter()
 	Angela: Oh my god, that's terrible!
 	Angela: What do we do? The escape pods are locked off!
-- Don't tell her
+- Don't tell her.
+	Angela: Let's chat again some time!

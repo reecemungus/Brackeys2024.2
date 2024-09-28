@@ -1,3 +1,10 @@
 join Patrick center
 Patrick: Oh, hey! I'm Patrick!
 Patrick: You work in the meteorology department, don't you? You're the weatherman! Me? I guess I'm the security-man?
+Patrick: You seem like you can keep a secret. If I'm honest, I hate this job. My partner back at home HATES Stratos and I can't blame them.
+Patrick: Stratos only cares about keeping their clients happy. They don't care for little guys like us.
+- Tell him about the meteor disaster.
+	do PlayerInformation.PanickCharacter()
+	Patrick: Wait, really? You're not joking? How did we not know this sooner?
+- Don't tell him.
+	Patrick: Don't get into too much trouble, weatherman!
