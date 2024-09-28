@@ -17,11 +17,11 @@
 "portraits": {
 "Jeremy": {
 "export_overrides": {
-"image": "\"res://Dialog/Portraits/Jeremy Portrait.png\""
+"image": "\"res://Dialog/Portraits/NewPortraits/New Jeremy Portrait.png\""
 },
 "mirror": false,
-"offset": Vector2(-185, -165),
-"scale": 0.4,
+"offset": Vector2(145, -165),
+"scale": 0.5,
 "scene": ""
 }
 },

@@ -17,11 +17,11 @@
 "portraits": {
 "Angela": {
 "export_overrides": {
-"image": "\"res://Dialog/Portraits/Angela Portrait.png\""
+"image": "\"res://Dialog/Portraits/NewPortraits/New Angela Portrait.png\""
 },
 "mirror": false,
-"offset": Vector2(-185, -165),
-"scale": 0.4,
+"offset": Vector2(137, -165),
+"scale": 0.5,
 "scene": ""
 }
 },

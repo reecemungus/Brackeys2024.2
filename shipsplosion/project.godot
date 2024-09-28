@@ -30,6 +30,7 @@ directories/dch_directory={
 "Charlotte": "res://Dialog/NPCs/Charlotte.dch",
 "Harry": "res://Dialog/NPCs/Harry.dch",
 "Jeremy": "res://Dialog/NPCs/Jeremy.dch",
+"Naomi": "res://Dialog/NPCs/Naomi.dch",
 "Patrick": "res://Dialog/NPCs/Patrick.dch"
 }
 directories/dtl_directory={
@@ -124,6 +125,7 @@ directories/dtl_directory={
 "JeremyFinale": "res://Dialog/Timelines/Jeremy/JeremyFinale.dtl",
 "JeremyTrade_1": "res://Dialog/Timelines/Jeremy/JeremyTrade_1.dtl",
 "JeremyTrade_2": "res://Dialog/Timelines/Jeremy/JeremyTrade_2.dtl",
+"Naomi1_1": "res://Dialog/Timelines/Naomi/Naomi1_1.dtl",
 "Patrick1_1": "res://Dialog/Timelines/Patrick/Patrick1_1.dtl",
 "Patrick1_1Panic": "res://Dialog/Timelines/Patrick/Patrick1_1Panic.dtl",
 "Patrick1_2": "res://Dialog/Timelines/Patrick/Patrick1_2.dtl",

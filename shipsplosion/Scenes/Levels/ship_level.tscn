@@ -23,13 +23,13 @@
 [ext_resource type="PackedScene" uid="uid://bns6n8yxs18bc" path="res://Scenes/game_end.tscn" id="21_63scu"]
 [ext_resource type="PackedScene" uid="uid://db65jdohlvy16" path="res://Scenes/Props/nav_desk.tscn" id="22_e0kh8"]
 [ext_resource type="PackedScene" uid="uid://bewp7u50gr63p" path="res://Scenes/Inventory/Items/PickUp/PickUp.tscn" id="23_aauyb"]
-[ext_resource type="Resource" uid="uid://bfs11dlc87jw4" path="res://Scenes/Inventory/Items/Ale.tres" id="24_4lq32"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/Ale.tres" id="24_4lq32"]
 [ext_resource type="Resource" uid="uid://mckrnys5sq8h" path="res://Scenes/Inventory/Items/Crowbar.tres" id="25_nl63x"]
 [ext_resource type="PackedScene" uid="uid://bjkcoek73l5ou" path="res://Scenes/Props/lockedDoor.tscn" id="26_dgrqf"]
 [ext_resource type="Resource" uid="uid://b182pjegpsb57" path="res://Scenes/Inventory/Items/keycardRed.tres" id="27_jui0f"]
 [ext_resource type="Resource" uid="uid://8pk6p8yqryx0" path="res://Scenes/Inventory/Items/keycardBlue.tres" id="28_c6py6"]
 [ext_resource type="Resource" uid="uid://bcp1k4dlny1cq" path="res://Scenes/Inventory/Items/keycardGreen.tres" id="29_vb1w2"]
-[ext_resource type="Resource" uid="uid://c8ty7jjj2vxct" path="res://Scenes/Inventory/Items/FirstAidKit.tres" id="30_yh0i0"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/FirstAidKit.tres" id="30_yh0i0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixjmq"]
 texture = ExtResource("8_34xlj")
