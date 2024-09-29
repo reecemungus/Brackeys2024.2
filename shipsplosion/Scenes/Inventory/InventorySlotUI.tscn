@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=3 uid="uid://ma52dtyj0rsf"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/UI/InventorySlotUI.gd" id="1_lcikr"]
+[ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="2_mrovo"]
+
+[node name="InvSlotUI" type="AspectRatioContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 0
+script = ExtResource("1_lcikr")
+hoverScale = 1.25
+lerpVal = 0.25
+
+[node name="InvSlotUi" type="NinePatchRect" parent="."]
+self_modulate = Color(1, 1, 1, 0.980392)
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("2_mrovo")
+region_rect = Rect2(2, 2, 34, 34)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="Container" type="Control" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ItemDisplay" type="TextureRect" parent="Container"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.125
+anchor_right = 0.875
+anchor_bottom = 0.875
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="AmountDisplay" type="Label" parent="Container"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.000250012
+anchor_top = 0.031
+anchor_right = 0.875
+anchor_bottom = 1.0
+offset_left = -0.00800037
+offset_top = 0.0079999
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.752941, 0.243137, 0.243137, 1)
+theme_override_colors/font_shadow_color = Color(0.470588, 0.141176, 0.141176, 1)
+theme_override_font_sizes/font_size = 15
+text = "0"
+horizontal_alignment = 2
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -7,7 +7,7 @@ class_name PickUp
 var isActive : bool = false
 
 func _ready() -> void:
-	player.Interact.connect(OnPickup)
+	SignalBus.OnPlayerInteract.connect(OnPickup)
 	%PickupSprite.texture = item.ItemTexture
 
 func _on_area_entered(area: Area2D) -> void:
@@ -21,3 +21,4 @@ func _on_area_exited(area: Area2D) -> void:
 func OnPickup() -> void:
 	if isActive && player.Collect(item): # If Player is in range & successfully picks up item
 		queue_free() # Destroy the PickUp (Self)
+		SignalBus.UpdateInventorySlots.emit()

@@ -1,0 +1,74 @@
+[gd_resource type="Resource" script_class="Inventory" load_steps=20 format=3 uid="uid://brtrkwvaod3o1"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/Inventory.gd" id="1_i6552"]
+[ext_resource type="Script" path="res://Scripts/Inventory/inventorySlot.gd" id="2_cdbqa"]
+[ext_resource type="Resource" uid="uid://dnqxoirf2fqcj" path="res://Scenes/Inventory/Items/MilkBottle.tres" id="3_1jmnd"]
+
+[sub_resource type="Resource" id="Resource_attu0"]
+script = ExtResource("2_cdbqa")
+slotItem = ExtResource("3_1jmnd")
+slotAmount = 1
+
+[sub_resource type="Resource" id="Resource_58kaa"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_ud037"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_ny1gm"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_do6fg"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_50l57"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_gg4gp"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_488v8"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_712vm"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_q8e6q"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_lfwbw"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_dklu8"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_gw4t0"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_n881u"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_qi7ai"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[sub_resource type="Resource" id="Resource_3nn7q"]
+script = ExtResource("2_cdbqa")
+slotAmount = 0
+
+[resource]
+script = ExtResource("1_i6552")
+slots = Array[ExtResource("2_cdbqa")]([SubResource("Resource_attu0"), SubResource("Resource_58kaa"), SubResource("Resource_ud037"), SubResource("Resource_ny1gm"), SubResource("Resource_do6fg"), SubResource("Resource_50l57"), SubResource("Resource_gg4gp"), SubResource("Resource_488v8"), SubResource("Resource_712vm"), SubResource("Resource_q8e6q"), SubResource("Resource_lfwbw"), SubResource("Resource_dklu8"), SubResource("Resource_gw4t0"), SubResource("Resource_n881u"), SubResource("Resource_qi7ai"), SubResource("Resource_3nn7q")])

@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3 uid="uid://df00k4i74potw"]
+
+[ext_resource type="Shape2D" uid="uid://b6rtu4sjganvv" path="res://Scenes/Props/chestArea.tres" id="2_x4ver"]
+[ext_resource type="Texture2D" uid="uid://cbof0allxtq7h" path="res://Assets/Tilemap/Spritesheet2 (1).png" id="3_bdvld"]
+
+[sub_resource type="GDScript" id="GDScript_efgv5"]
+script/source = "extends Area2D
+class_name Chest
+
+@onready var inventory : Inventory = preload(\"res://Scenes/Inventory/Inventories/chestInventory.tres\")
+
+@onready var player : PlayerController = get_tree().get_first_node_in_group(\"G_Player\") # player ref
+var isActive : bool = false
+
+var chestUI : ChestInventoryUI
+var isUIOpen : bool = false
+
+func _ready() -> void:
+	player.Interact.connect(OnInteract)
+	chestUI = player.get_node(\"./ChestUI\")
+
+func _on_area_entered(area: Area2D) -> void:
+	if area.is_in_group(\"G_Player\"):
+		isActive = true
+
+func _on_area_exited(area: Area2D) -> void:
+	if area.is_in_group(\"G_Player\"):
+		isActive = false
+		chestUI.visible = false
+		player.CloseContainer()
+
+func OnInteract() -> void:
+	if isActive:
+		chestUI.visible = true
+		player.OpenContainer(inventory)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxguu"]
+size = Vector2(40, 40)
+
+[node name="Chest" type="Area2D"]
+script = SubResource("GDScript_efgv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_x4ver")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_bdvld")
+region_enabled = true
+region_rect = Rect2(96, 0, 16, 16)
+
+[node name="Collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+shape = SubResource("RectangleShape2D_uxguu")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

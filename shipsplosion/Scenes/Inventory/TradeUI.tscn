@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2gdbqaykqx38"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/UI/TradeUI.gd" id="1_cx5a1"]
+[ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="1_vmd3p"]
+[ext_resource type="Resource" uid="uid://3is1gm4tkbcm" path="res://Scenes/Inventory/Items/Book.tres" id="2_eydaq"]
+[ext_resource type="Resource" uid="uid://b182pjegpsb57" path="res://Scenes/Inventory/Items/keycardRed.tres" id="3_mhfh7"]
+[ext_resource type="Resource" uid="uid://bb63xs7ukax8p" path="res://Scenes/Inventory/Inventories/AngelaInventory.tres" id="4_t57qm"]
+
+[node name="TradeUI" type="Control"]
+layout_mode = 3
+anchor_left = 0.457292
+anchor_top = 0.407407
+anchor_right = 0.542708
+anchor_bottom = 0.594444
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cx5a1")
+takingItem = ExtResource("2_eydaq")
+givingItem = ExtResource("3_mhfh7")
+npcInventory = ExtResource("4_t57qm")
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vmd3p")
+region_rect = Rect2(2, 2, 34, 34)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="GiveSlot" type="HBoxContainer" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+
+[node name="TradeButton" type="Button" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+text = "Give"

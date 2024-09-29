@@ -7,7 +7,7 @@ class_name Weapon
 var canSwing : bool = true
 
 func _ready() -> void:
-	player.OnAttack.connect(Swing)
+	SignalBus.OnPlayerAttack.connect(Swing)
 
 func _physics_process(_delta: float) -> void:
 	var mousePos = get_global_mouse_position()
@@ -27,8 +27,6 @@ func Swing() -> void:
 			if bodies[i].is_in_group("G_Attackable"):
 				var parent = bodies[i].get_node("..")
 				parent.onHit(Damage)
-				
-		print(bodies)
 
 func _on_delay_timeout() -> void:
 	canSwing = true

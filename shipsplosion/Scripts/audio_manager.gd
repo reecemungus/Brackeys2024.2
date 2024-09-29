@@ -1,4 +1,5 @@
 extends Node2D
+class_name AudioManager
 
 func _ready() -> void:
 	%MusicDay.playing = true

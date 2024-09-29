@@ -9,7 +9,7 @@ var lastDay : bool = false
 
 func _ready() -> void:	
 	if player: # attempt to connect to signal on player
-		player.Interact.connect(AdvanceDay) # connect advance day to player interact
+		SignalBus.OnPlayerInteract.connect(AdvanceDay) # connect advance day to player interact
 	else:
 		push_error("Player not found")
 

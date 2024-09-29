@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://dnxclndhuo5rf"]
+[gd_scene load_steps=2 format=3 uid="uid://dnxclndhuo5rf"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/PlayerInventoryUI.gd" id="1_2k5v7"]
 
 [node name="InventoryUi" type="CanvasLayer"]
+script = ExtResource("1_2k5v7")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://df00k4i74potw"]
+
+[ext_resource type="Script" path="res://Scripts/Props/chest.gd" id="1_u52r5"]
+[ext_resource type="Shape2D" uid="uid://b6rtu4sjganvv" path="res://Scenes/Props/chestArea.tres" id="2_x4ver"]
+[ext_resource type="Resource" uid="uid://brtrkwvaod3o1" path="res://Scenes/Inventory/Inventories/chestInventory.tres" id="2_ysje8"]
+[ext_resource type="Texture2D" uid="uid://cbof0allxtq7h" path="res://Assets/Tilemap/Spritesheet2 (1).png" id="3_bdvld"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uxguu"]
+size = Vector2(40, 40)
+
+[node name="Chest" type="Area2D"]
+script = ExtResource("1_u52r5")
+inventory = ExtResource("2_ysje8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource("2_x4ver")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_bdvld")
+region_enabled = true
+region_rect = Rect2(96, 0, 16, 16)
+
+[node name="Collision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision"]
+shape = SubResource("RectangleShape2D_uxguu")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

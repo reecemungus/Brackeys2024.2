@@ -13,8 +13,6 @@ func _ready() -> void:
 	var maxrep = [Angela, Avi, Charlotte, Jeremy, Harry, Patrick]
 	var largest = max(Angela, Avi, Charlotte, Jeremy, Harry, Patrick)
 	
-	print(largest)
-	
 	var chars : Array[String] = ["Angela", "Avi", "Charlotte", "Jeremy", "Harry", "Patrick"]
 	
 	var chosenChar 
@@ -22,8 +20,6 @@ func _ready() -> void:
 	for i in range(chars.size()):
 		if maxrep[i] == largest:
 			chosenChar = chars[i]
-	
-	print(chosenChar)
 	
 	Dialogic.start(chosenChar+"Finale")
 	%Character.texture = load ("res://Dialog/Sprites/%s.png" % [chosenChar])
