@@ -1,0 +1,151 @@
+[gd_scene load_steps=13 format=3 uid="uid://cdqaju73hin7k"]
+
+[ext_resource type="Script" path="res://Scenes/UI/PauseMenu.gd" id="1_emgc8"]
+[ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="2_iyjdo"]
+[ext_resource type="FontFile" uid="uid://bwaaiwv5lnc6s" path="res://Assets/UIAssets/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="3_gxy8p"]
+[ext_resource type="Texture2D" uid="uid://nrwetwm52j5b" path="res://Assets/UIAssets/backarrow.png" id="3_q2d2j"]
+[ext_resource type="Texture2D" uid="uid://p1w4x3t8jkac" path="res://Assets/UIAssets/backarrowpressed.png" id="4_c2umk"]
+[ext_resource type="Texture2D" uid="uid://bqos7qog2g1dg" path="res://Assets/UIAssets/Grabber.png" id="4_celns"]
+[ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="5_00efw"]
+[ext_resource type="Script" path="res://Scripts/UI/mastervolume.gd" id="6_5jnip"]
+[ext_resource type="Script" path="res://Scripts/UI/sfxvolume.gd" id="7_uutov"]
+[ext_resource type="Script" path="res://Scripts/UI/musicvolume.gd" id="8_06fi4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hoqcu"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 6.0
+texture = ExtResource("5_00efw")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(2, 2, 34, 34)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1sit2"]
+
+[node name="PauseMenuUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_emgc8")
+
+[node name="Panel" type="Panel" parent="."]
+self_modulate = Color(1, 1, 1, 0.572549)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -33.0
+offset_right = 35.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PauseButtons" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="Resume" type="Button" parent="MarginContainer/PauseButtons"]
+layout_mode = 2
+theme = ExtResource("2_iyjdo")
+text = "Resume"
+
+[node name="Options" type="Button" parent="MarginContainer/PauseButtons"]
+layout_mode = 2
+theme = ExtResource("2_iyjdo")
+text = "Options"
+
+[node name="Quit" type="Button" parent="MarginContainer/PauseButtons"]
+layout_mode = 2
+theme = ExtResource("2_iyjdo")
+text = "Quit"
+
+[node name="OptionsButtons" type="VBoxContainer" parent="MarginContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+mouse_filter = 2
+
+[node name="BackButton" type="TextureButton" parent="MarginContainer/OptionsButtons"]
+layout_mode = 2
+texture_normal = ExtResource("3_q2d2j")
+texture_hover = ExtResource("4_c2umk")
+flip_h = true
+
+[node name="MVolume" type="Label" parent="MarginContainer/OptionsButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_gxy8p")
+text = "Master Volume"
+horizontal_alignment = 1
+
+[node name="Volume" type="HSlider" parent="MarginContainer/OptionsButtons"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("4_celns")
+theme_override_icons/grabber_highlight = ExtResource("4_celns")
+theme_override_styles/slider = SubResource("StyleBoxTexture_hoqcu")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_1sit2")
+max_value = 2.0
+step = 0.001
+value = 0.5
+script = ExtResource("6_5jnip")
+bus_name = "Master"
+
+[node name="SfxVolume" type="Label" parent="MarginContainer/OptionsButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_gxy8p")
+text = "SFX Volume"
+horizontal_alignment = 1
+
+[node name="SFXVolume" type="HSlider" parent="MarginContainer/OptionsButtons"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("4_celns")
+theme_override_icons/grabber_highlight = ExtResource("4_celns")
+theme_override_styles/slider = SubResource("StyleBoxTexture_hoqcu")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_1sit2")
+max_value = 2.0
+step = 0.001
+value = 0.5
+script = ExtResource("7_uutov")
+bus_name = "SFX"
+
+[node name="MusicVolumeLabel" type="Label" parent="MarginContainer/OptionsButtons"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_gxy8p")
+text = "Music Volume"
+horizontal_alignment = 1
+
+[node name="MusicVolume" type="HSlider" parent="MarginContainer/OptionsButtons"]
+layout_mode = 2
+theme_override_icons/grabber = ExtResource("4_celns")
+theme_override_icons/grabber_highlight = ExtResource("4_celns")
+theme_override_styles/slider = SubResource("StyleBoxTexture_hoqcu")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_1sit2")
+max_value = 2.0
+step = 0.001
+value = 0.5
+script = ExtResource("8_06fi4")
+bus_name = "Music"
+
+[connection signal="pressed" from="MarginContainer/PauseButtons/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/PauseButtons/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/PauseButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="MarginContainer/OptionsButtons/BackButton" to="." method="_on_back_button_pressed"]

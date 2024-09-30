@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://baj082ltpbi8e"]
+[gd_scene load_steps=38 format=4 uid="uid://baj082ltpbi8e"]
 
 [ext_resource type="Script" path="res://Scripts/ship_levelScript.gd" id="1_vl32y"]
 [ext_resource type="PackedScene" uid="uid://begrf0occhpgk" path="res://Scenes/Character/player_character.tscn" id="2_sa0gw"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ehgrixoqenig" path="res://Scenes/Particles/stars.tscn" id="12_juqa5"]
 [ext_resource type="Texture2D" uid="uid://cv8wdcdi1qtlt" path="res://Dialog/Sprites/Avi.png" id="16_1b6nr"]
 [ext_resource type="Texture2D" uid="uid://cmgijav8brhys" path="res://Dialog/Sprites/Charlotte.png" id="17_125gt"]
+[ext_resource type="PackedScene" uid="uid://c7t7l3lsnybiy" path="res://Scenes/Inventory/Items/PickUp/Manual.tscn" id="17_uq0e4"]
 [ext_resource type="Texture2D" uid="uid://bnx3tcerk6wc5" path="res://Dialog/Sprites/Harry.png" id="18_xsk3o"]
 [ext_resource type="Texture2D" uid="uid://shdcp3527w4a" path="res://Dialog/Sprites/Jeremy.png" id="19_aa2w4"]
 [ext_resource type="Texture2D" uid="uid://c5fidacm2amx0" path="res://Dialog/Sprites/Patrick.png" id="20_jo5ef"]
@@ -846,3 +847,6 @@ item = ExtResource("27_jui0f")
 [node name="PickUp6" parent="." instance=ExtResource("23_aauyb")]
 position = Vector2(1224, 33)
 item = ExtResource("30_yh0i0")
+
+[node name="PickUp7" parent="." instance=ExtResource("17_uq0e4")]
+position = Vector2(1099, -100)
