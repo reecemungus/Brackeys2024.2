@@ -27,6 +27,8 @@ func _ready() -> void:
 	
 	Dialogic.timeline_started.connect(PreventDialog)
 	Dialogic.timeline_ended.connect(AllowDialog)
+	
+	SignalBus.CloseContainer.connect(CloseContainer)
 
 func _physics_process(delta: float) -> void:
 	if !canTalk:
@@ -77,3 +79,6 @@ func Collect(item : InventoryItem) -> bool:
 		return true
 	
 	return false
+
+func CloseContainer() -> void:
+	openContainer = null

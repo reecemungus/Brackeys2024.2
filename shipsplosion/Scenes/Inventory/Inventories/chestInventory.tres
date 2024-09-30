@@ -72,3 +72,4 @@ slotAmount = 0
 [resource]
 script = ExtResource("1_i6552")
 slots = Array[ExtResource("2_cdbqa")]([SubResource("Resource_attu0"), SubResource("Resource_58kaa"), SubResource("Resource_ud037"), SubResource("Resource_ny1gm"), SubResource("Resource_do6fg"), SubResource("Resource_50l57"), SubResource("Resource_gg4gp"), SubResource("Resource_488v8"), SubResource("Resource_712vm"), SubResource("Resource_q8e6q"), SubResource("Resource_lfwbw"), SubResource("Resource_dklu8"), SubResource("Resource_gw4t0"), SubResource("Resource_n881u"), SubResource("Resource_qi7ai"), SubResource("Resource_3nn7q")])
+playerInventory = false

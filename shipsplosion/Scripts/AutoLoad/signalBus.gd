@@ -8,6 +8,7 @@ signal OnPlayerTrade
 signal UpdateInventorySlots
 
 signal OpenChest # Unhide Chest UI
+signal CloseContainer
 
 signal TransferItem(item : InventoryItem, fromInventory : Inventory, toInventory : Inventory)
 
@@ -25,3 +26,6 @@ func OnTransferItem(item : InventoryItem, fromInventory : Inventory, toInventory
 		return true
 	
 	return false
+
+func AdvanceDay() -> void:
+	pass

@@ -114,7 +114,6 @@ func OnTraded() -> void:
 			
 			SignalBus.UpdateInventorySlots.emit()
 			runDialog(GetTimeLineTrading())
-			
 
 func OnPanicked() -> void:
 	isPanicked = true

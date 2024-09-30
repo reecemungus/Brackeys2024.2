@@ -18,6 +18,7 @@ func CreateSlots() -> void:
 
 func _on_close_button_pressed() -> void:
 	visible = false
+	SignalBus.CloseContainer.emit()
 
 func OpenChest() -> void:
 	visible = true
