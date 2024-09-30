@@ -159,8 +159,8 @@ texture_normal = ExtResource("6_b357q")
 texture_hover = ExtResource("6_osnig")
 
 [connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
-[connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/SFXVolume" to="." method="_on_sfx_volume_value_changed"]
 [connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/SFXVolume" to="." method="_on_volume_value_changed"]
+[connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/SFXVolume" to="." method="_on_sfx_volume_value_changed"]
 [connection signal="value_changed" from="CenterContainer/MarginContainer/VBoxContainer/MusicVolume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="CenterContainer/MarginContainer/VBoxContainer/Mute" to="." method="_on_check_box_toggled"]
 [connection signal="pressed" from="HBoxContainer/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,6 +1,8 @@
 extends Control
 
 @onready var pause_menu = $"."
+@onready var pausebuttons = $MarginContainer/PauseButtons
+@onready var optionsbuttons = $MarginContainer/OptionsButtons
 var paused = false
 
 func _input(event: InputEvent) -> void:
@@ -22,3 +24,15 @@ func _on_resume_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_options_pressed() -> void:
+	pausebuttons.hide()
+	optionsbuttons.show()
+
+func _on_back_button_pressed() -> void:
+	optionsbuttons.hide()
+	pausebuttons.show()
+
+func _on_check_box_toggled(toggled_on: bool) -> void:
+	AudioServer.set_bus_mute(0,toggled_on)
