@@ -1,3 +1,10 @@
 join Angela center
 Angela: Hey, you alright? You seem a little bit stressed.
 Angela: Is everything okay?
+Angela: If you've got something going on, I'm all ears!
+- Tell her about the meteor disaster.
+	do PlayerInformation.PanickCharacter()
+	Angela: Oh my god, that's terrible!
+	Angela: What do we do? The escape pods are locked off!
+- Don't tell her.
+	Angela: Let's chat again some time!

@@ -1,5 +1,3 @@
 join Avi center
-Avi: It makes me so happy that my passion can put smiles on other people's faces.
-- Tell him
-	do PlayerInformation.PanickCharacter("Avi")
-- Dont tell him
+Avi: One day, I wish to start my own music school. I want to show others the joy of music.
+Avi: I think it's a nice dream to have...
