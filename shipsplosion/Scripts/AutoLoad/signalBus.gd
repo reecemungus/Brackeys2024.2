@@ -26,6 +26,3 @@ func OnTransferItem(item : InventoryItem, fromInventory : Inventory, toInventory
 		return true
 	
 	return false
-
-func AdvanceDay() -> void:
-	pass
