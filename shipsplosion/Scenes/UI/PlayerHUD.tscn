@@ -106,3 +106,4 @@ alignment = 1
 visible = false
 
 [node name="PauseMenuUI" parent="." instance=ExtResource("6_l1ykc")]
+visible = false
