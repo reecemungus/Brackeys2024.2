@@ -1,2 +1,10 @@
 join Angela center
 Angela: Being in space makes my morning sickness so much worse.
+Angela: I can't wait to meet my babies when we land.
+Angela: I can definitely wait to go back to work though!
+- Tell her about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Angela")
+	Angela: Oh my god, that's terrible!
+	Angela: What do we do? The escape pods are locked off!
+- Don't tell her.
+	Angela: Let's chat again some time!

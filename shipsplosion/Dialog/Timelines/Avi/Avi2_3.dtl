@@ -1,6 +1,2 @@
 join Avi center
-Avi: This whole journey has really helped me strengthen my love for music and improve my confidence as well.
-Avi: I hope other people find what they're looking for too.
-- Tell him
-	do PlayerInformation.PanickCharacter("Avi")
-- Dont tell him
+Avi: If you don't take risks, you'll never know what success awaits you.

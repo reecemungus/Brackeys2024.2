@@ -1,0 +1,10 @@
+join Naomi center
+Naomi: Hey, new face. Name's Naomi. I work in maintenance.
+Naomi: See they got you trapped in the meteorlogy department? They've been trying to fill in that slot for ages.
+Naomi: Job seems pretty chill, though. Nothing ever really happens, so you can just kinda kick back the whole time.
+- Tell her about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Naomi")
+	Naomi: What? Nah, I don't believe you.
+	Naomi: Wait, you're being serious? Damn, this sucks.
+- Don't tell her.
+	Naomi: Don't do anything I wouldn't do.

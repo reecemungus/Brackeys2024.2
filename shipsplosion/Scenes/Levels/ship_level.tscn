@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://baj082ltpbi8e"]
+[gd_scene load_steps=37 format=4 uid="uid://baj082ltpbi8e"]
 
 [ext_resource type="Script" path="res://Scripts/ship_levelScript.gd" id="1_vl32y"]
 [ext_resource type="PackedScene" uid="uid://begrf0occhpgk" path="res://Scenes/Character/player_character.tscn" id="2_sa0gw"]
@@ -9,10 +9,8 @@
 [ext_resource type="TileSet" uid="uid://cbo7xsaj1ul1d" path="res://Assets/Tilemap/TileMap.tres" id="6_r5sly"]
 [ext_resource type="PackedScene" uid="uid://dxw7x2m37dfki" path="res://Scenes/Props/lightningScene.tscn" id="7_4awsa"]
 [ext_resource type="Texture2D" uid="uid://ustu2idmbmin" path="res://Assets/Props/sign.png" id="8_34xlj"]
-[ext_resource type="Resource" uid="uid://c4iqnprkkhimn" path="res://Scenes/Inventory/Items/Phone.tres" id="9_0xiyn"]
 [ext_resource type="Texture2D" uid="uid://lqxor4ol2oht" path="res://Assets/Tilemap/Spritesheet2.png" id="9_1gjgp"]
 [ext_resource type="Texture2D" uid="uid://rn27fe28wpdw" path="res://Assets/Tilemap/spritesheet.png" id="10_bhmma"]
-[ext_resource type="Resource" uid="uid://j1uopmy2v3tm" path="res://Scenes/Inventory/Items/money.tres" id="10_i1lgc"]
 [ext_resource type="PackedScene" uid="uid://du1on700oxenx" path="res://Scenes/Props/door.tscn" id="10_lh7je"]
 [ext_resource type="Texture2D" uid="uid://dg4rjsc8os8e4" path="res://Assets/Props/Water Cooler.png" id="11_gjvgn"]
 [ext_resource type="Texture2D" uid="uid://ug8j6wfkpqdb" path="res://Assets/UIAssets/Sprite-0003.png" id="11_txbib"]
@@ -25,13 +23,13 @@
 [ext_resource type="PackedScene" uid="uid://bns6n8yxs18bc" path="res://Scenes/game_end.tscn" id="21_63scu"]
 [ext_resource type="PackedScene" uid="uid://db65jdohlvy16" path="res://Scenes/Props/nav_desk.tscn" id="22_e0kh8"]
 [ext_resource type="PackedScene" uid="uid://bewp7u50gr63p" path="res://Scenes/Inventory/Items/PickUp/PickUp.tscn" id="23_aauyb"]
-[ext_resource type="Resource" uid="uid://bfs11dlc87jw4" path="res://Scenes/Inventory/Items/Ale.tres" id="24_4lq32"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/Ale.tres" id="24_4lq32"]
 [ext_resource type="Resource" uid="uid://mckrnys5sq8h" path="res://Scenes/Inventory/Items/Crowbar.tres" id="25_nl63x"]
 [ext_resource type="PackedScene" uid="uid://bjkcoek73l5ou" path="res://Scenes/Props/lockedDoor.tscn" id="26_dgrqf"]
-[ext_resource type="Resource" uid="uid://3is1gm4tkbcm" path="res://Scenes/Inventory/Items/Book.tres" id="28_6sds8"]
+[ext_resource type="Resource" uid="uid://b182pjegpsb57" path="res://Scenes/Inventory/Items/keycardRed.tres" id="27_jui0f"]
 [ext_resource type="Resource" uid="uid://8pk6p8yqryx0" path="res://Scenes/Inventory/Items/keycardBlue.tres" id="28_c6py6"]
-[ext_resource type="PackedScene" uid="uid://df00k4i74potw" path="res://Scenes/Props/chest.tscn" id="29_ch0hu"]
-[ext_resource type="Resource" uid="uid://dwnktvbqch8u2" path="res://Scenes/Inventory/Items/Glasses.tres" id="31_gap6o"]
+[ext_resource type="Resource" uid="uid://bcp1k4dlny1cq" path="res://Scenes/Inventory/Items/keycardGreen.tres" id="29_vb1w2"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/FirstAidKit.tres" id="30_yh0i0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixjmq"]
 texture = ExtResource("8_34xlj")
@@ -393,8 +391,6 @@ sprite = ExtResource("18_xsk3o")
 [node name="Jeremy" parent="." groups=["C_Jeremy"] instance=ExtResource("6_abfqa")]
 position = Vector2(1727, -72)
 characterName = "Jeremy"
-itemWanted = ExtResource("9_0xiyn")
-itemToGive = ExtResource("10_i1lgc")
 sprite = ExtResource("19_aa2w4")
 
 [node name="Patrick" parent="." groups=["C_Patrick"] instance=ExtResource("6_abfqa")]
@@ -815,6 +811,10 @@ position = Vector2(2140, -500)
 [node name="LockedDoor2" parent="." instance=ExtResource("26_dgrqf")]
 position = Vector2(2140, -460)
 
+[node name="PickUp" parent="." instance=ExtResource("23_aauyb")]
+position = Vector2(1169, -7)
+item = ExtResource("28_c6py6")
+
 [node name="LockedDoor3" parent="." instance=ExtResource("26_dgrqf")]
 position = Vector2(1500, -580)
 rotation = 1.57079
@@ -827,25 +827,22 @@ rotation = 1.57079
 keycardNeeded = ExtResource("28_c6py6")
 modulateColor = Color(0, 0.488924, 1, 1)
 
-[node name="PickUp" parent="." instance=ExtResource("23_aauyb")]
-position = Vector2(1134, 18)
-item = ExtResource("28_6sds8")
-
 [node name="PickUp2" parent="." instance=ExtResource("23_aauyb")]
-position = Vector2(1183, 44)
-item = ExtResource("9_0xiyn")
+position = Vector2(1780, -216)
+item = ExtResource("27_jui0f")
 
 [node name="PickUp3" parent="." instance=ExtResource("23_aauyb")]
-position = Vector2(1216, -1)
-item = ExtResource("28_6sds8")
-
-[node name="PickUp4" parent="." instance=ExtResource("23_aauyb")]
-position = Vector2(1210, 104)
-item = ExtResource("31_gap6o")
-
-[node name="PickUp5" parent="." instance=ExtResource("23_aauyb")]
-position = Vector2(1245, 52)
+position = Vector2(1055, -39)
 item = ExtResource("24_4lq32")
 
-[node name="Chest" parent="." instance=ExtResource("29_ch0hu")]
-position = Vector2(1058, -22)
+[node name="PickUp4" parent="." instance=ExtResource("23_aauyb")]
+position = Vector2(1090, 32)
+item = ExtResource("29_vb1w2")
+
+[node name="PickUp5" parent="." instance=ExtResource("23_aauyb")]
+position = Vector2(1163, 67)
+item = ExtResource("27_jui0f")
+
+[node name="PickUp6" parent="." instance=ExtResource("23_aauyb")]
+position = Vector2(1224, 33)
+item = ExtResource("30_yh0i0")

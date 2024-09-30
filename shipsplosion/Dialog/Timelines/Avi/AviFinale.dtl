@@ -3,9 +3,9 @@ Avi: Oh, no. So, there's only one escape pod left?
 Avi: If I've learnt one thing during this journey, it's that I'd be doing myself a disservice if I didn't live on past today.
 Avi: I still have so much passion. I wanna keep making people smile.
 Avi: Please, you have to understand.
-- Let Avi take the escape pod
+- Let Avi take the escape pod.
 	Avi: Thank you so much. This is the kindest gesture I've ever received. I won't forget this.
 	do EndAnimation.Anim("Stay")
-- Take the escape pod yourself
+- Take the escape pod yourself.
 	Avi: No, please! I found my passion. I found something to live for! I don't wanna go now......
 	do EndAnimation.Anim("Leave")

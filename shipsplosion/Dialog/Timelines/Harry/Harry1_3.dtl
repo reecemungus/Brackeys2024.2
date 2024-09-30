@@ -1,5 +1,4 @@
 join Harry center
-Harry: I'm grateful to be able to cross one last thing off my bucket list.
-- Tell him
-	do PlayerInformation.PanickCharacter("Harry")
-- Dont tell him
+Harry: Do you believe you can wish upon a shooting star?
+Harry: I think it's magical, truly. Making wishes is what makes me feel young again.
+Harry: Never lose your inner child, kid.

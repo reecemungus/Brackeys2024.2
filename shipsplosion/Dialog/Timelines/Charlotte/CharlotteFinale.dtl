@@ -3,10 +3,10 @@ Charlotte: Oh hey...you want that last escape pod, huh?
 Charlotte: Look, please. I just wanna see my grandparents again.
 Charlotte: Maybe I got ahead of myself thinking I could work in aerospace.
 Charlotte: I just wanna go back to my little life in my little town. Please, let me go back.
-- Let Charlotte take the escape pod
+- Let Charlotte take the escape pod.
 	Charlotte: Wait, really? Thank you...you remind me of my grandparents.
 	Charlotte: They would really like you. Thanks to you, I get to see them again.
 	do EndAnimation.Anim("Stay")
-- Take the escape rod yourself
+- Take the escape rod yourself.
 	Charlotte: Wait, please...don't leave me here. I'm so scared.
 	do EndAnimation.Anim("Leave")

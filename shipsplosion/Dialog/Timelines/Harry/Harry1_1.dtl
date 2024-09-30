@@ -1,3 +1,10 @@
 join Harry center
-Harry: Hello there, young'un. This cruise is the adventure of a lifetime!
-Harry: I never thought I'd get to see space myself.
+Harry: Hello there, young'un. This cruise is the adventure of a lifetime! I never thought I'd get to see space myself.
+Harry: You learn to appreciate the small things in life at my age.
+Harry: Life's catching up to me, cancer's a bugger.
+Harry: I'm just grateful to be able to cross one last thing off my bucket list.
+- Tell him about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Harry")
+	Harry: Oh God, that's awful news.
+- Don't tell him.
+	Harry: Always nice to have a good chat.

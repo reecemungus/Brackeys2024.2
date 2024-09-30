@@ -1,2 +1,8 @@
 join Patrick center
 Patrick: Something the matter? I'm the security man. You can tell me.
+Patrick: You look like something is bothering you. Kinda putting me on edge.
+- Tell him about the meteor strike.
+	do PlayerInformation.PanickCharacter("Patrick")
+	Patrick: Wait, really? You're not joking? How did we not know this sooner?
+- Don't tell him.
+	Patrick: Don't get into too much trouble, weatherman!

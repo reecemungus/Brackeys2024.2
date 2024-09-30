@@ -6,7 +6,7 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "Default_Style"
 },
 "default_portrait": "Avi",
 "description": "",
@@ -17,11 +17,11 @@
 "portraits": {
 "Avi": {
 "export_overrides": {
-"image": "\"res://Dialog/Portraits/Avi Portrait.png\""
+"image": "\"res://Dialog/Portraits/NewPortraits/New Avi Portrait.png\""
 },
 "mirror": false,
-"offset": Vector2(-185, -165),
-"scale": 0.4,
+"offset": Vector2(135, -165),
+"scale": 0.5,
 "scene": ""
 }
 },

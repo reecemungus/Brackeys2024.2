@@ -1,5 +1,2 @@
 join Angela center
 Angela: I've noticed people are acting a little off. Nothing's wrong, is it?
-- Tell her
-	do PlayerInformation.PanickCharacter("Angela")
-- Dont tell her

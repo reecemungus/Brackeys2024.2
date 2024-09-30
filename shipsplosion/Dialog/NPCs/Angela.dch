@@ -6,7 +6,7 @@
 "custom_info": {
 "sound_mood_default": "",
 "sound_moods": {},
-"style": ""
+"style": "Default_Style"
 },
 "default_portrait": "Angela",
 "description": "",
@@ -17,11 +17,11 @@
 "portraits": {
 "Angela": {
 "export_overrides": {
-"image": "\"res://Dialog/Portraits/Angela Portrait.png\""
+"image": "\"res://Dialog/Portraits/NewPortraits/New Angela Portrait.png\""
 },
 "mirror": false,
-"offset": Vector2(-185, -165),
-"scale": 0.4,
+"offset": Vector2(150, -165),
+"scale": 0.45,
 "scene": ""
 }
 },

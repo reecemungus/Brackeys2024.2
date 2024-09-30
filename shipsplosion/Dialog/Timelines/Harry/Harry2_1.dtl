@@ -1,3 +1,10 @@
 join Harry center
-Harry: The observatory here is fantastic!
-Harry: I promised my granddaughter, Hayley, I'd take a picture of space for her and show her when I get back.
+Harry: The observatory here is spectacular!
+Harry: I promised my granddaughter, Hayley, I'd take a picture of space for her...and show her when I get back.
+Harry: Hayley loves space as much as me. I'm so happy we share the same dream.
+Harry: For me, being surrounded with what you love and who you love, that's what dreams are made of.
+- Tell him about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Harry")
+	Harry: Oh God, that's awful news.
+- Don't tell him.
+	Harry: Always nice to have a good chat.
