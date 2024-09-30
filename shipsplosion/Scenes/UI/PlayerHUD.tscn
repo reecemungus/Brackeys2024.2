@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccl38q624ah8h"]
+[gd_scene load_steps=6 format=3 uid="uid://ccl38q624ah8h"]
 
 [ext_resource type="Script" path="res://Scripts/UI/player_hudScript.gd" id="1_flcg1"]
 [ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="2_plo1a"]
 [ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="3_e4m4s"]
 [ext_resource type="FontFile" uid="uid://bwaaiwv5lnc6s" path="res://Assets/UIAssets/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="4_nxw56"]
+[ext_resource type="PackedScene" uid="uid://cdqaju73hin7k" path="res://Scenes/UI/pause_menu.tscn" id="5_ndeba"]
 
 [node name="PlayerHUD" type="CanvasLayer"]
 script = ExtResource("1_flcg1")
@@ -54,3 +55,6 @@ size_flags_horizontal = 4
 theme = ExtResource("2_plo1a")
 theme_override_fonts/font = ExtResource("4_nxw56")
 text = "0000"
+
+[node name="Control" parent="." instance=ExtResource("5_ndeba")]
+visible = false
