@@ -1,2 +1,10 @@
 join Avi center
-Avi: Hey, buddy. You look like a thing or two is bothering you.
+Avi: Hey, buddy. You look like a thing or three is bothering you.
+Avi: I find humming a relaxing melody always helps to calm me down.
+Avi: Don't forget, sharing your troubles can help lighten the burden.
+- Tell him about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Avi")
+	Avi: Haha...a good joke, but your delivery was a bit intense.
+	Avi: Wait, you're not joking? But, all this people...this is awful news.
+- Don't tell him.
+	Avi: Don't be a stranger.

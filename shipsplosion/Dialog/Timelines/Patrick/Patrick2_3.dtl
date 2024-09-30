@@ -1,6 +1,2 @@
 join Patrick center
-Patrick: I've been talking to this sweet lady, Angela, about wedding planning.
-Patrick: Only thing keeping me sane on this damn ship.
-- Tell him
-	do PlayerInformation.PanickCharacter("Patrick")
-- Dont tell him
+Patrick: They should put a vending machine in the security office. Would make my life a lot better.

@@ -1,0 +1,9 @@
+join Naomi center
+Naomi: Hey, what's up? You look kinda spooked.
+Naomi: Got something you need to get off your chest? This is a safe space.
+- Tell her about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Naomi")
+	Naomi: What? Nah, I don't believe you.
+	Naomi: Wait, you're being serious? Damn, this sucks.
+- Don't tell her.
+	Naomi: Don't do anything I wouldn't do.

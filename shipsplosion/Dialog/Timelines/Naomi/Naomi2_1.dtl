@@ -1,0 +1,11 @@
+join Naomi center
+Naomi: As much as they suck, Stratos does pay good money.
+Naomi: Hopefully, after this is done, I can afford to go on a BIG trip around the world. It'll be my world tour.
+Naomi: For as long as I can remember, I've always wanted to travel the world and see its sights. Just seems so freeing, y'know?
+Naomi: Loads of people on this ship love space, but it's never really been my thing.
+- Tell her about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Naomi")
+	Naomi: What? Nah, I don't believe you.
+	Naomi: Wait, you're being serious? Damn, this sucks.
+- Don't tell her.
+	Naomi: Don't do anything I wouldnt do.

@@ -1,2 +1,9 @@
 join Harry center
 Harry: Woah, hey there. You look stressed.
+Harry: What's troubling ya?
+Harry: Looking at the stars always helps me when I'm in a panic, or thinking about my sweet Hayley.
+- Tell him about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Harry")
+	Harry: Oh God, that's awful news.
+- Don't tell him.
+	Harry: Always nice to have a good chat.

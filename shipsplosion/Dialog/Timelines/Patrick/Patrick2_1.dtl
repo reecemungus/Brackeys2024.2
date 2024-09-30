@@ -1,3 +1,10 @@
 join Patrick center
 Patrick: Y'know after this voyage, I think I might quit. I can't wait to see my partner again.
 Patrick: They're the love of my life.
+Patrick: If I quit, I'd have a lot more spare time on my hands. I could finally set a wedding date!
+Patrick: I've been talking to this sweet lady, Angela, about wedding planning. Only thing keeping me sane on this damn ship.
+- Tell him about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Patrick")
+	Patrick: Wait, really? You're not joking? How did we not know this sooner?
+- Don't tell him.
+	Patrick: Don't get into too much trouble, weatherman!

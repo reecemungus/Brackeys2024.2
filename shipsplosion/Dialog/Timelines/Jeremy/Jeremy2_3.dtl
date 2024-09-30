@@ -1,5 +1,2 @@
 join Jeremy center
-Jeremy: I've got a reputation to maintain and people to prove wrong.
-- Tell him
-	do PlayerInformation.PanickCharacter("Jeremy")
-- Dont tell him
+Jeremy: God, is there no VIP area on this ship?

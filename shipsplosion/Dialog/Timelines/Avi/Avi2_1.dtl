@@ -4,7 +4,7 @@ Avi: You can always catch me at the ballroom performing. You should drop by! I'd
 Avi: This whole journey has really helped me strengthen my love for music and improve my confidence as well.
 Avi: I hope other people find what they're looking for too.
 - Tell him about the meteor disaster.
-	do PlayerInformation.PanickCharacter()
+	do PlayerInformation.PanickCharacter("Avi")
 	Avi: Haha...a good joke, but your delivery was a bit intense.
 	Avi: Wait, you're not joking? But, all this people...this is awful news.
 - Don't tell him.

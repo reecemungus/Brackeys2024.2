@@ -4,7 +4,7 @@ Jeremy: I'm kinda busy right now.
 Jeremy: Oh, you work here? Then stop bothering me, I pay your wages after all.
 Jeremy: This is the Reunion's maiden voyage. I will not tolerate you slacking.
 - Tell him about the meteor disaster.
-	do PlayerInformation.PanickCharacter()
+	do PlayerInformation.PanickCharacter("Jeremy")
 	Jeremy: What's that? You're kidding!
 	Jeremy: Oh dammit!
 - Don't tell him.

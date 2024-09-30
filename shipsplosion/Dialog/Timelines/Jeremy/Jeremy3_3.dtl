@@ -1,5 +1,2 @@
 join Jeremy center
 Jeremy: I don't have time for this.
-- Tell him
-	do PlayerInformation.PanickCharacter("Jeremy")
-- Dont tell him

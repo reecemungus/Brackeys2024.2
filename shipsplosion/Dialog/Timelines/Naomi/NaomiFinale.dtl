@@ -1,0 +1,10 @@
+join Naomi center
+Naomi: Oh, hey. You're here too. Of course, there's only one escape left.
+Naomi: Look, I guess I'm gonna sound pretty selfish here, but I really want that escape pod.
+Naomi: I want to explore the world. It's my lifelong dream. I don't even pay attention to my job, because I daydream about it all the time.
+Naomi: My life would've been so worthless and mundane if I can't do this one thing. So, please...
+- Let Naomi take the escape pod.
+	Naomi: What, really? Jeez, thank you so much. Owe everything to you, really.
+	Naomi: You're a cool guy, weatherman.
+- Take the escape pod yourself.
+	Naomi: Please, no. C'mon. Nothing ever goes right for me...

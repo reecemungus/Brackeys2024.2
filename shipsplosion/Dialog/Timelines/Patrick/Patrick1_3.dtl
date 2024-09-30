@@ -1,6 +1,2 @@
 join Patrick center
-Patrick: Remember that stuff Stratos did back in Balamba?
-Patrick: They only care about keeping their clients happy. They don't care for little guys like us.
-- Tell him
-	do PlayerInformation.PanickCharacter("Patrick")
-- Dont tell him
+Patrick: There's no service up here, so I can't even call my partner.

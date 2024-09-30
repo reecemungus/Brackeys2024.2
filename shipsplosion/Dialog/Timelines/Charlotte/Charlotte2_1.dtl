@@ -1,3 +1,11 @@
 join Charlotte center
 Charlotte: I loved listening to Avi sing in the ballroom last night!
 Charlotte: It helped clear my mind after a long day of studying.
+Charlotte: I wonder what the engine room is like. I hope I can see how it works outside of a textbook.
+Charlotte: As much as I love it here, I can't wait to see my grandparents when we get back!
+- Tell her about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Charlotte")
+	Charlotte: What!? No way! This can't be happening...
+	Charlotte: I need to figure out a way off this ship.
+- Don't tell her.
+	Charlotte: See you around!

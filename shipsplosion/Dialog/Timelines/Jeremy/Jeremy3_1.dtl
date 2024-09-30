@@ -1,3 +1,10 @@
 join Jeremy center
 Jeremy: What are you meandering around for?
 Jeremy: Your vibes are scaring our paying customers.
+Jeremy: If something's wrong, you better fix it.
+- Tell him about the meteor disaster.
+	do PlayerInformation.PanickCharacter("Jeremy")
+	Jeremy: What's that? You're kidding!
+	Jeremy: Oh dammit!
+- Don't tell him.
+	Jeremy: Get back to work!
