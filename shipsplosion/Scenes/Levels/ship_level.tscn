@@ -17,20 +17,20 @@
 [ext_resource type="PackedScene" uid="uid://ehgrixoqenig" path="res://Scenes/Particles/stars.tscn" id="12_juqa5"]
 [ext_resource type="Texture2D" uid="uid://cv8wdcdi1qtlt" path="res://Dialog/Sprites/Avi.png" id="16_1b6nr"]
 [ext_resource type="Texture2D" uid="uid://cmgijav8brhys" path="res://Dialog/Sprites/Charlotte.png" id="17_125gt"]
-[ext_resource type="PackedScene" uid="uid://c7t7l3lsnybiy" path="res://Scenes/Inventory/Items/PickUp/Manual.tscn" id="17_uq0e4"]
 [ext_resource type="Texture2D" uid="uid://bnx3tcerk6wc5" path="res://Dialog/Sprites/Harry.png" id="18_xsk3o"]
 [ext_resource type="Texture2D" uid="uid://shdcp3527w4a" path="res://Dialog/Sprites/Jeremy.png" id="19_aa2w4"]
 [ext_resource type="Texture2D" uid="uid://c5fidacm2amx0" path="res://Dialog/Sprites/Patrick.png" id="20_jo5ef"]
 [ext_resource type="PackedScene" uid="uid://bns6n8yxs18bc" path="res://Scenes/game_end.tscn" id="21_63scu"]
 [ext_resource type="PackedScene" uid="uid://db65jdohlvy16" path="res://Scenes/Props/nav_desk.tscn" id="22_e0kh8"]
 [ext_resource type="PackedScene" uid="uid://bewp7u50gr63p" path="res://Scenes/Inventory/Items/PickUp/PickUp.tscn" id="23_aauyb"]
-[ext_resource type="Resource" path="res://Scenes/Inventory/Items/Ale.tres" id="24_4lq32"]
+[ext_resource type="Resource" uid="uid://bfs11dlc87jw4" path="res://Scenes/Inventory/Items/Ale.tres" id="24_4lq32"]
 [ext_resource type="Resource" uid="uid://mckrnys5sq8h" path="res://Scenes/Inventory/Items/Crowbar.tres" id="25_nl63x"]
 [ext_resource type="PackedScene" uid="uid://bjkcoek73l5ou" path="res://Scenes/Props/lockedDoor.tscn" id="26_dgrqf"]
 [ext_resource type="Resource" uid="uid://b182pjegpsb57" path="res://Scenes/Inventory/Items/keycardRed.tres" id="27_jui0f"]
 [ext_resource type="Resource" uid="uid://8pk6p8yqryx0" path="res://Scenes/Inventory/Items/keycardBlue.tres" id="28_c6py6"]
 [ext_resource type="Resource" uid="uid://bcp1k4dlny1cq" path="res://Scenes/Inventory/Items/keycardGreen.tres" id="29_vb1w2"]
-[ext_resource type="Resource" path="res://Scenes/Inventory/Items/FirstAidKit.tres" id="30_yh0i0"]
+[ext_resource type="Resource" uid="uid://c8ty7jjj2vxct" path="res://Scenes/Inventory/Items/FirstAidKit.tres" id="30_yh0i0"]
+[ext_resource type="PackedScene" uid="uid://df00k4i74potw" path="res://Scenes/Props/chest.tscn" id="31_g3w8h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixjmq"]
 texture = ExtResource("8_34xlj")
@@ -848,5 +848,7 @@ item = ExtResource("27_jui0f")
 position = Vector2(1224, 33)
 item = ExtResource("30_yh0i0")
 
-[node name="PickUp7" parent="." instance=ExtResource("17_uq0e4")]
-position = Vector2(1099, -100)
+[node name="Chest" parent="." instance=ExtResource("31_g3w8h")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(1780, -540)
