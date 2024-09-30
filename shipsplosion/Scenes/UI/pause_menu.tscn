@@ -10,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 script = ExtResource("1_emgc8")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
@@ -32,10 +33,15 @@ size_flags_horizontal = 4
 
 [node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme = ExtResource("2_iyjdo")
 text = "Resume"
 
 [node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+mouse_filter = 1
 theme = ExtResource("2_iyjdo")
 text = "Quit"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

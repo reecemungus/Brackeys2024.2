@@ -9,6 +9,9 @@
 [node name="PlayerHUD" type="CanvasLayer"]
 script = ExtResource("1_flcg1")
 
+[node name="Control" parent="." instance=ExtResource("5_ndeba")]
+visible = false
+
 [node name="HUDControl" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -55,6 +58,3 @@ size_flags_horizontal = 4
 theme = ExtResource("2_plo1a")
 theme_override_fonts/font = ExtResource("4_nxw56")
 text = "0000"
-
-[node name="Control" parent="." instance=ExtResource("5_ndeba")]
-visible = false
