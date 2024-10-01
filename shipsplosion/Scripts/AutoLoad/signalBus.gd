@@ -12,6 +12,8 @@ signal CloseContainer
 
 signal TransferItem(item : InventoryItem, fromInventory : Inventory, toInventory : Inventory)
 
+signal OpenManual
+
 func _ready() -> void:
 	TransferItem.connect(OnTransferItem)
 

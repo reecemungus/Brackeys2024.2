@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/NPC/unique_npc.gd" id="1_qrf46"]
 [ext_resource type="Shape2D" uid="uid://bdo387rdebn18" path="res://Scenes/Character/CharCollision.tres" id="2_0ljj6"]
 [ext_resource type="Texture2D" uid="uid://dt2hika5r1whi" path="res://Dialog/Sprites/Angela.png" id="2_r8rq1"]
-[ext_resource type="Texture2D" uid="uid://b0nid8obbvpta" path="res://Assets/UIAssets/ExclaimationMark.png" id="7_8s3o2"]
+[ext_resource type="PackedScene" uid="uid://bf3i2me2g418b" path="res://Scenes/exclaimation_mark.tscn" id="7_an7jb"]
 [ext_resource type="Texture2D" uid="uid://c8dinw1jn8rbt" path="res://Assets/Characters/Base/Feet_Sheet.png" id="9_kivvq"]
 [ext_resource type="Script" path="res://Scripts/feetAnim.gd" id="10_8n5ne"]
 [ext_resource type="PackedScene" uid="uid://dmd1nlhdv7jga" path="res://Scenes/Character/hit_box.tscn" id="11_wwfwv"]
@@ -88,12 +88,7 @@ texture = ExtResource("2_r8rq1")
 region_enabled = true
 region_rect = Rect2(0, 0, 20, 16)
 
-[node name="ExclaimationMark" type="Sprite2D" parent="."]
-modulate = Color(0.901961, 0.215686, 0.215686, 1)
-z_index = 3
-position = Vector2(0, -65)
-scale = Vector2(2, 2)
-texture = ExtResource("7_8s3o2")
+[node name="ExclaimationMark" parent="." instance=ExtResource("7_an7jb")]
 
 [connection signal="area_entered" from="DialogZone" to="." method="_on_dialog_zone_area_entered"]
 [connection signal="area_exited" from="DialogZone" to="." method="_on_dialog_zone_area_exited"]
