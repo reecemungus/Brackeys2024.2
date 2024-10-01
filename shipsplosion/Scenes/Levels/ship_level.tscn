@@ -1,35 +1,43 @@
-[gd_scene load_steps=38 format=4 uid="uid://baj082ltpbi8e"]
+[gd_scene load_steps=46 format=4 uid="uid://baj082ltpbi8e"]
 
 [ext_resource type="Script" path="res://Scripts/ship_levelScript.gd" id="1_vl32y"]
 [ext_resource type="PackedScene" uid="uid://begrf0occhpgk" path="res://Scenes/Character/player_character.tscn" id="2_sa0gw"]
 [ext_resource type="PackedScene" uid="uid://qqjadxciqvnx" path="res://Scenes/Props/bed.tscn" id="3_2vq62"]
 [ext_resource type="PackedScene" uid="uid://dmoctpykqcsx4" path="res://Scenes/game_manager.tscn" id="4_tg6ta"]
 [ext_resource type="PackedScene" uid="uid://6bmg6cemniwx" path="res://Scenes/Character/NPC.tscn" id="5_uqw8v"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/MilkBottle.tres" id="6_6udfv"]
 [ext_resource type="PackedScene" uid="uid://c8ssdynf847wn" path="res://Scenes/Character/UniqueNPCs/UniqueNPCBase.tscn" id="6_abfqa"]
 [ext_resource type="TileSet" uid="uid://cbo7xsaj1ul1d" path="res://Assets/Tilemap/TileMap.tres" id="6_r5sly"]
 [ext_resource type="PackedScene" uid="uid://dxw7x2m37dfki" path="res://Scenes/Props/lightningScene.tscn" id="7_4awsa"]
 [ext_resource type="Texture2D" uid="uid://ustu2idmbmin" path="res://Assets/Props/sign.png" id="8_34xlj"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/Microphone.tres" id="8_p40ed"]
 [ext_resource type="Texture2D" uid="uid://lqxor4ol2oht" path="res://Assets/Tilemap/Spritesheet2.png" id="9_1gjgp"]
+[ext_resource type="Resource" uid="uid://j1uopmy2v3tm" path="res://Scenes/Inventory/Items/money.tres" id="9_67md7"]
 [ext_resource type="Texture2D" uid="uid://rn27fe28wpdw" path="res://Assets/Tilemap/spritesheet.png" id="10_bhmma"]
 [ext_resource type="PackedScene" uid="uid://du1on700oxenx" path="res://Scenes/Props/door.tscn" id="10_lh7je"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/Book.tres" id="11_1eftx"]
 [ext_resource type="Texture2D" uid="uid://dg4rjsc8os8e4" path="res://Assets/Props/Water Cooler.png" id="11_gjvgn"]
 [ext_resource type="Texture2D" uid="uid://ug8j6wfkpqdb" path="res://Assets/UIAssets/Sprite-0003.png" id="11_txbib"]
 [ext_resource type="PackedScene" uid="uid://ehgrixoqenig" path="res://Scenes/Particles/stars.tscn" id="12_juqa5"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/toolBox.tres" id="12_mq0i5"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/Glasses.tres" id="14_tfk8x"]
 [ext_resource type="Texture2D" uid="uid://cv8wdcdi1qtlt" path="res://Dialog/Sprites/Avi.png" id="16_1b6nr"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/Phone.tres" id="16_m01jv"]
 [ext_resource type="Texture2D" uid="uid://cmgijav8brhys" path="res://Dialog/Sprites/Charlotte.png" id="17_125gt"]
+[ext_resource type="Texture2D" uid="uid://bfjt0ljr8nybn" path="res://Dialog/Sprites/Naomi.png" id="18_voyxx"]
 [ext_resource type="Texture2D" uid="uid://bnx3tcerk6wc5" path="res://Dialog/Sprites/Harry.png" id="18_xsk3o"]
 [ext_resource type="Texture2D" uid="uid://shdcp3527w4a" path="res://Dialog/Sprites/Jeremy.png" id="19_aa2w4"]
 [ext_resource type="Texture2D" uid="uid://c5fidacm2amx0" path="res://Dialog/Sprites/Patrick.png" id="20_jo5ef"]
 [ext_resource type="PackedScene" uid="uid://bns6n8yxs18bc" path="res://Scenes/game_end.tscn" id="21_63scu"]
 [ext_resource type="PackedScene" uid="uid://db65jdohlvy16" path="res://Scenes/Props/nav_desk.tscn" id="22_e0kh8"]
 [ext_resource type="PackedScene" uid="uid://bewp7u50gr63p" path="res://Scenes/Inventory/Items/PickUp/PickUp.tscn" id="23_aauyb"]
-[ext_resource type="Resource" uid="uid://bfs11dlc87jw4" path="res://Scenes/Inventory/Items/Ale.tres" id="24_4lq32"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/Ale.tres" id="24_4lq32"]
 [ext_resource type="Resource" uid="uid://mckrnys5sq8h" path="res://Scenes/Inventory/Items/Crowbar.tres" id="25_nl63x"]
 [ext_resource type="PackedScene" uid="uid://bjkcoek73l5ou" path="res://Scenes/Props/lockedDoor.tscn" id="26_dgrqf"]
 [ext_resource type="Resource" uid="uid://b182pjegpsb57" path="res://Scenes/Inventory/Items/keycardRed.tres" id="27_jui0f"]
 [ext_resource type="Resource" uid="uid://8pk6p8yqryx0" path="res://Scenes/Inventory/Items/keycardBlue.tres" id="28_c6py6"]
 [ext_resource type="Resource" uid="uid://bcp1k4dlny1cq" path="res://Scenes/Inventory/Items/keycardGreen.tres" id="29_vb1w2"]
-[ext_resource type="Resource" uid="uid://c8ty7jjj2vxct" path="res://Scenes/Inventory/Items/FirstAidKit.tres" id="30_yh0i0"]
+[ext_resource type="Resource" path="res://Scenes/Inventory/Items/FirstAidKit.tres" id="30_yh0i0"]
 [ext_resource type="PackedScene" uid="uid://df00k4i74potw" path="res://Scenes/Props/chest.tscn" id="31_g3w8h"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixjmq"]
@@ -373,30 +381,49 @@ position = Vector2(1444, -1022)
 
 [node name="Angela" parent="." groups=["C_Angela"] instance=ExtResource("6_abfqa")]
 position = Vector2(-700, -593)
+itemWanted = ExtResource("6_6udfv")
+itemToGive = ExtResource("30_yh0i0")
 
 [node name="Avi" parent="." groups=["C_Avi"] instance=ExtResource("6_abfqa")]
 position = Vector2(18, -118)
 characterName = "Avi"
+itemWanted = ExtResource("8_p40ed")
+itemToGive = ExtResource("9_67md7")
 sprite = ExtResource("16_1b6nr")
 
 [node name="Charlotte" parent="." groups=["C_Charlotte"] instance=ExtResource("6_abfqa")]
 position = Vector2(716, 78)
 characterName = "Charlotte"
+itemWanted = ExtResource("11_1eftx")
+itemToGive = ExtResource("12_mq0i5")
 sprite = ExtResource("17_125gt")
 
 [node name="Harry" parent="." groups=["C_Harry"] instance=ExtResource("6_abfqa")]
 position = Vector2(-794, 823)
 characterName = "Harry"
+itemWanted = ExtResource("14_tfk8x")
+itemToGive = ExtResource("11_1eftx")
 sprite = ExtResource("18_xsk3o")
 
 [node name="Jeremy" parent="." groups=["C_Jeremy"] instance=ExtResource("6_abfqa")]
 position = Vector2(1727, -72)
 characterName = "Jeremy"
+itemWanted = ExtResource("16_m01jv")
+itemToGive = ExtResource("9_67md7")
 sprite = ExtResource("19_aa2w4")
 
+[node name="Naomi" parent="." groups=["C_Patrick"] instance=ExtResource("6_abfqa")]
+position = Vector2(2548, 95)
+characterName = "Naomi"
+itemWanted = ExtResource("30_yh0i0")
+itemToGive = ExtResource("9_67md7")
+sprite = ExtResource("18_voyxx")
+
 [node name="Patrick" parent="." groups=["C_Patrick"] instance=ExtResource("6_abfqa")]
-position = Vector2(2018, -656)
+position = Vector2(2101, -396)
 characterName = "Patrick"
+itemWanted = ExtResource("24_4lq32")
+itemToGive = ExtResource("27_jui0f")
 sprite = ExtResource("20_jo5ef")
 
 [node name="ShipMap" type="Node2D" parent="."]
