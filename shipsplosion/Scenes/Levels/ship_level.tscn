@@ -840,7 +840,7 @@ position = Vector2(2140, -500)
 position = Vector2(2140, -460)
 
 [node name="PickUp" parent="." instance=ExtResource("23_aauyb")]
-position = Vector2(1169, -7)
+position = Vector2(1161, -59)
 item = ExtResource("28_c6py6")
 
 [node name="LockedDoor3" parent="." instance=ExtResource("26_dgrqf")]
@@ -860,7 +860,7 @@ position = Vector2(1780, -216)
 item = ExtResource("27_jui0f")
 
 [node name="PickUp3" parent="." instance=ExtResource("23_aauyb")]
-position = Vector2(1055, -39)
+position = Vector2(741, 863)
 item = ExtResource("24_4lq32")
 
 [node name="PickUp4" parent="." instance=ExtResource("23_aauyb")]
