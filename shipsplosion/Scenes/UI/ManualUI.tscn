@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfs4fe1fvjxbi"]
+
+[ext_resource type="Script" path="res://Scripts/UI/ManualUI.gd" id="1_3gcx5"]
+[ext_resource type="Texture2D" uid="uid://bqfoib4h18so7" path="res://Assets/UIAssets/bookRect.png" id="1_nbjyw"]
+[ext_resource type="Texture2D" uid="uid://bicir2gs7jkcj" path="res://Assets/UIAssets/bookMiddle.png" id="2_4s05i"]
+
+[node name="ManualScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3gcx5")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.235417
+anchor_top = 0.1
+anchor_right = 0.764583
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nbjyw")
+region_rect = Rect2(0, 0, 32, 32)
+patch_margin_left = 14
+patch_margin_top = 14
+patch_margin_right = 14
+patch_margin_bottom = 14
+metadata/_edit_use_anchors_ = true
+
+[node name="NinePatchRect" type="NinePatchRect" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.494094
+anchor_top = 0.0277778
+anchor_right = 0.505906
+anchor_bottom = 0.972222
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4s05i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Page1" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.0509259
+anchor_right = 0.475
+anchor_bottom = 0.951389
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0588235, 0.0392157, 0.117647, 1)
+text = "WeatherMan's Handbook:
+
+WASD - Move
+
+E - Interact / Skip Dialog
+
+R - Trade
+
+Click - Transfer item to open container
+
+Escape - Pause
+"
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Page2" type="Label" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.525
+anchor_top = 0.0509259
+anchor_right = 0.950787
+anchor_bottom = 0.951389
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0588235, 0.0392157, 0.117647, 1)
+text = "You need to have the item someone wants in order to trade with them. 
+
+You need to be in bed by midnight
+
+Certain doors need a keycard to open them. Make sure you have it on you when you go to the door."
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="CloseBook" type="Button" parent="NinePatchRect/Page2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.907455
+anchor_right = 0.998613
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Close Book"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="NinePatchRect/Page2/CloseBook" to="." method="_on_close_book_pressed"]

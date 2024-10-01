@@ -14,7 +14,6 @@ func _ready() -> void:
 		push_error("Player not found")
 
 func _on_interact_area_area_entered(area: Area2D) -> void:
-	
 	if area.name == "InteractArea": # only move forward if player is in the area
 		isActive = true
 

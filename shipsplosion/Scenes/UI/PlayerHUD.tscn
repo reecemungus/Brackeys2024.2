@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccl38q624ah8h"]
+[gd_scene load_steps=9 format=3 uid="uid://ccl38q624ah8h"]
 
 [ext_resource type="Script" path="res://Scripts/Inventory/UI/PlayerHUD.gd" id="1_flcg1"]
 [ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="2_plo1a"]
@@ -6,6 +6,8 @@
 [ext_resource type="FontFile" uid="uid://bwaaiwv5lnc6s" path="res://Assets/UIAssets/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf" id="4_nxw56"]
 [ext_resource type="PackedScene" uid="uid://rxu6t4wwhv2q" path="res://Scenes/UI/chestUI.tscn" id="5_0eksv"]
 [ext_resource type="PackedScene" uid="uid://cdqaju73hin7k" path="res://Scenes/UI/pause_menu.tscn" id="6_l1ykc"]
+[ext_resource type="PackedScene" uid="uid://cfs4fe1fvjxbi" path="res://Scenes/UI/ManualUI.tscn" id="7_s7we6"]
+[ext_resource type="Script" path="res://Scripts/UI/ManualUI.gd" id="8_sbb7l"]
 
 [node name="PlayerHUD" type="CanvasLayer"]
 script = ExtResource("1_flcg1")
@@ -107,3 +109,8 @@ visible = false
 
 [node name="PauseMenuUI" parent="." instance=ExtResource("6_l1ykc")]
 visible = false
+
+[node name="ManualScreen" parent="." instance=ExtResource("7_s7we6")]
+visible = false
+mouse_filter = 2
+script = ExtResource("8_sbb7l")

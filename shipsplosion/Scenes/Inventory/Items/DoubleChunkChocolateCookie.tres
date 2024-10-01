@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://bo74irdvb31a0"]
+
+[ext_resource type="Texture2D" uid="uid://dsrqcxgqjvpq7" path="res://Assets/Items/DoubleChunkChocolateCookie.png" id="1_bqoe7"]
+[ext_resource type="Script" path="res://Scripts/Inventory/inventoryItem.gd" id="1_y23pv"]
+
+[resource]
+script = ExtResource("1_y23pv")
+ItemName = "DoubleChunkChocolateCookie"
+ItemTexture = ExtResource("1_bqoe7")
