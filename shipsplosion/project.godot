@@ -22,6 +22,7 @@ GameInformation="*res://Scripts/AutoLoad/game_information.gd"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 EndAnimation="*res://Scripts/AutoLoad/end_animation.gd"
 SignalBus="*res://Scripts/AutoLoad/signalBus.gd"
+AudioBus="*res://Scripts/AutoLoad/AudioBus.gd"
 
 [debug]
 

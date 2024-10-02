@@ -16,8 +16,6 @@ var hasCrowbar : bool = false
 @export_group("Dialog")
 var canTalk : bool = true
 
-@onready var audioManager : AudioManager = get_node("./AudioManager")
-
 var weaponEquipped : InventoryItem
 
 var bedLocation : Vector2 = Vector2(1735, -575)
@@ -65,17 +63,14 @@ func AllowDialog() -> void:
 
 func _on_footstep_timer_timeout() -> void:
 	if velocity.length() != 0:
-		%MetalFootsteps.play()
-
-func playAttackSound() -> void:
-	%AttackSound.play()
+		AudioBus.playSoundAtLocation(global_position, "res://Assets/Audio/Footsteps/metal_footsteps1.wav", 0.2)
 
 func AdvanceDay() -> void:
 	global_position = bedLocation
 
 func Collect(item : InventoryItem) -> bool:
 	if inventory.Insert(item):
-		audioManager.playSound("Pickup")
+		AudioBus.playSoundAtLocation(global_position, "res://Assets/Audio/Interactions/item_pickup.mp3", 0.2)
 		return true
 	
 	return false

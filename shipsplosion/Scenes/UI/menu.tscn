@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ci0bwayqypyei"]
+[gd_scene load_steps=10 format=3 uid="uid://ci0bwayqypyei"]
 
 [ext_resource type="Script" path="res://Scripts/UI/menuScript.gd" id="1_pkdlk"]
 [ext_resource type="Theme" uid="uid://l78c22phb3jp" path="res://Scenes/Particles/Default.tres" id="2_ruij2"]
@@ -6,6 +6,65 @@
 [ext_resource type="Texture2D" uid="uid://b58for0ds8iwd" path="res://Assets/UIAssets/logo.png" id="3_4hu5l"]
 [ext_resource type="PackedScene" uid="uid://b6qik5q5vdmse" path="res://Scenes/Particles/Comet.tscn" id="3_oagg0"]
 [ext_resource type="Texture2D" uid="uid://wqmheqbtdhqr" path="res://Assets/UIAssets/SAPCE.webp" id="4_np7oi"]
+
+[sub_resource type="Animation" id="Animation_ai23l"]
+resource_name = "StarTrack"
+length = 7.0
+loop_mode = 1
+step = 0.25
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Star:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(500, -0.25, 0, 0.25, 0, 500, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 7)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Star:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -250, -0.583333, 0, 1.08333, 0, 250, -1.08333, 0, 0.666667, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.75, 5, 7)
+}
+
+[sub_resource type="Animation" id="Animation_8tuqw"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Star:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(500, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Star:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8d4in"]
+_data = {
+"RESET": SubResource("Animation_8tuqw"),
+"StarTrack": SubResource("Animation_ai23l")
+}
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -16,23 +75,31 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pkdlk")
 
-[node name="Meteorite" parent="." instance=ExtResource("2_tuute")]
-position = Vector2(556, 0)
-
-[node name="Node2D" parent="." instance=ExtResource("3_oagg0")]
-position = Vector2(1939, 159)
-scale = Vector2(10, 10)
-
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackGround" type="TextureRect" parent="."]
 z_index = -1
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = -1
+anchor_left = -0.00937503
+anchor_top = -0.0722222
+anchor_right = 1.01042
+anchor_bottom = 1.07407
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_np7oi")
 stretch_mode = 1
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.23125
+anchor_top = 0.174074
+anchor_right = 0.76875
+anchor_bottom = 0.281481
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_4hu5l")
+stretch_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -50,7 +117,8 @@ alignment = 1
 
 [node name="Start" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 4
 size_flags_stretch_ratio = 0.0
 theme = ExtResource("2_ruij2")
 text = "Start Game"
@@ -65,9 +133,28 @@ layout_mode = 2
 theme = ExtResource("2_ruij2")
 text = "Quit"
 
-[node name="Logo" type="Sprite2D" parent="HBoxContainer/VBoxContainer"]
-position = Vector2(58, 122)
-texture = ExtResource("3_4hu5l")
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Particles" type="Control" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="Meteorite" parent="CenterContainer/Particles" instance=ExtResource("2_tuute")]
+
+[node name="Star" parent="CenterContainer/Particles" instance=ExtResource("3_oagg0")]
+position = Vector2(500, 0)
+scale = Vector2(10, 10)
+
+[node name="StarTrack" type="AnimationPlayer" parent="CenterContainer/Particles"]
+libraries = {
+"": SubResource("AnimationLibrary_8d4in")
+}
+autoplay = "StarTrack"
 
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

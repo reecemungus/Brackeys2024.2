@@ -17,6 +17,8 @@ var hasOpened : bool = false
 func _ready() -> void:
 	%DoorRight.modulate = modulateColor
 	%DoorLeft.modulate = modulateColor
+	
+	SignalBus.UpdateInventorySlots.connect(CheckPlayer)
 
 func _physics_process(_delta: float) -> void:
 	blendValue = lerpf(blendValue, targetBlendValue, doorSpeed)
@@ -42,5 +44,20 @@ func CheckAreas(area : Area2D) -> void:
 	
 	if shouldOpen:
 		targetBlendValue = 1
+		AudioBus.playSoundAtLocation(global_position, "res://Assets/Audio/Interactions/keycard_scan.wav", 0.2)
 		%CollisionBlocker.set_collision_layer_value(1, false)
 		%CollisionBlocker.set_collision_mask_value(1, false)
+	else:
+		targetBlendValue = 0
+		AudioBus.playSoundAtLocation(global_position, "res://Assets/Audio/Interactions/door_denied.wav", 0.2)
+		%CollisionBlocker.set_collision_layer_value(1, true)
+		%CollisionBlocker.set_collision_mask_value(1, true)
+
+func CheckPlayer() -> void:
+	var areas : Array[Area2D] = get_overlapping_areas()
+	var player : Area2D
+	
+	for i in range(areas.size()):
+		if areas[i].is_in_group("G_Player"):
+			player = areas[i]
+			CheckAreas(player)

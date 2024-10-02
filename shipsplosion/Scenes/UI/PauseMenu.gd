@@ -6,7 +6,7 @@ extends Control
 var paused = false
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("Pause"):
+	if event.is_action_pressed("Pause"):
 		pauseMenu()
 
 func pauseMenu():
