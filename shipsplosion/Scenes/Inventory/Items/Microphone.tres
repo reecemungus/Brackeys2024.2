@@ -1,7 +1,9 @@
-[gd_resource type="Resource" script_class="InventoryItem" load_steps=2 format=3 uid="uid://b36uhs7f76bbb"]
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://b36uhs7f76bbb"]
 
+[ext_resource type="Texture2D" uid="uid://ccw5u52ms81mx" path="res://Assets/Items/mic.png" id="1_n7yas"]
 [ext_resource type="Script" path="res://Scripts/Inventory/inventoryItem.gd" id="1_plowk"]
 
 [resource]
 script = ExtResource("1_plowk")
 ItemName = "Microphone"
+ItemTexture = ExtResource("1_n7yas")
