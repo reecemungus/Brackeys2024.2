@@ -4,6 +4,7 @@ var musicTrack : AudioStreamPlayer
 
 func _ready() -> void:
 	musicTrack = AudioStreamPlayer.new()
+	musicTrack.volume_db = -24
 	musicTrack.bus = "Music"
 	
 	add_child(musicTrack)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=4 uid="uid://baj082ltpbi8e"]
+[gd_scene load_steps=46 format=4 uid="uid://baj082ltpbi8e"]
 
 [ext_resource type="Script" path="res://Scripts/ship_levelScript.gd" id="1_vl32y"]
 [ext_resource type="PackedScene" uid="uid://begrf0occhpgk" path="res://Scenes/Character/player_character.tscn" id="2_sa0gw"]
@@ -39,7 +39,6 @@
 [ext_resource type="Resource" uid="uid://c8ty7jjj2vxct" path="res://Scenes/Inventory/Items/FirstAidKit.tres" id="30_yh0i0"]
 [ext_resource type="PackedScene" uid="uid://df00k4i74potw" path="res://Scenes/Props/chest.tscn" id="31_g3w8h"]
 [ext_resource type="Script" path="res://Scripts/Particles/explosions.gd" id="39_agp8f"]
-[ext_resource type="PackedScene" uid="uid://c5ndl60ro0y4v" path="res://Scenes/Props/manual_book.tscn" id="40_1sp6s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ixjmq"]
 texture = ExtResource("8_34xlj")
@@ -836,6 +835,10 @@ position = Vector2(2140, -500)
 [node name="LockedDoor2" parent="." instance=ExtResource("26_dgrqf")]
 position = Vector2(2140, -460)
 
+[node name="PickUp" parent="." instance=ExtResource("23_aauyb")]
+position = Vector2(1161, -59)
+item = ExtResource("28_c6py6")
+
 [node name="LockedDoor3" parent="." instance=ExtResource("26_dgrqf")]
 position = Vector2(1500, -580)
 rotation = 1.57079
@@ -875,13 +878,10 @@ position = Vector2(1579, -620)
 
 [node name="Explosions" type="Node2D" parent="."]
 script = ExtResource("39_agp8f")
-distance = 500.0
+distance = 50.0
 
 [node name="Timer" type="Timer" parent="Explosions"]
 autostart = true
-
-[node name="ManualBook" parent="." instance=ExtResource("40_1sp6s")]
-position = Vector2(1062, -110)
 
 [connection signal="timeout" from="Explosions/Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="Explosions/Timer" to="Explosions" method="_on_timer_timeout"]
