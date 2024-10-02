@@ -1,14 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkvtkhrbtcrav"]
+[gd_scene load_steps=5 format=3 uid="uid://bkvtkhrbtcrav"]
 
 [ext_resource type="PackedScene" uid="uid://ci0bwayqypyei" path="res://Scenes/UI/menu.tscn" id="1_s71fl"]
+[ext_resource type="Script" path="res://Scripts/Inventory/UI/MenuLevelScript.gd" id="1_wytiu"]
+[ext_resource type="PackedScene" uid="uid://m833dr6gc888" path="res://Scenes/Particles/BrowserSafe/meteor_storm.tscn" id="2_dv4bi"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dtks8"]
 
 [node name="MainMenuLevel" type="Node2D"]
-
-[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("1_wytiu")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
 
 [node name="Menu" parent="CanvasLayer" instance=ExtResource("1_s71fl")]
 material = SubResource("CanvasItemMaterial_dtks8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MeteorStorm" parent="Camera2D" instance=ExtResource("2_dv4bi")]
+position = Vector2(-250, -200)
+rotation = 0.436332
+meteorSpread = 1000.0
