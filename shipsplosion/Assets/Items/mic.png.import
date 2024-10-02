@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dsrqcxgqjvpq7"
-path="res://.godot/imported/DoubleChunkChocolateCookie.png-77e3873e31cc69884afe2acd6cc4d634.ctex"
+uid="uid://ccw5u52ms81mx"
+path="res://.godot/imported/mic.png-2a9bdca9f2dc0449f4f1b5dd7a3601b0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/DoubleChunkChocolateCookie.png"
-dest_files=["res://.godot/imported/DoubleChunkChocolateCookie.png-77e3873e31cc69884afe2acd6cc4d634.ctex"]
+source_file="res://Assets/Items/mic.png"
+dest_files=["res://.godot/imported/mic.png-2a9bdca9f2dc0449f4f1b5dd7a3601b0.ctex"]
 
 [params]
 
