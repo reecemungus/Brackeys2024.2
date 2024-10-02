@@ -364,7 +364,7 @@ script = ExtResource("1_vl32y")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("2_sa0gw")]
 unique_name_in_owner = true
-position = Vector2(1160, -108)
+position = Vector2(2690, 100)
 
 [node name="Bed" parent="." instance=ExtResource("3_2vq62")]
 position = Vector2(1780, -594)
@@ -413,7 +413,7 @@ itemWanted = ExtResource("16_m01jv")
 itemToGive = ExtResource("9_67md7")
 sprite = ExtResource("19_aa2w4")
 
-[node name="Naomi" parent="." groups=["C_Patrick"] instance=ExtResource("6_abfqa")]
+[node name="Naomi" parent="." groups=["C_Naomi"] instance=ExtResource("6_abfqa")]
 position = Vector2(2607, 99)
 characterName = "Naomi"
 itemWanted = ExtResource("30_yh0i0")

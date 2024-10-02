@@ -7,6 +7,7 @@ var charlotteRep : int = 0
 var harryRep : int = 0
 var jeremyRep : int = 0
 var patrickRep : int = 0
+var naomiRep : int = 0
 
 func addRep(character : String) -> void:
 	match character:
@@ -22,9 +23,12 @@ func addRep(character : String) -> void:
 			jeremyRep += 1
 		"Patrick":
 			patrickRep += 1
+		"Naomi":
+			naomiRep += 1
 		_:
 			angelaRep += 1
 
 func PanickCharacter(character : String) -> void:
 	var targetChar = get_tree().get_first_node_in_group("C_%s" % [character])
+	print(targetChar)
 	targetChar.OnPanicked()

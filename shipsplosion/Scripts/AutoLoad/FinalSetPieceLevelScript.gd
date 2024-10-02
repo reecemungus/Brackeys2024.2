@@ -9,11 +9,12 @@ func _ready() -> void:
 	var Jeremy = PlayerInformation.jeremyRep
 	var Harry = PlayerInformation.harryRep
 	var Patrick = PlayerInformation.patrickRep
+	var Naomi = PlayerInformation.naomiRep
 	
-	var maxrep = [Angela, Avi, Charlotte, Jeremy, Harry, Patrick]
-	var largest = max(Angela, Avi, Charlotte, Jeremy, Harry, Patrick)
+	var maxrep = [Angela, Avi, Charlotte, Jeremy, Harry, Patrick, Naomi]
+	var largest = max(Angela, Avi, Charlotte, Jeremy, Harry, Patrick, Naomi)
 	
-	var chars : Array[String] = ["Angela", "Avi", "Charlotte", "Jeremy", "Harry", "Patrick"]
+	var chars : Array[String] = ["Angela", "Avi", "Charlotte", "Jeremy", "Harry", "Patrick", "Naomi"]
 	
 	var chosenChar 
 	

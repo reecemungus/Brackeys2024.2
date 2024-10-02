@@ -6,5 +6,7 @@ Naomi: My life would've been so worthless and mundane if I can't do this one thi
 - Let Naomi take the escape pod.
 	Naomi: What, really? Jeez, thank you so much. Owe everything to you, really.
 	Naomi: You're a cool guy, weatherman.
+	do EndAnimation.Anim("Stay")
 - Take the escape pod yourself.
 	Naomi: Please, no. C'mon. Nothing ever goes right for me...
+	do EndAnimation.Anim("Leave")
