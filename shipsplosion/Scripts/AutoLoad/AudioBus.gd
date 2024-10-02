@@ -25,3 +25,6 @@ func playSoundAtLocation(globalLocation : Vector2, sound : String, pitchVariatio
 	
 	newSound.playing = true
 	newSound.finished.connect(newSound.queue_free)
+
+func KillMusic() -> void:
+	musicTrack.queue_free()
