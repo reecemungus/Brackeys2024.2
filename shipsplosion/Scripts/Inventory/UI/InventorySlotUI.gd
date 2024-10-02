@@ -50,3 +50,5 @@ func OnClicked() -> void:
 			SignalBus.TransferItem.emit(inventorySlot.slotItem, player.openContainer, player.inventory)
 		
 		SignalBus.UpdateInventorySlots.emit()
+		
+		AudioBus.playSoundAtLocation(player.global_position, "res://Assets/Audio/Interactions/item_pickup.mp3", 0.2)

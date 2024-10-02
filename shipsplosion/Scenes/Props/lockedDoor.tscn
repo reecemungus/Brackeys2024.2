@@ -1,15 +1,17 @@
-[gd_scene load_steps=15 format=3 uid="uid://bjkcoek73l5ou"]
+[gd_scene load_steps=18 format=3 uid="uid://bjkcoek73l5ou"]
 
 [ext_resource type="Script" path="res://Scripts/Doors/lockedDoorScript.gd" id="1_ebfbc"]
 [ext_resource type="Resource" uid="uid://b182pjegpsb57" path="res://Scenes/Inventory/Items/keycardRed.tres" id="2_1m8e6"]
 [ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="2_wqs87"]
 [ext_resource type="Texture2D" uid="uid://cmlyjt326df7j" path="res://Assets/spritesheet1COMPLETE (1).png" id="3_2ud65"]
+[ext_resource type="AudioStream" uid="uid://mfb33xqbeujy" path="res://Assets/Audio/dooropening.wav" id="5_tkaa6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3wr76"]
-radius = 45.0
+radius = 20.0
 
 [sub_resource type="Animation" id="Animation_ghju6"]
 resource_name = "DoorClosed"
+step = 0.25
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -54,9 +56,36 @@ tracks/3/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%AnimationTree/../Hiss:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-80, -0.25, 0, 0.25, 0, -80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_8fhas"]
+resource_name = "DoorMiddle"
+step = 0.25
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%AnimationTree/../Hiss:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
 
 [sub_resource type="Animation" id="Animation_5rnnj"]
 resource_name = "DoorOpen"
+step = 0.25
 tracks/0/type = "bezier"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -99,6 +128,17 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%AnimationTree/../Hiss:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-80, -0.25, 0, 0.25, 0, -80, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
 
@@ -148,10 +188,22 @@ tracks/3/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("%AnimationTree/../Hiss:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mr2qk"]
 _data = {
 "DoorClosed": SubResource("Animation_ghju6"),
+"DoorMiddle": SubResource("Animation_8fhas"),
 "DoorOpen": SubResource("Animation_5rnnj"),
 "RESET": SubResource("Animation_qhct6")
 }
@@ -162,15 +214,20 @@ animation = &"DoorClosed"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7rf00"]
 animation = &"DoorOpen"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_14uxk"]
+animation = &"DoorMiddle"
+
 [sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_s0pad"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_chi03")
 blend_point_0/pos = 0.0
 blend_point_1/node = SubResource("AnimationNodeAnimation_7rf00")
 blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_14uxk")
+blend_point_2/pos = 0.5
 min_space = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_tge48"]
-graph_offset = Vector2(-448.03, -39.3775)
+graph_offset = Vector2(-656, 93)
 nodes/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_s0pad")
 nodes/BlendSpace1D/position = Vector2(-100, 100)
 nodes/output/position = Vector2(100, 100)
@@ -182,6 +239,7 @@ size = Vector2(16, 16)
 [node name="LockedDoor" type="Area2D"]
 scale = Vector2(2.5, 2.5)
 script = ExtResource("1_ebfbc")
+doorSpeed = 0.05
 keycardNeeded = ExtResource("2_1m8e6")
 modulateColor = Color(1, 0, 0, 1)
 
@@ -220,13 +278,19 @@ unique_name_in_owner = true
 root_node = NodePath(".")
 tree_root = SubResource("AnimationNodeBlendTree_tge48")
 anim_player = NodePath("../AnimationPlayer")
-parameters/BlendSpace1D/blend_position = -0.0519248
+parameters/BlendSpace1D/blend_position = 0.5
 
 [node name="CollisionBlocker" type="StaticBody2D" parent="."]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionBlocker"]
 shape = SubResource("RectangleShape2D_1m7fv")
+
+[node name="Hiss" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_tkaa6")
+volume_db = -80.0
+autoplay = true
+max_distance = 250.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

@@ -1,6 +1,6 @@
 extends Node
 
-func playSoundAtLocation(globalLocation : Vector2, sound : String, pitchVariation : float = 0.0) -> void:
+func playSoundAtLocation(globalLocation : Vector2, sound : String, pitchVariation : float = 0.2) -> void:
 	var newSound : AudioStreamPlayer2D = AudioStreamPlayer2D.new()
 	newSound.stream = load(sound)
 	

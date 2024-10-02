@@ -1,12 +1,86 @@
-[gd_scene load_steps=14 format=3 uid="uid://du1on700oxenx"]
+[gd_scene load_steps=17 format=3 uid="uid://du1on700oxenx"]
 
 [ext_resource type="Texture2D" uid="uid://cmlyjt326df7j" path="res://Assets/spritesheet1COMPLETE (1).png" id="1_jqxto"]
 [ext_resource type="Script" path="res://Scripts/Doors/doorScript.gd" id="1_p52eu"]
 [ext_resource type="Texture2D" uid="uid://j5vsrq4xwgd7" path="res://Assets/UIAssets/HotbarBox.png" id="1_pmqkw"]
 [ext_resource type="Script" path="res://Scripts/Tools/hiddenInGame.gd" id="4_vg5mv"]
+[ext_resource type="AudioStream" uid="uid://mfb33xqbeujy" path="res://Assets/Audio/dooropening.wav" id="5_hfvjs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3wr76"]
 radius = 45.0
+
+[sub_resource type="Animation" id="Animation_ghju6"]
+resource_name = "DoorClosed"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Clipper/DoorRight:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(8.42105, -0.25, 0, 0.25, 0, 8.42105, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Clipper/DoorRight:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Clipper/DoorLeft:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-8.42105, -0.25, 0, 0.25, 0, -8.42105, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Clipper/DoorLeft:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Hiss:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-80, -0.25, 0, 0.25, 0, -80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_c3qmh"]
+resource_name = "DoorMiddle"
+step = 0.25
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Hiss:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
 
 [sub_resource type="Animation" id="Animation_5rnnj"]
 resource_name = "DoorOpen"
@@ -52,6 +126,17 @@ tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Hiss:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(-80, -0.25, 0, 0.25, 0, -80, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
 
@@ -101,57 +186,22 @@ tracks/3/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
-
-[sub_resource type="Animation" id="Animation_ghju6"]
-resource_name = "DoorClosed"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("../Clipper/DoorRight:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(8.42105, -0.25, 0, 0.25, 0, 8.42105, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("../Clipper/DoorRight:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("../Clipper/DoorLeft:position:x")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-8.42105, -0.25, 0, 0.25, 0, -8.42105, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-tracks/3/type = "bezier"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("../Clipper/DoorLeft:position:y")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Hiss:volume_db")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_mr2qk"]
 _data = {
 "DoorClosed": SubResource("Animation_ghju6"),
+"DoorMiddle": SubResource("Animation_c3qmh"),
 "DoorOpen": SubResource("Animation_5rnnj"),
 "RESET": SubResource("Animation_qhct6")
 }
@@ -162,15 +212,20 @@ animation = &"DoorClosed"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_7rf00"]
 animation = &"DoorOpen"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_a32fm"]
+animation = &"DoorMiddle"
+
 [sub_resource type="AnimationNodeBlendSpace1D" id="AnimationNodeBlendSpace1D_s0pad"]
 blend_point_0/node = SubResource("AnimationNodeAnimation_chi03")
 blend_point_0/pos = 0.0
 blend_point_1/node = SubResource("AnimationNodeAnimation_7rf00")
 blend_point_1/pos = 1.0
+blend_point_2/node = SubResource("AnimationNodeAnimation_a32fm")
+blend_point_2/pos = 0.5
 min_space = 0.0
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_tge48"]
-graph_offset = Vector2(-448.03, -39.3775)
+graph_offset = Vector2(-83, 13)
 nodes/BlendSpace1D/node = SubResource("AnimationNodeBlendSpace1D_s0pad")
 nodes/BlendSpace1D/position = Vector2(-100, 100)
 nodes/output/position = Vector2(100, 100)
@@ -179,6 +234,7 @@ node_connections = [&"output", 0, &"BlendSpace1D"]
 [node name="Door" type="Area2D"]
 scale = Vector2(2.5, 2.5)
 script = ExtResource("1_p52eu")
+doorSpeed = 0.05
 
 [node name="EntryZone" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_3wr76")
@@ -220,7 +276,12 @@ unique_name_in_owner = true
 root_node = NodePath(".")
 tree_root = SubResource("AnimationNodeBlendTree_tge48")
 anim_player = NodePath("../AnimationPlayer")
-parameters/BlendSpace1D/blend_position = -0.0519248
+parameters/BlendSpace1D/blend_position = 0.499265
+
+[node name="Hiss" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_hfvjs")
+autoplay = true
+max_distance = 250.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
