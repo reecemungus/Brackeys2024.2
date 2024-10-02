@@ -47,6 +47,9 @@ func AdvanceDay() -> void:
 	DAY = DAY + 1
 	
 	OnAdvanceDay.emit()
+	
+	if DAY == 4:
+		AudioBus.setMusic("res://Assets/Audio/Music/WeatherWarningNewChaosTheme.wav")
 
 func _physics_process(_delta: float) -> void:
 	if TIME == "24:00":

@@ -878,7 +878,7 @@ position = Vector2(1579, -620)
 
 [node name="Explosions" type="Node2D" parent="."]
 script = ExtResource("39_agp8f")
-distance = 500.0
+distance = 50.0
 
 [node name="Timer" type="Timer" parent="Explosions"]
 autostart = true

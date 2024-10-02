@@ -166,7 +166,8 @@ directories/dtl_directory={
 "Patrick3_3": "res://Dialog/Timelines/Patrick/Patrick3_3.dtl",
 "PatrickFinale": "res://Dialog/Timelines/Patrick/PatrickFinale.dtl",
 "PatrickTrade_1": "res://Dialog/Timelines/Patrick/PatrickTrade_1.dtl",
-"PatrickTrade_2": "res://Dialog/Timelines/Patrick/PatrickTrade_2.dtl"
+"PatrickTrade_2": "res://Dialog/Timelines/Patrick/PatrickTrade_2.dtl",
+"timeline": "res://Dialog/Timelines/Charlotte/timeline.dtl"
 }
 glossary/default_case_sensitive=true
 variables={}
